@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="(c) 2020 Cotechnoe http://www.cotechnoe.com" modelDirectory="/com.cotechnoe.ontocase.eli/src"
+    modelPluginID="com.cotechnoe.ontocase.eli" modelName="Gowl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>g-owl.ecore</foreignModel>
+  <genPackages prefix="Gowl" basePackage="com.cotechnoe.ontocase.eli" disposableProviderFactory="true"
+      fileExtensions="gowl" ecorePackage="g-owl.ecore#/">
+    <genClasses ecoreClass="g-owl.ecore#//G_OWL_Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference g-owl.ecore#//G_OWL_Document/g_entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference g-owl.ecore#//G_OWL_Document/g_relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference g-owl.ecore#//G_OWL_Document/g_prefix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference g-owl.ecore#//G_OWL_Document/baseIRI"/>
+    </genClasses>
+    <nestedGenPackages prefix="Model" basePackage="com.cotechnoe.ontocase.eli.gowl"
+        disposableProviderFactory="true" ecorePackage="g-owl.ecore#//model">
+      <nestedGenPackages prefix="Relation" basePackage="com.cotechnoe.ontocase.eli.gowl.model"
+          disposableProviderFactory="true" ecorePackage="g-owl.ecore#//model/relation">
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/relation/G_TypedRelation"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/ILink" labelFeature="#//gowl/model/relation/ILink/I">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/ILink/I"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/PLink" labelFeature="#//gowl/model/core/G_Relation/g_label"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/relation/G_UntypedRelation"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/SLink" labelFeature="#//gowl/model/relation/SLink/S">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/SLink/S"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/ELink" labelFeature="#//gowl/model/relation/ELink/E">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/ELink/E"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/ALink" labelFeature="#//gowl/model/relation/ALink/A">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/ALink/A"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/InvLink" labelFeature="#//gowl/model/relation/InvLink/Inv">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/InvLink/Inv"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/NegatePLink" labelFeature="#//gowl/model/relation/NegatePLink/NOT">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/NegatePLink/NOT"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/relation/DLink" labelFeature="#//gowl/model/relation/DLink/D">
+          <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/relation/DLink/D"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Entity" basePackage="com.cotechnoe.ontocase.eli.gowl.model"
+          disposableProviderFactory="true" ecorePackage="g-owl.ecore#//model/entity">
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_ObjectIntersectionOf"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_ClassContainer"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_Container"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_Collection"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_AnnotationProperty"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_Property"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_ObjectProperty"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_AnonymousIndividual"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_Individual"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_NamedIndividual"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_NamedClass"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_Resource"/>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/entity/G_SingleObject"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/entity/G_Literal"/>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Core" basePackage="com.cotechnoe.ontocase.eli.gowl.model"
+          disposableProviderFactory="true" ecorePackage="g-owl.ecore#//model/core">
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/core/G_Relation">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Relation/g_label"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Relation/iri"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference g-owl.ecore#//model/core/G_Relation/source"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference g-owl.ecore#//model/core/G_Relation/target"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/core/G_Resource"/>
+        <genClasses ecoreClass="g-owl.ecore#//model/core/G_Prefix">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Prefix/ns"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Prefix/iri"/>
+        </genClasses>
+        <genClasses ecoreClass="g-owl.ecore#//model/core/IRI">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/IRI/iri"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="g-owl.ecore#//model/core/G_Entity">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference g-owl.ecore#//model/core/G_Entity/isSourceOf"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference g-owl.ecore#//model/core/G_Entity/isTargetOf"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Entity/g_label"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute g-owl.ecore#//model/core/G_Entity/iri"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

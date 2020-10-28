@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    copyrightText="(c) 2015 Cotechnoe http://www.cotechnoe.com" modelDirectory="/com.cotechnoe.ontocase.eli.GRDF/src"
+    modelPluginID="com.cotechnoe.ontocase.eli.GRDF" modelName="GRDF" editPluginClass="com.cotechnoe.ontocase.eli.GRDF.provider.GrdfEditPlugin"
+    editorPluginClass="com.cotechnoe.ontocase.eli.GRDF.presentation.GrdfEditPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testSuiteClass="com.cotechnoe.ontocase.eli.GRDF.tests.GrdfAllTests"
+    importerID="com.ibm.xtools.modeler.ui.wizards.internal.ecore.importer.EmxImporterWizard"
+    complianceLevel="7.0" copyrightFields="false" colorProviders="true" classNamePattern=""
+    operationReflection="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/com.ibm.xtools.modeler.ui.wizards.internal.ecore.importer.EmxImporterWizard">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>grdf.emx</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="GRDF" basePackage="com.cotechnoe.ontocase.eli"
+      disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="ttl"
+      ecorePackage="GRDF.ecore#/">
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//GlabelProperty">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//GlabelProperty/AS_URI"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//GlabelProperty/AS_QNAME"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//GlabelProperty/AS_LABEL"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//GlabelProperty/AS_ID"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//G_DataType">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/NIL"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/INTEGER"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/BOOLEAN"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/FLOAT"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/LITERAL"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//G_DataType/STRING"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//RDF_Vocabulary">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RDF_Vocabulary/rdfs_Class"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RDF_Vocabulary/rdf_Property"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RDF_Vocabulary/rdfs_label"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//RestrictionType">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/someValuesFrom"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/allValuesFrom"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/cardinality"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/hasSelf"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/hasValue"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/maxCardinality"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/maxQualifiedCardinality"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/minCardinality"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//RestrictionType/minQualifiedCardinality"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//SPARQL_OutputFormat">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//SPARQL_OutputFormat/TEXT"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//SPARQL_OutputFormat/CSV"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//SPARQL_OutputFormat/TSV"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//SPARQL_OutputFormat/JSON"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//SPARQL_OutputFormat/XML"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GRDF.ecore#//OntologicalPredicate">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//OntologicalPredicate/rdf_type"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GRDF.ecore#//OntologicalPredicate/rdfs_subClassOf"/>
+    </genEnums>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//QueryNodeUri"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Entity"
+        labelFeature="#//GRDF/G_Element/glabel">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Entity/isSourceOf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Entity/isTargetOf"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Entity/v_id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Entity/v_id_read"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/compareWithURI">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/compareWithURI/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/isRDFTypeOf">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/isRDFTypeOf/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/getValueFromProperty">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/getValueFromProperty/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/getOwnerOfProperty">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/getOwnerOfProperty/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/setValueFromPropery">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/setValueFromPropery/uri"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/setValueFromPropery/value"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Entity/getEntityFromProperty">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Entity/getEntityFromProperty/uri"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Element">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/label"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/glabel"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/anon"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/siriusCmdName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" propertyMultiLine="true"
+          ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/comment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Element/parentDoc"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Element/glabelProperty"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asUri"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asG_Element"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asG_Entity"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asG_Resource"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/isLiteral"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/isUri"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/isResource"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/isBlankNode"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asLiteral"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asBlankNode"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/getDenotation"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/setGrdfDoc">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Element/setGrdfDoc/grdfDoc"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/getGrdfDoc"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asG_Node"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Element/asQueryVariable"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//GRDF_Doc" labelFeature="#//GRDF/GRDF_Doc/baseName">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/ontologies"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/baseUri"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" createChild="false"
+          ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/v_id_ctr"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertyMultiLine="true" propertySortChoices="true" ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/JenaOntoModel"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/gOntologicalImport"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/glabelAsQname"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" children="true"
+          createChild="false" propertyDescription="" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/domainGroups"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/prefixGroup"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/gEntities"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/gRelations"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" children="true"
+          createChild="true" propertyCategory="" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/ontologyHeader"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/baseName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/importsGroup"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//GRDF_Doc/inImportsGroup"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//GRDF_Doc/isWorkFlow"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/addEntity">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/addEntity/gEntity"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findGentity">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findGentity/ontoUri"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findGentity/entityRri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/incr_v_id"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getPrefixFromNSUri">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/getPrefixFromNSUri/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findGentity.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findGentity.1/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/init"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findResource">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findResource/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/addNode">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/addNode/node"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/addRelation">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/addRelation/relation"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getDefaultNameSpace"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findGrelation">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findGrelation/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findLiteral">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findLiteral/id"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getNSUriFromQname">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/getNSUriFromQname/qname"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findOntologicalURI">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findOntologicalURI/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/deleteEntity">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/deleteEntity/g_Entity"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/deleteRelation">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/deleteRelation/g_Relation"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getGRelationList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getGEntityList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/findGentityInImport">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/findGentityInImport/id"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/reOrderUriList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/countAnoEntities"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/getGUriList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GRDF_Doc/replaceGUriInGUriList">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/replaceGUriInGUriList/oldUri"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GRDF_Doc/replaceGUriInGUriList/newUri"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//Ontology">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//Ontology/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//Ontology/entityGroup"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//Ontology/relationGroup"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//EntityGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//EntityGroup/gEntities"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//EntityGroup/classGroup"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//EntityGroup/ontology"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//ClassGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="false" propertyCategory="" ecoreFeature="ecore:EReference GRDF.ecore#//ClassGroup/gEntites"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//ClassGroup/ontology"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RelationGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//RelationGroup/gRelations"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//RelationGroup/ontology"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Relation">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Relation/source"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" children="true"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Relation/target"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Relation/v_id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Relation/labelID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Relation/RelId"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Relation/asPredicate"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Relation/isPredicate"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Relation/getGOWLType"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Relation/setGrdfDoc">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Relation/setGrdfDoc/grdfDoc"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Relation/getGrdfDoc"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_Predicate">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertyCategory="" ecoreFeature="ecore:EReference GRDF.ecore#//G_Predicate/aSubject"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//G_Predicate/aObject"/>
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertyDescription="" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Predicate/aProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Predicate/glabel"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Predicate/getUri"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_UnTypedRelation"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Subject"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Resource"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Resource/seeAlso"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Resource/isDefinedBy"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Resource/isRDFSResourceDeclare"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Resource/setUriString">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Resource/setUriString/uriString"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Resource/getUriString"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_AnoEntity"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Node">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Node/uri"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Node/qname"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_URI">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_URI/fragment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_URI/nameSpace"
+          key="true"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" createChild="false"
+          ecoreFeature="ecore:EAttribute GRDF.ecore#//G_URI/prefix"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_URI/uriValue"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_URI/g_Node"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getScheme"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getAuthority"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getPath"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getQuery"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getQname"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getFullUri"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_URI/getFullUri.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_URI/getFullUri.1/grdfDoc"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//QueryNode"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//SPARQL_ObjectNode"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Object"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_PredicateProperty">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_PredicateProperty/predicate"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_OntologicalImport">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_OntologicalImport/importEntities"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_OntologicalImport/importRelations"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_OntologicalImport/importPrefix"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_OntologicalImport/importUri"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//DomainGroupEntity">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//DomainGroupEntity/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//DomainGroupEntity/gEntities"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//PrefixGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//PrefixGroup/prefixNameSpaces"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//PrefixGroup/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//PrefixGroup/baseUri"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//PrefixGroup/createDefaultPrefix"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//PrefixNameSpace">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//PrefixNameSpace/prefix"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//PrefixNameSpace/nameSpaceUri"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OntologyHeader">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OntologyHeader/backwardCompatibleWith"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OntologyHeader/incompatibleWith"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OntologyHeader/priorVersion"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OntologyHeader/ontoUri"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//OntologyHeader/attributs"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_Field" labelFeature="#//GRDF/G_Field/value">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Field/predicate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Field/value"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Field/datatype"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//G_Field/ontologyheader"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//ImportsGroup">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//ImportsGroup/imports"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" createChild="false"
+          ecoreFeature="ecore:EReference GRDF.ecore#//ImportsGroup/rootDoc"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_Literal"
+        labelFeature="#//GRDF/RDFS_Literal/literal">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_Literal/dataType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//RDFS_Literal/literal"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//RDFS_Literal/genNewId"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//BlankNode"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//Variable"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_TypedRelation"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ILink"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//InstanceType"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//SLink"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//DataTypeInstance"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_1"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_2"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_3"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_Alt"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_Bag"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_comment"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_first"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_HTML"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_langString"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_List"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_nil"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_object"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_predicate"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_Property"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ClassTypeOf_subPropertyOf"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Property"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isAsymmetricProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isInverseFunctionalProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isIrreflexiveProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isReflexiveProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isSymmetricProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isTransitiveProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isFunctionalProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isOWLObjectProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isRDFProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isOWL_DatatypeProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/stereotype"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_Property/isAnnotationProperty"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Property/asRDF_Property"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ALink_Property"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//LinkInverseOf_Property_rule"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//RestrictionOnObjectProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//OWL_equivalentProperty_rule"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_rest"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_Seq"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_Statement"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDF_Statement/subject"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDF_Statement/predicate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDF_Statement/object"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Container"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ClassType"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ClassTypeOf_equivalentClass_rule"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Boolean_Operand_rule"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//RestrictionFromClass"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_Resource"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_sameAs_rule"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_OneOf_OperandRule"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ClassTypeOf_SubClassOf"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ALink_Class"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ALink_ToClass"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//DisjointMembers"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_subject"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_type">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDF_type/instance"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDF_type/clazz"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_value"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDF_XMLLiteral"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_Class"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_Container"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_ContainerMembershipProperty"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_Datatype"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//RDFS_Datatype/dataType"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_domain">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_domain/toProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_domain/fromClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ALink"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_isDefineBy"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_label">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//RDFS_label/label"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_member"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_range">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_range/fromProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_range/toClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_seeAlso"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_subClassOf">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_subClassOf/superClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_subClassOf/subClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//RDFS_subPropertyOf">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_subPropertyOf/superProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//RDFS_subPropertyOf/subProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_Class" labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//GOWLResourcesManager">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//GOWLResourcesManager/resourcesMapping"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//GOWLResourcesManager/loadImport"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/findAltUrl">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/findAltUrl/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/findResource">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/findResource/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/mapAltUrl">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/mapAltUrl/uri"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/mapAltUrl/altUrl"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/mapResource">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/mapResource/uri"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/mapResource/resource"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/findMapper">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/findMapper/uri"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//GOWLResourcesManager/buildMap">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//GOWLResourcesManager/buildMap/rootDir"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//ResourceMapper">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//ResourceMapper/publicURI"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//ResourceMapper/altURL"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//ResourceMapper/gowlResource"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//URI" labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Restriction"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/asSomeValuesFromRestriction">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asSomeValuesFromRestriction/onObjectProperty"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asSomeValuesFromRestriction/hasResource"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/isSomeValuesRestriction"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/asAllValuesFromRestriction">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asAllValuesFromRestriction/onObjectProperty"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asAllValuesFromRestriction/onClass"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/isAllValuesRestriction"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/isHasValueRestriction"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Restriction/asHasValueRestriction">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asHasValueRestriction/onObjectProperty"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Restriction/asHasValueRestriction/onResource"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectSomeValuesFrom"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Restriction_fromClass_onProperty_rule"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Restriction_fromClass_onProperty_rule/fromClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_Restriction_onProperty_Rule"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Restriction_onProperty_Rule/onObjectProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectAllValuesFrom"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectHasValue"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Restriction_Value_onProperty_rule"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Restriction_Value_onProperty_rule/hasValue"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectDataPropertyExpressionComponant"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectDataPropertyRangeDomainAxiom"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ObjectExistsSelf"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_oneOf" labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_ObjectExpression"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_ObjectExpression/operand"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_ObjectExpression/isOneOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_Restriction"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OWL_Restriction/restrictionType"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_BooleanExpression"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_BooleanExpression/isIntersectionOf"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_BooleanExpression/isUnionOf"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_BooleanExpression/isComplementOf"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_intersectionOf"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Boolean_MutlipleClass_rule"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Boolean_MutlipleClass_rule/operand"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_unionOf"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_complementOf"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_complementOf/operand"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//DSLink"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_equivalentClass">
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_equivalentClass/sourceClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_equivalentClass/targetClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_equivalentProperty">
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_equivalentProperty/sourceProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_equivalentProperty/targetProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_sameAs">
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_sameAs/sourceIndividual"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="Readonly" notify="false"
+          createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_sameAs/targetIndividual"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_DatatypeProperty"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//OWL_DatatypeProperty/dataType"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//G_Query"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Query/variableList"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Query/variable"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_Query/uriList"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Query/addVariable">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Query/addVariable/var"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Query/addVariable.1">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//G_Query/addVariable.1/varName"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Query/infer"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Query/getQueryString"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//G_Query/createNewVariable"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//VariableList">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//VariableList/variables"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//VariableList/addVariable">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//VariableList/addVariable/variable"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_UriList">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_UriList/gEntities"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_Select"
+        labelFeature="#//GRDF/G_Element/glabel">
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="true"
+          propertyCategory="" propertyMultiLine="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_Select/whereClauses"/>
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="true"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_Select/queryResult"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_Select/sparql_result"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//WhereClause"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//QueryStatement">
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//QueryStatement/aSubject"/>
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//QueryStatement/aPredicate"/>
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//QueryStatement/aObject"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GRDF.ecore#//QueryStatement/getQueryNodeString">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GRDF.ecore#//QueryStatement/getQueryNodeString/queryNode"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//QueryResult">
+      <genFeatures xsi:type="genmodel:GenFeature" children="true" createChild="false"
+          propertyMultiLine="true" ecoreFeature="ecore:EReference GRDF.ecore#//QueryResult/variables"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//QueryResult/varSequence"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//QueryResult/outputFormat"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_Result">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_Result/SPARQL_Result_Columns"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_Result/SPARQL_Result_Lines"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_Result_Column_Title">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//SPARQL_Result_Column_Title/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_Result_Line">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//SPARQL_Result_Line/number"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//SPARQL_Result_Line/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//QueryLink"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPIN_query">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPIN_query/fromResource"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPIN_query/toQuery"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//ExtendedIteratorOntModel"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OntologicalURI"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_WhereClause_Link">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_WhereClause_Link/sourceNode"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//SPARQL_WhereClause_Link/targetNode"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_UntypedRelationAndEntity"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_WhereClause_Node"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//SPARQL_Literal"/>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GRDF.ecore#//InverseOfLink"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_inverseOf">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_inverseOf/targetInvProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//OWL_inverseOf/sourceInvProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_AsymmetricProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_InverseFunctionnalProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_IrreflexiveProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_ReflexiveProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_SymmetricProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_TransitiveProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_FunctionnalProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_AnnotationProperty"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_Ontology"
+        labelFeature="#//GRDF/G_Element/glabel"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//G_DisjointExpression"
+        labelFeature="#//GRDF/G_Node/qname">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_DisjointExpression/isAllDisjointClasses"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_DisjointExpression/isDisjointWith"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" children="true" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference GRDF.ecore#//G_DisjointExpression/members"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GRDF.ecore#//G_DisjointExpression/isAllDifferent"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_AllDisjointClass"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_disjointWith"
+        labelFeature="#//GRDF/G_Node/qname"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_disjointUnionOf"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="GRDF.ecore#//OWL_AllDifferent"
+        labelFeature="#//GRDF/G_Node/qname"/>
+  </genPackages>
+</genmodel:GenModel>

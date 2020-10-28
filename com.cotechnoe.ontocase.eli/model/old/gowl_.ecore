@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gowl" nsURI="http://cotechnoe.com/vocabulary/gowl.ecore" nsPrefix="gowl">
+  <eClassifiers xsi:type="ecore:EClass" name="G_OWL_Document">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_entities" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_relations" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Relation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_prefix" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Prefix" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Resource" eSuperTypes="#//model/core/G_Assertional"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_UntypedResource" eSuperTypes="#//model/core/G_Assertional"/>
+  <eSubpackages name="model" nsURI="http://cotechnoe.com/vocabulary/gowl-model.ecore"
+      nsPrefix="model">
+    <eSubpackages name="relation" nsURI="http://cotechnoe.com/vocabulary/gowl-relation.ecore"
+        nsPrefix="relation">
+      <eClassifiers xsi:type="ecore:EClass" name="TypedLink" abstract="true" eSuperTypes="#//model/core/G_Relation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ILink" eSuperTypes="#//model/relation/TypedLink">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_type" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedLink" changeable="false" defaultValueLiteral="ILink"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PLink" eSuperTypes="#//model/core/G_Relation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_type" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedLink" changeable="false" defaultValueLiteral="PLink"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SLink" eSuperTypes="#//model/relation/TypedLink">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_type" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedLink" changeable="false" defaultValueLiteral="SLink"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ELink" eSuperTypes="#//model/relation/TypedLink">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_type" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedLink" changeable="false" defaultValueLiteral="ELink"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ALink" eSuperTypes="#//model/relation/TypedLink">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_type" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedLink" changeable="false" defaultValueLiteral="ALink"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="entity" nsURI="http://cotechnoe.com/vocabulary/gowl-entity.ecore"
+        nsPrefix="entity">
+      <eClassifiers xsi:type="ecore:EClass" name="G_EmptyClass" eSuperTypes="#//model/entity/G_ClassExpression"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ClassExpression" abstract="true"
+          eSuperTypes="#//model/core/G_Terminological"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_NamedClass" eSuperTypes="#//model/entity/G_ClassExpression"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_UniversalClass" eSuperTypes="#//model/entity/G_ClassExpression"/>
+      <eClassifiers xsi:type="ecore:EEnum" name="G_LiteralType">
+        <eLiterals name="typedLiteral"/>
+        <eLiterals name="stringLiteralNoLanguage" value="1"/>
+        <eLiterals name="stringLiteralWithLanguage" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Individual" eSuperTypes="#//model/core/G_Assertional"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Literal" abstract="true" eSuperTypes="#//model/core/G_Entity">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="literalType" ordered="false"
+            eType="#//model/entity/G_LiteralType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_BlankNode" eSuperTypes="#//model/core/G_Assertional #//model/core/G_NodeID"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_AnnotationProperty"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectIntersectionOf" eSuperTypes="#//model/entity/G_BooleanAndSet"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_BooleanAndSet" abstract="true"
+          eSuperTypes="#//model/core/G_Container"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectUnionOf" eSuperTypes="#//model/entity/G_BooleanAndSet"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectComplementOf" eSuperTypes="#//model/entity/G_BooleanAndSet"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectOneOf" eSuperTypes="#//model/entity/G_BooleanAndSet"/>
+    </eSubpackages>
+    <eSubpackages name="core" nsURI="http://cotechnoe.com/vocabulary/gowl-core.ecore"
+        nsPrefix="core">
+      <eClassifiers xsi:type="ecore:EClass" name="G_Relation" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_label" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
+            eType="#//model/core/G_Entity" eOpposite="#//model/core/G_Entity/isSourceOf"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+            eType="#//model/core/G_Entity" eOpposite="#//model/core/G_Entity/isTargetOf"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasObjet" ordered="false"
+            lowerBound="1" eType="#//model/core/G_Entity" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="G_TypedLink">
+        <eLiterals name="SLink"/>
+        <eLiterals name="ILink" value="1"/>
+        <eLiterals name="ELink" value="2"/>
+        <eLiterals name="ALink" value="3"/>
+        <eLiterals name="PLink" value="4"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Terminological" abstract="true"
+          eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Assertional" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_NodeID">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Container" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Role" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EEnum" name="G_TypedEntity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Prefix">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ns" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Entity" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isSourceOf" ordered="false"
+            upperBound="-1" eType="#//model/core/G_Relation" eOpposite="#//model/core/G_Relation/source"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isTargetOf" ordered="false"
+            upperBound="-1" eType="#//model/core/G_Relation" eOpposite="#//model/core/G_Relation/target"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_label" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_TypedEntity" ordered="false"
+            lowerBound="1" eType="#//model/core/G_TypedEntity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasPredicate" ordered="false"
+            upperBound="-1" eType="#//model/core/G_Relation" containment="true"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

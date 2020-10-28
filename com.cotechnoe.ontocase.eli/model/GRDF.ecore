@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="GRDF" nsURI="http://www.cotechnoe.com/ontology/GRDF.ecore" nsPrefix="GRDF">
+  <eAnnotations source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+    <details key="com.ibm.xtools.activities.umlBBEvent1" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBComponent" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBDependancy" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBEvent2" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBFunction" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBTypes1" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBClassTemplateParameter" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBRealization" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBClassDiagram" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBClass" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBFunctionTemplateParameter" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBSubsystem" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBInterfaceTemplateParameter" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBRelationship1" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBSequenceDiagram" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBRelationship2" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBPackageTemplateParameter" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBSequence1" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBSequence2" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBUsage" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBPackage" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBComment1" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBComment2" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBComponentDiagram" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBStereotypedClass" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBSignal" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBFreeFormDiagram" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBLifeLine" value="1"/>
+    <details key="com.ibm.xtools.activities.umlBBInterface" value="1"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryNodeUri" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>À supprimer&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Entity" abstract="true" eSuperTypes="#//G_Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Encapsule les entités du langage &lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="compareWithURI" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+    <eOperations name="isRDFTypeOf" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Indique si l'élément est du type indiqué&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getValueFromProperty" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Retourne l'entité qui est à associée l'uri de la propriété&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getOwnerOfProperty" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Permet de trouver l'origine d'une propriété&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="setValueFromPropery" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Cette méthode permet d'associer une valeur String à une propriété associé à l'entité.&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="value" ordered="false" lowerBound="1" eType="#//RDFS_Literal"/>
+    </eOperations>
+    <eOperations name="getEntityFromProperty" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Retourne l'entité qui est à associée l'uri de la propriété&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isSourceOf" ordered="false"
+        upperBound="-1" eType="#//G_Relation" eOpposite="#//G_Relation/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isTargetOf" ordered="false"
+        upperBound="-1" eType="#//G_Relation" eOpposite="#//G_Relation/target"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_id_read" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Element" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Graphical element&lt;/p>&lt;p>Définit les caractéristiques des éléments du volet graphique du langage&lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="asUri" ordered="false" lowerBound="1" eType="#//G_URI"/>
+    <eOperations name="asG_Element" ordered="false" lowerBound="1" eType="#//G_Element"/>
+    <eOperations name="asG_Entity" ordered="false" lowerBound="1" eType="#//G_Entity"/>
+    <eOperations name="asG_Resource" ordered="false" lowerBound="1" eType="#//G_Resource"/>
+    <eOperations name="isLiteral" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isResource" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isBlankNode" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="asLiteral" ordered="false" lowerBound="1" eType="#//RDFS_Literal"/>
+    <eOperations name="asBlankNode" ordered="false" lowerBound="1" eType="#//BlankNode"/>
+    <eOperations name="getDenotation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setGrdfDoc" ordered="false" lowerBound="1">
+      <eParameters name="grdfDoc" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    </eOperations>
+    <eOperations name="getGrdfDoc" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    <eOperations name="asG_Node" ordered="false" lowerBound="1" eType="#//G_Node"/>
+    <eOperations name="asQueryVariable" ordered="false" lowerBound="1" eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Le label est le contenu de rdf:label&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glabel" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Le gLabel est la partie qui est affiché dans le grahique&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anon" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="siriusCmdName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Cette variable est utilisée pour désigner le nom de la commande Sirius qui sera invoquée par un élément Sirius&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Si anon = false, le ID est l'uri du noeud&lt;/p>&lt;p>si anon = true, le ID correspond au numéro du noeud&lt;/p>"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" ordered="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Le label est le contenu de rdf:label&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentDoc" ordered="false"
+        lowerBound="1" eType="#//GRDF_Doc" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glabelProperty" ordered="false"
+        lowerBound="1" eType="#//GlabelProperty" defaultValueLiteral="AS_LABEL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GRDF_Doc">
+    <eOperations name="addEntity" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eParameters name="gEntity" ordered="false" lowerBound="1" eType="#//G_Entity"/>
+    </eOperations>
+    <eOperations name="findGentity" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Utilisé pour rechercher des entités nommées&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="ontoUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="entityRri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="incr_v_id" ordered="false" lowerBound="1"/>
+    <eOperations name="getPrefixFromNSUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findGentity" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Utilisé pour rechercher des entités nommées&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="init" ordered="false" lowerBound="1"/>
+    <eOperations name="findResource" ordered="false" lowerBound="1" eType="#//G_Resource">
+      <eParameters name="ID" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="addNode" ordered="false" lowerBound="1">
+      <eParameters name="node" ordered="false" lowerBound="1" eType="#//G_Node"/>
+    </eOperations>
+    <eOperations name="addRelation" ordered="false" lowerBound="1">
+      <eParameters name="relation" ordered="false" lowerBound="1" eType="#//G_Relation"/>
+    </eOperations>
+    <eOperations name="getDefaultNameSpace" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="findGrelation" ordered="false" lowerBound="1" eType="#//G_Relation">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findLiteral" ordered="false" lowerBound="1" eType="#//RDFS_Literal">
+      <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getNSUriFromQname" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="qname" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findOntologicalURI" ordered="false" lowerBound="1" eType="#//G_Element">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="deleteEntity" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="g_Entity" ordered="false" lowerBound="1" eType="#//G_Entity"/>
+    </eOperations>
+    <eOperations name="deleteRelation" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="g_Relation" ordered="false" lowerBound="1" eType="#//G_Relation"/>
+    </eOperations>
+    <eOperations name="getGRelationList" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eOperations name="getGEntityList" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eOperations name="findGentityInImport" ordered="false" lowerBound="1" eType="#//G_Entity">
+      <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+    <eOperations name="reOrderUriList" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>En privé, le document contient une liste des URI des gentites contenu dans le document. Cette méthode permet de retrier la liste en fonction de la séquence dans le gentities&lt;/p>"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="countAnoEntities" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Calcul le nombre d'entités anonymes dans le document&lt;/p>"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="getGUriList" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eOperations name="replaceGUriInGUriList" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Lors de la modification de l'URI d'un élément, il est nécessaire de changer la valeur dans la liste des URI&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="oldUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="newUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontologies" ordered="false"
+        upperBound="-1" eType="#//Ontology" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseUri" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true" defaultValueLiteral="http://www.example.org/base#"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_id_ctr" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="JenaOntoModel" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gOntologicalImport" ordered="false"
+        lowerBound="1" eType="#//G_OntologicalImport" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glabelAsQname" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainGroups" ordered="false"
+        upperBound="-1" eType="#//DomainGroupEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prefixGroup" ordered="false"
+        lowerBound="1" eType="#//PrefixGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gEntities" ordered="false"
+        upperBound="-1" eType="#//G_Entity" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gRelations" ordered="false"
+        upperBound="-1" eType="#//G_Relation" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontologyHeader" ordered="false"
+        eType="#//OntologyHeader" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Indique le nom de L'ontologie&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importsGroup" ordered="false"
+        lowerBound="1" eType="#//ImportsGroup" containment="true" eOpposite="#//ImportsGroup/rootDoc"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inImportsGroup" ordered="false"
+        eType="#//ImportsGroup" eOpposite="#//ImportsGroup/imports"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isWorkFlow" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ontology">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityGroup" ordered="false"
+        lowerBound="1" eType="#//EntityGroup" containment="true" eOpposite="#//EntityGroup/ontology"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationGroup" ordered="false"
+        lowerBound="1" eType="#//RelationGroup" containment="true" eOpposite="#//RelationGroup/ontology"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gEntities" ordered="false"
+        upperBound="-1" eType="#//G_Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classGroup" ordered="false"
+        lowerBound="1" eType="#//ClassGroup" containment="true" eOpposite="#//ClassGroup/ontology"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontology" ordered="false"
+        lowerBound="1" eType="#//Ontology" eOpposite="#//Ontology/entityGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gEntites" ordered="false"
+        upperBound="-1" eType="#//G_Entity" volatile="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontology" ordered="false"
+        lowerBound="1" eType="#//EntityGroup" eOpposite="#//EntityGroup/classGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gRelations" ordered="false"
+        upperBound="-1" eType="#//G_Relation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontology" ordered="false"
+        lowerBound="1" eType="#//Ontology" eOpposite="#//Ontology/relationGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Relation" abstract="true">
+    <eOperations name="asPredicate" ordered="false" lowerBound="1" eType="#//G_Predicate"/>
+    <eOperations name="isPredicate" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="getGOWLType" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setGrdfDoc" ordered="false" lowerBound="1">
+      <eParameters name="grdfDoc" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    </eOperations>
+    <eOperations name="getGrdfDoc" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
+        eType="#//G_Entity" eOpposite="#//G_Entity/isSourceOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+        eType="#//G_Entity" eOpposite="#//G_Entity/isTargetOf"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v_id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelID" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RelId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Predicate" eSuperTypes="#//G_UnTypedRelation">
+    <eOperations name="getUri" ordered="false" lowerBound="1" eType="#//G_URI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aSubject" ordered="false"
+        lowerBound="1" eType="#//G_Subject" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aObject" ordered="false"
+        lowerBound="1" eType="#//G_Object" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aProperty" ordered="false"
+        lowerBound="1" eType="#//G_PredicateProperty" eOpposite="#//G_PredicateProperty/predicate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glabel" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Le gLabel est la partie qui est affiché dans le grahique&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_UnTypedRelation" abstract="true" eSuperTypes="#//G_Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Subject" abstract="true" eSuperTypes="#//G_Resource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Le subject (ressource et literal) devront être séparée quand le DataType prop seront implantée.&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Resource" abstract="true" eSuperTypes="#//G_URI #//G_AnoEntity">
+    <eOperations name="setUriString" ordered="false" lowerBound="1">
+      <eParameters name="uriString" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getUriString" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seeAlso" ordered="false"
+        lowerBound="1" eType="#//G_Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isDefinedBy" ordered="false"
+        lowerBound="1" eType="#//G_Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRDFSResourceDeclare"
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        volatile="true" defaultValueLiteral="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Parfois, l'URI n'est pas déclaré de type rdfs:Resource mais plustot d'un type local au domaine du discours.&lt;/p>&lt;p>Par ex.: &lt;/p>&lt;p>vin:ChardonnayGrape&lt;/p>&lt;p>rdf:type vin:WineGrape ;&lt;/p>&lt;p>.&lt;/p>&lt;p> &lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_AnoEntity" abstract="true" eSuperTypes="#//G_Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Node" abstract="true" eSuperTypes="#//G_Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uri" ordered="false" eType="#//G_URI"
+        eOpposite="#//G_URI/g_Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qname" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_URI" abstract="true" eSuperTypes="#//G_Node #//QueryNode">
+    <eOperations name="getScheme" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAuthority" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getPath" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getQuery" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getQname" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getFullUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getFullUri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="grdfDoc" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fragment" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSpace" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        changeable="false" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriValue" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_Node" ordered="false"
+        eType="#//G_Node" eOpposite="#//G_Node/uri"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryNode" abstract="true" eSuperTypes="#//SPARQL_ObjectNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_ObjectNode" abstract="true" eSuperTypes="#//G_Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Object" abstract="true" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_PredicateProperty" abstract="true"
+      eSuperTypes="#//G_Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" ordered="false"
+        upperBound="-1" eType="#//G_Predicate" eOpposite="#//G_Predicate/aProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_OntologicalImport" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importEntities" ordered="false"
+        upperBound="-1" eType="#//G_Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="importRelations" ordered="false"
+        upperBound="-1" eType="#//G_Relation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importPrefix" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importUri" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainGroupEntity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Groupe contenant les entités des éléments des sous-ontologies&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gEntities" ordered="false"
+        upperBound="-1" eType="#//G_Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrefixGroup">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Groupe contenant la définition des PREFIXS.&lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="createDefaultPrefix" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prefixNameSpaces" ordered="false"
+        upperBound="-1" eType="#//PrefixNameSpace" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseUri" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrefixNameSpace">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSpaceUri" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OntologyHeader">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="backwardCompatibleWith"
+        ordered="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incompatibleWith" ordered="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priorVersion" ordered="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ontoUri" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" ordered="false"
+        upperBound="-1" eType="#//G_Field" containment="true" eOpposite="#//G_Field/ontologyheader"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Field">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Cette classe sert à la gestion dynamique des éléments associés à des DataTypes&lt;/p>&lt;p>&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="predicate" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datatype" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ontologyheader" ordered="false"
+        lowerBound="1" eType="#//OntologyHeader" eOpposite="#//OntologyHeader/attributs"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImportsGroup">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Répertoire des ontologies importées.&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" ordered="false"
+        upperBound="-1" eType="#//GRDF_Doc" containment="true" eOpposite="#//GRDF_Doc/inImportsGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootDoc" ordered="false"
+        lowerBound="1" eType="#//GRDF_Doc" eOpposite="#//GRDF_Doc/importsGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_Literal" eSuperTypes="#//G_Object">
+    <eOperations name="genNewId" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" ordered="false"
+        lowerBound="1" eType="#//G_URI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GlabelProperty">
+    <eLiterals name="AS_URI" literal="AS_URI"/>
+    <eLiterals name="AS_QNAME" value="1" literal="AS_QNAME"/>
+    <eLiterals name="AS_LABEL" value="2" literal="AS_LABEL"/>
+    <eLiterals name="AS_ID" value="3" literal="AS_ID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BlankNode" eSuperTypes="#//G_Object #//G_Subject #//G_AnoEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//QueryNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_TypedRelation" abstract="true" eSuperTypes="#//G_Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ILink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceType" abstract="true" eSuperTypes="#//G_Resource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&lt;/p>&lt;p>The subject is an instance of a class. &lt;/p>&lt;p>rdf:type&lt;/p>&lt;p>- Domainrdfs:Resource&lt;/p>&lt;p>- Range  rdfs:Class &lt;/p>&lt;p>&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SLink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataTypeInstance" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_3"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_Alt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_Bag"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_comment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_first"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_HTML"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_langString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_List"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_nil"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_object"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_predicate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_Property" eSuperTypes="#//G_Property #//G_PredicateProperty #//ClassTypeOf_subPropertyOf #//G_Object #//G_Subject #//InstanceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassTypeOf_subPropertyOf" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Property" eSuperTypes="#//G_PredicateProperty #//ALink_Property #//ClassTypeOf_subPropertyOf #//G_Object #//G_Resource #//G_Subject #//LinkInverseOf_Property_rule #//OWL_equivalentProperty_rule #//RestrictionOnObjectProperty">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Cette classe définit une propriété générique qui englobe toutes les sortes de propirétés possibles en RDF et OWL2&lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="asRDF_Property" ordered="false" lowerBound="1" eType="#//RDF_Property"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAsymmetricProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInverseFunctionalProperty"
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIrreflexiveProperty"
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReflexiveProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSymmetricProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTransitiveProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFunctionalProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOWLObjectProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRDFProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOWL_DatatypeProperty"
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stereotype" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="namespace" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAnnotationProperty" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ALink_Property" abstract="true" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkInverseOf_Property_rule" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RestrictionOnObjectProperty" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_equivalentProperty_rule" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_rest"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_Seq"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_Statement" eSuperTypes="#//ClassType #//ClassTypeOf_equivalentClass_rule #//G_Boolean_Operand_rule #//G_Container #//G_Object #//RestrictionFromClass">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" ordered="false"
+        lowerBound="1" eType="#//RDFS_Resource" unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=""/>
+        <details key="namespace" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" ordered="false"
+        eType="#//G_Property" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" ordered="false"
+        eType="#//RDFS_Resource" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Container" abstract="true" eSuperTypes="#//G_Resource #//G_Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassType" abstract="true" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassTypeOf_equivalentClass_rule" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Boolean_Operand_rule" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RestrictionFromClass" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_Resource" eSuperTypes="#//ALink_Class #//ALink_Property #//ClassType #//ClassTypeOf_SubClassOf #//ClassTypeOf_subPropertyOf #//DisjointMembers #//G_Object #//G_OneOf_OperandRule #//G_Subject #//InstanceType #//LinkInverseOf_Property_rule #//OWL_sameAs_rule">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>The class resource, everything. &lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_sameAs_rule" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_OneOf_OperandRule" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassTypeOf_SubClassOf" abstract="true"
+      eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ALink_Class" abstract="true" eSuperTypes="#//ALink_ToClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ALink_ToClass" abstract="true" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DisjointMembers" abstract="true" eSuperTypes="#//G_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_subject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_type" eSuperTypes="#//ILink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" ordered="false"
+        lowerBound="1" eType="#//InstanceType" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clazz" ordered="false"
+        lowerBound="1" eType="#//ClassType" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_value"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDF_XMLLiteral"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_Class" eSuperTypes="#//ALink_Class #//ClassType #//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//G_Object #//G_Subject #//InstanceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_Container"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_ContainerMembershipProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_Datatype" eSuperTypes="#//ALink_ToClass #//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//G_Object #//G_Subject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" ordered="false"
+        lowerBound="1" eType="#//G_DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="G_DataType">
+    <eLiterals name="NIL" literal=""/>
+    <eLiterals name="INTEGER" value="1" literal="integer"/>
+    <eLiterals name="BOOLEAN" value="2" literal="boolean"/>
+    <eLiterals name="FLOAT" value="3" literal="float"/>
+    <eLiterals name="LITERAL" value="4" literal="literal"/>
+    <eLiterals name="STRING" value="5" literal="string"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_domain" eSuperTypes="#//ALink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toProperty" ordered="false"
+        eType="#//ALink_Property" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromClass" ordered="false"
+        lowerBound="1" eType="#//ALink_Class" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ALink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_isDefineBy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_label">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_member"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_range" eSuperTypes="#//ALink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromProperty" ordered="false"
+        eType="#//ALink_Property" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toClass" ordered="false"
+        lowerBound="1" eType="#//ALink_ToClass" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_seeAlso"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_subClassOf" eSuperTypes="#//SLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_SubClassOf" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subClass" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_SubClassOf" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RDFS_subPropertyOf" eSuperTypes="#//SLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superProperty" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_subPropertyOf" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subProperty" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_subPropertyOf" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_Class" eSuperTypes="#//ALink_Class #//ClassType #//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//DisjointMembers #//G_Boolean_Operand_rule #//G_Object #//G_Subject #//InstanceType #//RestrictionFromClass"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="RDF_Vocabulary">
+    <eLiterals name="rdfs_Class"/>
+    <eLiterals name="rdf_Property" value="1"/>
+    <eLiterals name="rdfs_label" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectProperty" eSuperTypes="#//G_Property #//G_PredicateProperty #//ClassTypeOf_subPropertyOf #//G_Object #//G_Subject #//RestrictionOnObjectProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GOWLResourcesManager">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Le gestionnaire de ressources permet de mapper une URI avec l'altURL correspondant et l'instance de la resource EMF associée.&lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="findAltUrl" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="findResource" ordered="false" lowerBound="1" eType="#//GRDF_Doc">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="mapAltUrl" ordered="false" lowerBound="1">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="altUrl" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="mapResource" ordered="false" lowerBound="1">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="resource" ordered="false" lowerBound="1" eType="#//GRDF_Doc"/>
+    </eOperations>
+    <eOperations name="findMapper" ordered="false" lowerBound="1" eType="#//ResourceMapper">
+      <eParameters name="uri" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="buildMap" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Permet de construire la map à partir d'un répertoire racine donné en paramêtre.&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="rootDir" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcesMapping" ordered="false"
+        upperBound="-1" eType="#//ResourceMapper" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loadImport" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceMapper">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicURI" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Adresse publique ex.: &quot;http://www.cotechnoe.com/exemple.owl&quot;&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altURL" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Adresse alternative contenant par exemple le nom de l'emplacement local du l'ontologie ex.: &quot;file:///c:/document/exemple.ttl&quot;&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gowlResource" ordered="false"
+        lowerBound="1" eType="#//GRDF_Doc"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="URI" eSuperTypes="#//G_PredicateProperty #//ALink_Class #//ALink_Property #//ClassType #//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//ClassTypeOf_subPropertyOf #//DisjointMembers #//G_Boolean_Operand_rule #//G_Object #//G_OneOf_OperandRule #//G_Subject #//InstanceType #//LinkInverseOf_Property_rule #//OWL_equivalentProperty_rule #//OWL_sameAs_rule #//RestrictionFromClass #//RestrictionOnObjectProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Restriction" abstract="true" eSuperTypes="#//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//G_Boolean_Operand_rule #//G_Container #//RestrictionFromClass">
+    <eOperations name="asSomeValuesFromRestriction" ordered="false" lowerBound="1"
+        eType="#//OWL_ObjectSomeValuesFrom">
+      <eParameters name="onObjectProperty" ordered="false" lowerBound="1" eType="#//RestrictionOnObjectProperty"/>
+      <eParameters name="hasResource" ordered="false" lowerBound="1" eType="#//RestrictionFromClass"/>
+    </eOperations>
+    <eOperations name="isSomeValuesRestriction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="asAllValuesFromRestriction" ordered="false" lowerBound="1"
+        eType="#//OWL_ObjectAllValuesFrom">
+      <eParameters name="onObjectProperty" ordered="false" lowerBound="1" eType="#//RestrictionOnObjectProperty"/>
+      <eParameters name="onClass" ordered="false" lowerBound="1" eType="#//RestrictionFromClass"/>
+    </eOperations>
+    <eOperations name="isAllValuesRestriction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isHasValueRestriction" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="asHasValueRestriction" ordered="false" lowerBound="1" eType="#//OWL_ObjectHasValue">
+      <eParameters name="onObjectProperty" ordered="false" lowerBound="1" eType="#//RestrictionOnObjectProperty"/>
+      <eParameters name="onResource" ordered="false" lowerBound="1" eType="#//RDFS_Resource"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectSomeValuesFrom" eSuperTypes="#//G_Restriction_fromClass_onProperty_rule #//ALink_Class #//ClassType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Restriction_fromClass_onProperty_rule"
+      abstract="true" eSuperTypes="#//G_Restriction_onProperty_Rule">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Cette règle limite la signature des sous classes à la gestion de classe à partir de fromClass et la gestion d'une propriété à partir de onObjectProperty&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromClass" ordered="false"
+        lowerBound="1" eType="#//RestrictionFromClass" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Restriction_onProperty_Rule" abstract="true"
+      eSuperTypes="#//G_Restriction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onObjectProperty" ordered="false"
+        lowerBound="1" eType="#//RestrictionOnObjectProperty" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectAllValuesFrom" eSuperTypes="#//G_Restriction_fromClass_onProperty_rule #//ALink_Class #//ClassType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectHasValue" eSuperTypes="#//G_Restriction_Value_onProperty_rule"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Restriction_Value_onProperty_rule"
+      abstract="true" eSuperTypes="#//G_Restriction_onProperty_Rule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValue" ordered="false"
+        lowerBound="1" eType="#//RDFS_Resource" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectDataPropertyExpressionComponant"
+      eSuperTypes="#//G_Restriction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectDataPropertyRangeDomainAxiom"
+      eSuperTypes="#//G_Restriction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ObjectExistsSelf" eSuperTypes="#//G_Restriction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_oneOf" eSuperTypes="#//G_ObjectExpression #//ALink_Class #//ClassType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_ObjectExpression" abstract="true"
+      eSuperTypes="#//ClassTypeOf_SubClassOf #//G_Boolean_Operand_rule #//G_Container #//RestrictionFromClass">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//G_OneOf_OperandRule"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOneOf" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_Restriction" eSuperTypes="#//G_Restriction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restrictionType" ordered="false"
+        eType="#//RestrictionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RestrictionType">
+    <eLiterals name="someValuesFrom"/>
+    <eLiterals name="allValuesFrom" value="1"/>
+    <eLiterals name="cardinality" value="2"/>
+    <eLiterals name="hasSelf" value="3"/>
+    <eLiterals name="hasValue" value="4"/>
+    <eLiterals name="maxCardinality" value="5"/>
+    <eLiterals name="maxQualifiedCardinality" value="6"/>
+    <eLiterals name="minCardinality" value="7"/>
+    <eLiterals name="minQualifiedCardinality" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_BooleanExpression" abstract="true"
+      eSuperTypes="#//ClassTypeOf_equivalentClass_rule #//ClassTypeOf_SubClassOf #//G_Boolean_Operand_rule #//G_Container #//RestrictionFromClass">
+    <eOperations name="isIntersectionOf" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isUnionOf" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isComplementOf" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_intersectionOf" eSuperTypes="#//G_Boolean_MutlipleClass_rule #//ALink_Class #//ClassType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Boolean_MutlipleClass_rule" abstract="true"
+      eSuperTypes="#//G_BooleanExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" ordered="false"
+        lowerBound="2" upperBound="-1" eType="#//G_Boolean_Operand_rule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_unionOf" eSuperTypes="#//G_Boolean_MutlipleClass_rule #//ALink_Class #//ClassType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_complementOf" eSuperTypes="#//ClassType #//G_BooleanExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" ordered="false"
+        lowerBound="1" eType="#//G_Boolean_Operand_rule" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DSLink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_equivalentClass" eSuperTypes="#//DSLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceClass" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_equivalentClass_rule" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetClass" ordered="false"
+        lowerBound="1" eType="#//ClassTypeOf_equivalentClass_rule" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_equivalentProperty" eSuperTypes="#//DSLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceProperty" ordered="false"
+        lowerBound="1" eType="#//OWL_equivalentProperty_rule" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetProperty" ordered="false"
+        lowerBound="1" eType="#//OWL_equivalentProperty_rule" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_sameAs" eSuperTypes="#//DSLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceIndividual" ordered="false"
+        lowerBound="1" eType="#//OWL_sameAs_rule" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetIndividual" ordered="false"
+        lowerBound="1" eType="#//OWL_sameAs_rule" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_DatatypeProperty" eSuperTypes="#//G_Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" ordered="false"
+        lowerBound="1" eType="#//G_DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_Query" abstract="true" eSuperTypes="#//G_Container">
+    <eOperations name="addVariable" ordered="false" lowerBound="1" eType="#//Variable">
+      <eParameters name="var" ordered="false" lowerBound="1" eType="#//Variable"/>
+    </eOperations>
+    <eOperations name="addVariable" ordered="false" lowerBound="1" eType="#//Variable">
+      <eParameters name="varName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="infer" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getQueryString" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="createNewVariable" ordered="false" lowerBound="1" eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableList" ordered="false"
+        lowerBound="1" eType="#//VariableList" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" ordered="false"
+        lowerBound="1" eType="#//Variable" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uriList" ordered="false"
+        lowerBound="1" eType="#//SPARQL_UriList" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableList">
+    <eOperations name="addVariable" ordered="false" lowerBound="1" eType="#//Variable">
+      <eParameters name="variable" ordered="false" lowerBound="1" eType="#//Variable"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" ordered="false"
+        upperBound="-1" eType="#//Variable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_UriList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gEntities" ordered="false"
+        upperBound="-1" eType="#//G_Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_Select" eSuperTypes="#//G_Query">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="whereClauses" ordered="false"
+        upperBound="-1" eType="#//WhereClause" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queryResult" ordered="false"
+        lowerBound="1" eType="#//QueryResult" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sparql_result" ordered="false"
+        eType="#//SPARQL_Result" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WhereClause" abstract="true" eSuperTypes="#//QueryStatement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryStatement" abstract="true">
+    <eOperations name="getQueryNodeString" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>Extrait le glabel ou l'uri d'un QueryNode indépendamment qu'il soit une Variable ou  un G_URI&lt;/p>"/>
+      </eAnnotations>
+      <eParameters name="queryNode" ordered="false" lowerBound="1" eType="#//QueryNode"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aSubject" ordered="false"
+        lowerBound="1" eType="#//QueryNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aPredicate" ordered="false"
+        lowerBound="1" eType="#//QueryNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aObject" ordered="false"
+        lowerBound="1" eType="#//SPARQL_ObjectNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryResult">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" ordered="false"
+        upperBound="-1" eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="varSequence" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputFormat" ordered="false"
+        eType="#//SPARQL_OutputFormat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SPARQL_OutputFormat">
+    <eLiterals name="TEXT"/>
+    <eLiterals name="CSV" value="1"/>
+    <eLiterals name="TSV" value="2"/>
+    <eLiterals name="JSON" value="3"/>
+    <eLiterals name="XML" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_Result">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SPARQL_Result_Columns"
+        ordered="false" upperBound="-1" eType="#//SPARQL_Result_Column_Title" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SPARQL_Result_Lines" ordered="false"
+        upperBound="-1" eType="#//SPARQL_Result_Line" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_Result_Column_Title">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_Result_Line">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QueryLink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SPIN_query" eSuperTypes="#//QueryLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromResource" ordered="false"
+        eType="#//G_Resource" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toQuery" ordered="false"
+        eType="#//G_Query" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OntologicalPredicate">
+    <eLiterals name="rdf_type"/>
+    <eLiterals name="rdfs_subClassOf" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedIteratorOntModel" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OntologicalURI" eSuperTypes="#//QueryNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_WhereClause_Link" eSuperTypes="#//G_UntypedRelationAndEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNode" ordered="false"
+        eType="#//QueryNode" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" ordered="false"
+        eType="#//QueryNode" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_UntypedRelationAndEntity" abstract="true"
+      eSuperTypes="#//G_UnTypedRelation #//WhereClause">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Cette classe abstraite permet d'unir les méthodes associés à des resources et des relations&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_WhereClause_Node" eSuperTypes="#//WhereClause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SPARQL_Literal" eSuperTypes="#//SPARQL_ObjectNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InverseOfLink" abstract="true" eSuperTypes="#//G_TypedRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_inverseOf" eSuperTypes="#//InverseOfLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetInvProperty" ordered="false"
+        lowerBound="1" eType="#//LinkInverseOf_Property_rule" volatile="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceInvProperty" ordered="false"
+        lowerBound="1" eType="#//LinkInverseOf_Property_rule" volatile="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_AsymmetricProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_InverseFunctionnalProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_IrreflexiveProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_ReflexiveProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_SymmetricProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_TransitiveProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_FunctionnalProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_AnnotationProperty" eSuperTypes="#//G_Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_Ontology" eSuperTypes="#//G_Object #//G_Resource #//G_Subject #//OntologyHeader"/>
+  <eClassifiers xsi:type="ecore:EClass" name="G_DisjointExpression" eSuperTypes="#//G_Container">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAllDisjointClasses" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDisjointWith" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" ordered="false"
+        upperBound="-1" eType="#//DisjointMembers"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAllDifferent" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_AllDisjointClass" eSuperTypes="#//G_DisjointExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_disjointWith" eSuperTypes="#//G_DisjointExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_disjointUnionOf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OWL_AllDifferent" eSuperTypes="#//G_DisjointExpression"/>
+</ecore:EPackage>

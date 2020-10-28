@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gowl" nsURI="http://cotechnoe.com/vocabulary/g-owl.ecore" nsPrefix="gowl">
+  <eClassifiers xsi:type="ecore:EClass" name="G_OWL_Document">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_entities" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_relations" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Relation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g_prefix" ordered="false"
+        upperBound="-1" eType="#//model/core/G_Prefix" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseIRI" ordered="false"
+        lowerBound="1" eType="#//model/core/IRI"/>
+  </eClassifiers>
+  <eSubpackages name="model" nsURI="http://cotechnoe.com/vocabulary/gowl-model.ecore"
+      nsPrefix="model">
+    <eSubpackages name="relation" nsURI="http://cotechnoe.com/vocabulary/gowl-relation.ecore"
+        nsPrefix="relation">
+      <eClassifiers xsi:type="ecore:EClass" name="G_TypedRelation" abstract="true"
+          eSuperTypes="#//model/core/G_Relation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ILink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="I" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="I" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PLink" eSuperTypes="#//model/relation/G_UntypedRelation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_UntypedRelation" abstract="true"
+          eSuperTypes="#//model/core/G_Relation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SLink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="S" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="S" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ELink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="E" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="E" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ALink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="A" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="A" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InvLink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="Inv" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="-1" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="NegatePLink" eSuperTypes="#//model/relation/G_UntypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="NOT" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="NOT" unsettable="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DLink" eSuperTypes="#//model/relation/G_TypedRelation">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="D" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            changeable="false" defaultValueLiteral="D" unsettable="true"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="entity" nsURI="http://cotechnoe.com/vocabulary/gowl-entity.ecore"
+        nsPrefix="entity">
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectIntersectionOf" eSuperTypes="#//model/entity/G_ClassContainer"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ClassContainer" abstract="true"
+          eSuperTypes="#//model/entity/G_Container"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Container" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Collection" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_AnnotationProperty" eSuperTypes="#//model/entity/G_Property"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Property" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_ObjectProperty" eSuperTypes="#//model/entity/G_Property"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_AnonymousIndividual" eSuperTypes="#//model/entity/G_Individual"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Individual" abstract="true" eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_NamedIndividual" eSuperTypes="#//model/entity/G_Individual"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_NamedClass" eSuperTypes="#//model/entity/G_Collection"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Resource" eSuperTypes="#//model/entity/G_SingleObject"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_SingleObject" abstract="true"
+          eSuperTypes="#//model/core/G_Entity"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Literal" eSuperTypes="#//model/entity/G_SingleObject"/>
+    </eSubpackages>
+    <eSubpackages name="core" nsURI="http://cotechnoe.com/vocabulary/gowl-core.ecore"
+        nsPrefix="core">
+      <eClassifiers xsi:type="ecore:EClass" name="G_Relation" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_label" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
+            eType="#//model/core/G_Entity" eOpposite="#//model/core/G_Entity/isSourceOf"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+            eType="#//model/core/G_Entity" eOpposite="#//model/core/G_Entity/isTargetOf"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Resource" eSuperTypes="#//model/entity/G_SingleObject"/>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Prefix">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ns" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IRI">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="G_Entity" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isSourceOf" ordered="false"
+            upperBound="-1" eType="#//model/core/G_Relation" eOpposite="#//model/core/G_Relation/source"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="isTargetOf" ordered="false"
+            upperBound="-1" eType="#//model/core/G_Relation" eOpposite="#//model/core/G_Relation/target"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_label" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>
