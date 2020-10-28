@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:entity="http://cotechnoe.com/vocabulary/gowl-entity.ecore" xmlns:gowl="http://cotechnoe.com/vocabulary/g-owl.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://cotechnoe.com/vocabulary/gowl-entity.ecore http://cotechnoe.com/vocabulary/g-owl.ecore#//entity http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_PPELIBj7EeuPE9GKM-Etrw" selectedViews="_UsOFcBj9EeuPE9GKM-Etrw _hWzhsBj9EeuPE9GKM-Etrw" version="14.3.1.202003261200">
+    <semanticResources>description/g-owl.odesign</semanticResources>
+    <semanticResources>environment:/viewpoint</semanticResources>
+    <semanticResources>platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore</semanticResources>
+    <semanticResources>MyGowl.gowl</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_UsOFcBj9EeuPE9GKM-Etrw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_VJCkUBj9EeuPE9GKM-Etrw" name="gowl class diagram" repPath="#_VIApkBj9EeuPE9GKM-Etrw" changeId="57ac940a-8e2d-4adf-8ee9-af8aefa2d855">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hWzhsBj9EeuPE9GKM-Etrw">
+      <viewpoint xmi:type="description:Viewpoint" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_h1VQwRj9EeuPE9GKM-Etrw" name="new g-owl diagram" repPath="#_h1TbkBj9EeuPE9GKM-Etrw" changeId="5bfd1576-9d0c-41dc-9951-62de8d9e5ca0">
+        <description xmi:type="description_1:DiagramDescription" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']"/>
+        <target xmi:type="gowl:G_OWL_Document" href="MyGowl.gowl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_VIApkBj9EeuPE9GKM-Etrw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_VI-58Bj9EeuPE9GKM-Etrw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_VI-58Rj9EeuPE9GKM-Etrw">
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_Wl_DcBj9EeuPE9GKM-Etrw" labelExpression="service:renderAsNode" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelFormat>bold</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+        </computedStyleDescriptions>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_VJdbEBj9EeuPE9GKM-Etrw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_VJdbERj9EeuPE9GKM-Etrw" type="Sirius" element="_VIApkBj9EeuPE9GKM-Etrw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_WmDU4Bj9EeuPE9GKM-Etrw" type="2003" element="_WlxoEBj9EeuPE9GKM-Etrw">
+          <children xmi:type="notation:Node" xmi:id="_WmD78Bj9EeuPE9GKM-Etrw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_WmFxIBj9EeuPE9GKM-Etrw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_WmGYMBj9EeuPE9GKM-Etrw" type="3010" element="_Wl7ZEBj9EeuPE9GKM-Etrw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_WmGYMRj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_WmGYMhj9EeuPE9GKM-Etrw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_WmGYMxj9EeuPE9GKM-Etrw" type="3010" element="_Wl9OQBj9EeuPE9GKM-Etrw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_WmGYNBj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_WmGYNRj9EeuPE9GKM-Etrw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_WmG_QBj9EeuPE9GKM-Etrw" type="3010" element="_Wl91URj9EeuPE9GKM-Etrw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_WmG_QRj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_WmG_Qhj9EeuPE9GKM-Etrw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_WmG_Qxj9EeuPE9GKM-Etrw" type="3010" element="_Wl-cYBj9EeuPE9GKM-Etrw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_WmG_RBj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="8" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_WmG_RRj9EeuPE9GKM-Etrw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_WmFxIRj9EeuPE9GKM-Etrw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_WmFxIhj9EeuPE9GKM-Etrw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_WmDU4Rj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WmDU4hj9EeuPE9GKM-Etrw" x="48" y="36"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_VJdbEhj9EeuPE9GKM-Etrw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_WlxoEBj9EeuPE9GKM-Etrw" name="G_OWL_Document" tooltipText="" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document"/>
+      <semanticElements xmi:type="ecore:EClass" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Wl0rYBj9EeuPE9GKM-Etrw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Wl7ZEBj9EeuPE9GKM-Etrw" name=" g_entities : G_Entity" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_entities"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_entities"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_Wl8nMBj9EeuPE9GKM-Etrw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Wl9OQBj9EeuPE9GKM-Etrw" name=" g_relations : G_Relation" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_relations"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_relations"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_Wl91UBj9EeuPE9GKM-Etrw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Wl91URj9EeuPE9GKM-Etrw" name=" g_prefix : G_Prefix" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_prefix"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/g_prefix"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_Wl91Uhj9EeuPE9GKM-Etrw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Wl-cYBj9EeuPE9GKM-Etrw" name=" baseIRI : IRI" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/baseIRI"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#//G_OWL_Document/baseIRI"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_Wl_DcRj9EeuPE9GKM-Etrw" labelAlignment="LEFT" description="_Wl_DcBj9EeuPE9GKM-Etrw" color="114,159,207">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_VIRIQBj9EeuPE9GKM-Etrw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <target xmi:type="ecore:EPackage" href="platform:/resource/com.cotechnoe.ontocase.eli/model/g-owl.ecore#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_h1TbkBj9EeuPE9GKM-Etrw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_h1UpsBj9EeuPE9GKM-Etrw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_h1UpsRj9EeuPE9GKM-Etrw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_h1VQwhj9EeuPE9GKM-Etrw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_h1VQwxj9EeuPE9GKM-Etrw" type="Sirius" element="_h1TbkBj9EeuPE9GKM-Etrw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_z5NF4Bj9EeuPE9GKM-Etrw" type="2001" element="_z44VwBj9EeuPE9GKM-Etrw">
+          <children xmi:type="notation:Node" xmi:id="_z5Ns8Bj9EeuPE9GKM-Etrw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_z5Ns8Rj9EeuPE9GKM-Etrw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_z5OUABj9EeuPE9GKM-Etrw" type="3016" element="_z45j4Bj9EeuPE9GKM-Etrw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_z5OUARj9EeuPE9GKM-Etrw" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z5OUAhj9EeuPE9GKM-Etrw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_z5NF4Rj9EeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z5NF4hj9EeuPE9GKM-Etrw" x="120" y="132" width="217" height="73"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_DOzl0BkdEeuPE9GKM-Etrw" type="2001" element="_DOxJkRkdEeuPE9GKM-Etrw">
+          <children xmi:type="notation:Node" xmi:id="_DOzl0xkdEeuPE9GKM-Etrw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_DOzl1BkdEeuPE9GKM-Etrw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_DOzl1RkdEeuPE9GKM-Etrw" type="3016" element="_DOxwoBkdEeuPE9GKM-Etrw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_DOzl1hkdEeuPE9GKM-Etrw" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DOzl1xkdEeuPE9GKM-Etrw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_DOzl0RkdEeuPE9GKM-Etrw" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DOzl0hkdEeuPE9GKM-Etrw" x="432" y="120" width="193" height="49"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_h1VQxBj9EeuPE9GKM-Etrw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_z44VwBj9EeuPE9GKM-Etrw" name="r1" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="entity:G_Resource" href="MyGowl.gowl#//@g_entities.0"/>
+      <semanticElements xmi:type="entity:G_Resource" href="MyGowl.gowl#//@g_entities.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_z45j4Bj9EeuPE9GKM-Etrw" labelSize="12" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']/@defaultLayer/@nodeMappings[name='Resource']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']/@defaultLayer/@nodeMappings[name='Resource']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_DOxJkRkdEeuPE9GKM-Etrw" name="r3" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="entity:G_Resource" href="MyGowl.gowl#//@g_entities.1"/>
+      <semanticElements xmi:type="entity:G_Resource" href="MyGowl.gowl#//@g_entities.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_DOxwoBkdEeuPE9GKM-Etrw" labelSize="12" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:EllipseNodeDescription" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']/@defaultLayer/@nodeMappings[name='Resource']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']/@defaultLayer/@nodeMappings[name='Resource']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_h1UCoBj9EeuPE9GKM-Etrw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="description/g-owl.odesign#//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='g-owl%20diagram']/@defaultLayer"/>
+    <target xmi:type="gowl:G_OWL_Document" href="MyGowl.gowl#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
