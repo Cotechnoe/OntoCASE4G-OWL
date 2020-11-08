@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright Text&#x9;(c) 2020 Cotechnoe http://www.cotechnoe.com"
+    modelDirectory="/com.cotechnoe.ontocase.eli/src" modelPluginID="com.cotechnoe.ontocase.eli"
+    modelName="Gowl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>gowl.ecore</foreignModel>
+  <genPackages prefix="Gowl" basePackage="com.cotechnoe.ontocase.eli" resource="XMI"
+      disposableProviderFactory="true" ecorePackage="gowl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gowl.ecore#//G_LABEL_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/LABEL"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/RDFS_LABEL"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/IRI"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/QNAME"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/PROPERTY_LABEL"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_LABEL_TYPE/TYPED_LINK"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gowl.ecore#//G_ClassType">
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/OWL_CLASS"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/RDFS_CLASS"/>
+      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/SKOS_CLASS"/>
+    </genEnums>
+    <genClasses ecoreClass="gowl.ecore#//ALink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_TypedRelation" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Relation" labelFeature="#//gowl/G_OWL_Object/g_label">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Relation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Relation/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_OWL_Object" labelFeature="#//gowl/G_OWL_Object/g_label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/g_labelType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/iri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/g_label"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Entity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Entity/isTargetOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Entity/isSourceOf"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//DLink" labelFeature="#//gowl/G_OWL_Object/g_label">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//DLink/D"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//ELink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_UntypedRelation" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//ILink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//InvLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//NegatePLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//PLink" labelFeature="#//gowl/G_OWL_Object/g_label">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//PLink/g_Property"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Property" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//SLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_AnnotationProperty" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_AnonymousIndividual" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Individual" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_ClassContainer" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Container" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_Collection" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_Literal" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses image="false" ecoreClass="gowl.ecore#//G_SingleObject" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_NamedClass" labelFeature="#//gowl/G_OWL_Object/g_label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_NamedClass/g_ClassType"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//G_NamedIndividual" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_ObjectIntersectionOf" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_ObjectProperty" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//G_Prefix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_Prefix/ns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_Prefix/iri"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//G_Annotation" labelFeature="#//gowl/G_OWL_Object/g_label"/>
+    <genClasses ecoreClass="gowl.ecore#//IRI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//IRI/iri"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//G_OWL_Document">
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_prefix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/baseIRI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/groupOfEntities"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/groupOfRelations"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_entities"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//Entities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//Entities/name"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//Relations"/>
+  </genPackages>
+</genmodel:GenModel>

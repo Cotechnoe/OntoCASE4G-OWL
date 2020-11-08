@@ -1,0 +1,20 @@
+source jdk11.sh 
+java -version
+cd gowl-siriusweb-plugins/plugins/
+
+Exporter les plugins
+
+rm -r ~/.m2/repository/com/cotechnoe/ontocase
+rm -r com
+SNAPSHOT=202011081452
+ELI=com.cotechnoe.ontocase.eli_0.1.0.${SNAPSHOT}.jar
+DESIGN=com.cotechnoe.ontocase.eli.design_1.0.0.${SNAPSHOT}.jar
+EDIT=com.cotechnoe.ontocase.eli.edit_1.0.0.${SNAPSHOT}.jar
+
+
+mvn install:install-file -DgroupId=com.cotechnoe.ontocase -DartifactId=com.cotechnoe.ontocase.eli -Dversion=0.1.0-SNAPSHOT -Dfile=$ELI -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
+mvn install:install-file -DgroupId=com.cotechnoe.ontocase -DartifactId=com.cotechnoe.ontocase.eli.design -Dversion=0.1.0-SNAPSHOT -Dfile=$DESIGN -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
+mvn install:install-file -DgroupId=com.cotechnoe.ontocase -DartifactId=com.cotechnoe.ontocase.eli.edit -Dversion=0.1.0-SNAPSHOT -Dfile=$EDIT -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
+
+cp -r com ~/.m2/repository/
+ls ~/.m2/repository/com/cotechnoe/ontocase

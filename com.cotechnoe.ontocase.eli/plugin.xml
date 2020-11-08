@@ -18,32 +18,16 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated g-owl -->
       <package
-            uri="http://cotechnoe.com/vocabulary/gowl-core.ecore"
-            class="com.cotechnoe.ontocase.eli.gowl.model.core.CorePackage"
-            genModel="model/g-owl.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated g-owl -->
-      <package
-            uri="http://cotechnoe.com/vocabulary/gowl-entity.ecore"
-            class="com.cotechnoe.ontocase.eli.gowl.model.entity.EntityPackage"
-            genModel="model/g-owl.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated g-owl -->
-      <package
             uri="http://cotechnoe.com/vocabulary/g-owl.ecore"
             class="com.cotechnoe.ontocase.eli.gowl.GowlPackage"
-            genModel="model/g-owl.genmodel"/>
+            genModel="model/old/g-owl.genmodel_"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
+   <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated g-owl -->
-      <package
-            uri="http://cotechnoe.com/vocabulary/gowl-relation.ecore"
-            class="com.cotechnoe.ontocase.eli.gowl.model.relation.RelationPackage"
-            genModel="model/g-owl.genmodel"/>
+      <parser
+            type="gowl"
+            class="com.cotechnoe.ontocase.eli.gowl.util.GowlResourceFactoryImpl"/>
    </extension>
+
 </plugin>

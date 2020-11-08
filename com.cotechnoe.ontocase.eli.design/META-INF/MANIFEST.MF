@@ -5,13 +5,10 @@ Bundle-SymbolicName: com.cotechnoe.ontocase.eli.design;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.cotechnoe.ontocase.eli.design.Activator
 Bundle-Localization: plugin
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.core.resources,
+Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.aql,
  com.cotechnoe.ontocase.eli;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: %providerName
 Automatic-Module-Name: com.cotechnoe.ontocase.eli.design

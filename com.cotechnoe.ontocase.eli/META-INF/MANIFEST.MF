@@ -7,19 +7,11 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: com.cotechnoe.ontocase.eli.gowl,
  com.cotechnoe.ontocase.eli.gowl.impl,
- com.cotechnoe.ontocase.eli.gowl.model.core,
- com.cotechnoe.ontocase.eli.gowl.model.core.impl,
- com.cotechnoe.ontocase.eli.gowl.model.core.util,
- com.cotechnoe.ontocase.eli.gowl.model.entity,
- com.cotechnoe.ontocase.eli.gowl.model.entity.impl,
- com.cotechnoe.ontocase.eli.gowl.model.entity.util,
- com.cotechnoe.ontocase.eli.gowl.model.relation,
- com.cotechnoe.ontocase.eli.gowl.model.relation.impl,
- com.cotechnoe.ontocase.eli.gowl.model.relation.util,
  com.cotechnoe.ontocase.eli.gowl.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport
 Bundle-ActivationPolicy: lazy

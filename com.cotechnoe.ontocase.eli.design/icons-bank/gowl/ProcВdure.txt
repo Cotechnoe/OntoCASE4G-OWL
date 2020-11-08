@@ -1,0 +1,3 @@
+- Éditer le fichier Vision
+- Sauver en gif
+- Faire les ajustements de tailles avec Gimp

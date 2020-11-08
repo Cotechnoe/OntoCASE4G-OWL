@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<gowl:G_OWL_Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:entity="http://cotechnoe.com/vocabulary/gowl-entity.ecore" xmlns:gowl="http://cotechnoe.com/vocabulary/g-owl.ecore" xmlns:relation="http://cotechnoe.com/vocabulary/gowl-relation.ecore">
-  <g_entities xsi:type="entity:G_Resource" isSourceOf="//@g_relations.0" g_label="r1"/>
-  <g_entities xsi:type="entity:G_Resource" isTargetOf="//@g_relations.0" g_label="r3"/>
-  <g_relations xsi:type="relation:PLink" g_label="r1 to r3" source="//@g_entities.0" target="//@g_entities.1"/>
-</gowl:G_OWL_Document>
