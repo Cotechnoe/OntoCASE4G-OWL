@@ -1540,5 +1540,5 @@
   <Ecore:EReference xmi:id="_T_1tYB0rEeuC86f1LDTikA" base_Property="__ZU8YR0qEeuC86f1LDTikA"/>
   <Ecore:EReference xmi:id="_U32TcB0rEeuC86f1LDTikA" base_Property="__ZUVUB0qEeuC86f1LDTikA"/>
   <Ecore:EAttribute xmi:id="_FujzkB1AEeuC86f1LDTikA" base_Property="_-NsqMB0_EeuC86f1LDTikA"/>
-  <Ecore:EReference xmi:id="_tbWXQB1TEeuC86f1LDTikA" isVolatile="true" base_Property="_lGe-EB1TEeuC86f1LDTikA"/>
+  <Ecore:EReference xmi:id="_tbWXQB1TEeuC86f1LDTikA" base_Property="_lGe-EB1TEeuC86f1LDTikA"/>
 </xmi:XMI>

@@ -36,9 +36,12 @@ public interface PLink extends G_UntypedRelation {
 	 * The list contents are of type {@link com.cotechnoe.ontocase.eli.gowl.G_Property}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * À transformer en volatile
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>GProperty</em>' containment reference list.
 	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getPLink_G_Property()
-	 * @model containment="true" required="true" volatile="true" ordered="false"
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	EList<G_Property> getG_Property();

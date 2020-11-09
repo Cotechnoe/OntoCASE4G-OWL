@@ -53,7 +53,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NegatePLink" eSuperTypes="#//G_UntypedRelation"/>
   <eClassifiers xsi:type="ecore:EClass" name="PLink" eSuperTypes="#//G_UntypedRelation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="g_Property" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//G_Property" volatile="true" containment="true"/>
+        lowerBound="1" upperBound="-1" eType="#//G_Property" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="G_Property" abstract="true" eSuperTypes="#//G_Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="SLink" eSuperTypes="#//G_TypedRelation"/>

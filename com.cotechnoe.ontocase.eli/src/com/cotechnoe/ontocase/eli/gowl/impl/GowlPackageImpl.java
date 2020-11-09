@@ -1117,7 +1117,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(negatePLinkEClass, NegatePLink.class, "NegatePLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pLinkEClass, PLink.class, "PLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPLink_G_Property(), this.getG_Property(), null, "g_Property", null, 1, -1, PLink.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPLink_G_Property(), this.getG_Property(), null, "g_Property", null, 1, -1, PLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(g_PropertyEClass, G_Property.class, "G_Property", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

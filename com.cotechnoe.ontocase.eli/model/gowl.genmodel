@@ -46,7 +46,8 @@
     <genClasses ecoreClass="gowl.ecore#//InvLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//NegatePLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//PLink" labelFeature="#//gowl/G_OWL_Object/g_label">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//PLink/g_Property"/>
+      <genFeatures documentation="À transformer en volatile" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//PLink/g_Property"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gowl.ecore#//G_Property" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//SLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
