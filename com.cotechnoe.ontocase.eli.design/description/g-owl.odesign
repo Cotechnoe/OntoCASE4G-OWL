@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="g-owl" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="g-owl" version="12.0.0.2017041100">
   <ownedViewpoints name="g-owl document" modelFileExtension="gowl">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="G-OWL diagram" domainClass="gowl::G_OWL_Document" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Individual" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_NamedIndividual">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale.svg">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_NamedIndividual.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Class" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_NamedClass">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/rectangle.svg">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_NamedClass.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="ObjectProperty" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_ObjectProperty">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/polygon.svg">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_ObjectProperty.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Annotation" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_Annotation">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.svg">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_Annotation.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -102,11 +102,11 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_ObjectProperty" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'property '+container.g_entities->size()"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'objectProperty '+container.g_entities->size()"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="GOD_CreateAnnotationProperty" label="AnnotationProperty" nodeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_ObjectProperty.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="GOD_CreateAnnotationProperty" label="AnnotationProperty" nodeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_AnnotationProperty.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -120,7 +120,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_Annotation" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'property '+container.g_entities->size()"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'annotation '+container.g_entities->size()"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -156,7 +156,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create SLINK" label="Lien S" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='S%20Link']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/LienS.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create SLINK" label="Lien S" precondition="aql:preSource.canCreateSlink(preTarget)" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='S%20Link']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/LienS.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -171,7 +171,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create ALINK" label="Lien A" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='ALink']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/Predicate.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create ALINK" label="Lien A" precondition="aql:preSource.canCreateAlink(preTarget)" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='ALink']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/Predicate.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -186,7 +186,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create ELINK" label="Lien E" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='E%20Link']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/LienE.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GOD Create ELINK" label="Lien E" precondition="aql:preSource.canCreateElink(preTarget)" edgeMappings="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@edgeMappings[name='E%20Link']" iconPath="/com.cotechnoe.ontocase.eli.design/icons/palette/LienE.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -216,4 +216,60 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="com.cotechnoe.ontocase.eli.design.Services"/>
   </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <metamodels href="../../com.cotechnoe.ontocase.eli/model/gowl.ecore#/"/>
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1"/>
+      <pages name="DebugPage" label="Debug" labelExpression="Debug" semanticCandidateExpression="var:self"/>
+      <groups name="Default Group" labelExpression="Group" domainClass="gowl::G_Entity" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="gowl::G_Entitie iri" labelExpression="aql:'IRI :'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('iri'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('iri').changeable" valueExpression="aql:self.iri">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="iri" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('iri').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="gowl::G_NamedIndividual g_labelType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_labelType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_labelType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_labelType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.getEEnumLiteralByLiteral(self.g_labelType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_labelType" valueExpression="aql:newValue.instance"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="gowl::G_NamedIndividual label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('label').changeable" valueExpression="aql:self.label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('label').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="gowl::G_NamedIndividual g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+      </groups>
+      <groups name="Class  Group" labelExpression="Class properties" domainClass="gowl::G_NamedClass" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="gowl::G_NamedClass g_ClassType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_ClassType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_ClassType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_ClassType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_ClassType').eType.getEEnumLiteralByLiteral(self.g_ClassType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_ClassType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_ClassType" valueExpression="aql:newValue.instance"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_ClassType').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+      </groups>
+    </categories>
+  </extensions>
 </description:Group>
