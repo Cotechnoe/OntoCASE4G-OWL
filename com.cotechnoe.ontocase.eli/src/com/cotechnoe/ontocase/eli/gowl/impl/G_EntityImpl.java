@@ -8,12 +8,14 @@ import com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE;
 import com.cotechnoe.ontocase.eli.gowl.G_Relation;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -26,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIsTargetOf <em>Is Target Of</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIri <em>Iri</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIsSourceOf <em>Is Source Of</em>}</li>
  * </ul>
  *
@@ -49,6 +52,26 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 	 */
 	protected EList<G_Relation> isTargetOf;
 
+
+	/**
+	 * The default value of the '{@link #getIri() <em>Iri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIri()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IRI_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIri() <em>Iri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIri()
+	 * @generated
+	 * @ordered
+	 */
+	protected String iri = IRI_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getIsSourceOf() <em>Is Source Of</em>}' reference list.
@@ -110,6 +133,29 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public String getIri() {
+		return iri;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIri(String newIri) {
+		String oldIri = iri;
+		iri = newIri;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GENTITY__IRI, oldIri, iri));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -148,6 +194,8 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 		switch (featureID) {
 			case GowlPackage.GENTITY__IS_TARGET_OF:
 				return getIsTargetOf();
+			case GowlPackage.GENTITY__IRI:
+				return getIri();
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				return getIsSourceOf();
 		}
@@ -166,6 +214,9 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 			case GowlPackage.GENTITY__IS_TARGET_OF:
 				getIsTargetOf().clear();
 				getIsTargetOf().addAll((Collection<? extends G_Relation>)newValue);
+				return;
+			case GowlPackage.GENTITY__IRI:
+				setIri((String)newValue);
 				return;
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				getIsSourceOf().clear();
@@ -186,6 +237,9 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 			case GowlPackage.GENTITY__IS_TARGET_OF:
 				getIsTargetOf().clear();
 				return;
+			case GowlPackage.GENTITY__IRI:
+				setIri(IRI_EDEFAULT);
+				return;
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				getIsSourceOf().clear();
 				return;
@@ -203,11 +257,29 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 		switch (featureID) {
 			case GowlPackage.GENTITY__IS_TARGET_OF:
 				return isTargetOf != null && !isTargetOf.isEmpty();
+			case GowlPackage.GENTITY__IRI:
+				return IRI_EDEFAULT == null ? iri != null : !IRI_EDEFAULT.equals(iri);
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				return isSourceOf != null && !isSourceOf.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (iri: ");
+		result.append(iri);
+		result.append(')');
+		return result.toString();
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * Le labelType est l'une de ces possibilité (IRI, LABEL, QNAME, RDFS_LABEL, LABEL)

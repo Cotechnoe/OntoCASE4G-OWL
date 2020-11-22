@@ -6,14 +6,10 @@ package com.cotechnoe.ontocase.eli.gowl.impl;
 import com.cotechnoe.ontocase.eli.gowl.G_Property;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
 import com.cotechnoe.ontocase.eli.gowl.PLink;
-
-import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,14 +33,14 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	public static final String copyright = "Copyright Text\t(c) 2020 Cotechnoe http://www.cotechnoe.com";
 
 	/**
-	 * The cached value of the '{@link #getG_Property() <em>GProperty</em>}' containment reference list.
+	 * The cached value of the '{@link #getG_Property() <em>GProperty</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getG_Property()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<G_Property> g_Property;
+	protected G_Property g_Property;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -73,9 +69,14 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	 * @generated
 	 */
 	@Override
-	public EList<G_Property> getG_Property() {
-		if (g_Property == null) {
-			g_Property = new EObjectContainmentEList<G_Property>(G_Property.class, this, GowlPackage.PLINK__GPROPERTY);
+	public G_Property getG_Property() {
+		if (g_Property != null && g_Property.eIsProxy()) {
+			InternalEObject oldG_Property = (InternalEObject)g_Property;
+			g_Property = (G_Property)eResolveProxy(oldG_Property);
+			if (g_Property != oldG_Property) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GowlPackage.PLINK__GPROPERTY, oldG_Property, g_Property));
+			}
 		}
 		return g_Property;
 	}
@@ -85,13 +86,21 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public G_Property basicGetG_Property() {
+		return g_Property;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case GowlPackage.PLINK__GPROPERTY:
-				return ((InternalEList<?>)getG_Property()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setG_Property(G_Property newG_Property) {
+		G_Property oldG_Property = g_Property;
+		g_Property = newG_Property;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.PLINK__GPROPERTY, oldG_Property, g_Property));
 	}
 
 	/**
@@ -103,7 +112,8 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GowlPackage.PLINK__GPROPERTY:
-				return getG_Property();
+				if (resolve) return getG_Property();
+				return basicGetG_Property();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,8 +128,7 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case GowlPackage.PLINK__GPROPERTY:
-				getG_Property().clear();
-				getG_Property().addAll((Collection<? extends G_Property>)newValue);
+				setG_Property((G_Property)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,7 +143,7 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case GowlPackage.PLINK__GPROPERTY:
-				getG_Property().clear();
+				setG_Property((G_Property)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,7 +158,7 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case GowlPackage.PLINK__GPROPERTY:
-				return g_Property != null && !g_Property.isEmpty();
+				return g_Property != null;
 		}
 		return super.eIsSet(featureID);
 	}

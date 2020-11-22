@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Gowl2owl
+Bundle-SymbolicName: com.cotechnoe.ontocase.eli.gowl2owl
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.cotechnoe.ontocase.eli.gowl2owl,
+ com.cotechnoe.ontocase.eli.gowl2owl.examples
+Require-Bundle: com.cotechnoe.ontocase.eli;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport

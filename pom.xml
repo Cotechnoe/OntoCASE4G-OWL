@@ -85,5 +85,7 @@
  	<module>com.cotechnoe.ontocase.eli</module>
  	<module>com.cotechnoe.ontocase.eli.design</module>
  	<module>com.cotechnoe.ontocase.eli.edit</module>
+ 	<module>com.cotechnoe.ontocase.eli.gowl2owl</module>
+ 	<module>com.cotechnoe.ontocase.eli.exporter</module>
  </modules>
 </project>

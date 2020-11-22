@@ -38,22 +38,22 @@ public interface GowlFactory extends EFactory {
 	G_OWL_Document createG_OWL_Document();
 
 	/**
-	 * Returns a new object of class '<em>Entities</em>'.
+	 * Returns a new object of class '<em>Entities Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entities</em>'.
+	 * @return a new object of class '<em>Entities Group</em>'.
 	 * @generated
 	 */
-	Entities createEntities();
+	EntitiesGroup createEntitiesGroup();
 
 	/**
-	 * Returns a new object of class '<em>Relations</em>'.
+	 * Returns a new object of class '<em>Relations Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Relations</em>'.
+	 * @return a new object of class '<em>Relations Group</em>'.
 	 * @generated
 	 */
-	Relations createRelations();
+	RelationsGroup createRelationsGroup();
 
 	/**
 	 * Returns a new object of class '<em>GPrefix</em>'.

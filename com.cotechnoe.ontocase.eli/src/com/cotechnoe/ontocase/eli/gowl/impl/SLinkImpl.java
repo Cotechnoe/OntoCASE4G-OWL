@@ -26,10 +26,11 @@ public class SLinkImpl extends G_TypedRelationImpl implements SLink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected SLinkImpl() {
 		super();
+		setG_label("S");
 	}
 
 	/**

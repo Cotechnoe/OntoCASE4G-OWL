@@ -7,20 +7,12 @@
 
 <plugin>
 
-
-
-
-
-
-
-
-
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated g-owl -->
       <package
             uri="http://cotechnoe.com/vocabulary/g-owl.ecore"
             class="com.cotechnoe.ontocase.eli.gowl.GowlPackage"
-            genModel="model/old/g-owl.genmodel_"/>
+            genModel="model/gowl.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">

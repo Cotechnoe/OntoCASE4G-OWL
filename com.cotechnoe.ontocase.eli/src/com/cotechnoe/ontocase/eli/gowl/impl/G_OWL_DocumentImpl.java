@@ -3,15 +3,12 @@
  */
 package com.cotechnoe.ontocase.eli.gowl.impl;
 
-import com.cotechnoe.ontocase.eli.gowl.Entities;
-import com.cotechnoe.ontocase.eli.gowl.G_Entity;
+import com.cotechnoe.ontocase.eli.gowl.EntitiesGroup;
 import com.cotechnoe.ontocase.eli.gowl.G_OWL_Document;
 import com.cotechnoe.ontocase.eli.gowl.G_Prefix;
-import com.cotechnoe.ontocase.eli.gowl.G_Relation;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
 import com.cotechnoe.ontocase.eli.gowl.IRI;
-
-import com.cotechnoe.ontocase.eli.gowl.Relations;
+import com.cotechnoe.ontocase.eli.gowl.RelationsGroup;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,12 +33,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getG_relations <em>Grelations</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getG_prefix <em>Gprefix</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getBaseIRI <em>Base IRI</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getGroupOfEntities <em>Group Of Entities</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getGroupOfRelations <em>Group Of Relations</em>}</li>
- *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getG_entities <em>Gentities</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,16 +48,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public static final String copyright = "Copyright Text\t(c) 2020 Cotechnoe http://www.cotechnoe.com";
-
-	/**
-	 * The cached value of the '{@link #getG_relations() <em>Grelations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getG_relations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<G_Relation> g_relations;
 
 	/**
 	 * The cached value of the '{@link #getG_prefix() <em>Gprefix</em>}' containment reference list.
@@ -85,14 +70,14 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	protected IRI baseIRI;
 
 	/**
-	 * The cached value of the '{@link #getGroupOfEntities() <em>Group Of Entities</em>}' containment reference list.
+	 * The cached value of the '{@link #getGroupOfEntities() <em>Group Of Entities</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGroupOfEntities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entities> groupOfEntities ;
+	protected EntitiesGroup groupOfEntities ;
 
 	/**
 	 * The cached value of the '{@link #getGroupOfRelations() <em>Group Of Relations</em>}' containment reference.
@@ -102,17 +87,7 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected Relations groupOfRelations ;
-
-	/**
-	 * The cached value of the '{@link #getG_entities() <em>Gentities</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getG_entities()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<G_Entity> g_entities;
+	protected RelationsGroup groupOfRelations ;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,19 +106,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass() {
 		return GowlPackage.Literals.GOWL_DOCUMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<G_Relation> getG_relations() {
-		if (g_relations == null) {
-			g_relations = new EObjectContainmentEList<G_Relation>(G_Relation.class, this, GowlPackage.GOWL_DOCUMENT__GRELATIONS);
-		}
-		return g_relations;
 	}
 
 	/**
@@ -205,10 +167,7 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public EList<Entities> getGroupOfEntities() {
-		if (groupOfEntities == null) {
-			groupOfEntities = new EObjectContainmentEList<Entities>(Entities.class, this, GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES);
-		}
+	public EntitiesGroup getGroupOfEntities() {
 		return groupOfEntities;
 	}
 
@@ -217,8 +176,43 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetGroupOfEntities(EntitiesGroup newGroupOfEntities, NotificationChain msgs) {
+		EntitiesGroup oldGroupOfEntities = groupOfEntities;
+		groupOfEntities = newGroupOfEntities;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES, oldGroupOfEntities, newGroupOfEntities);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
-	public Relations getGroupOfRelations() {
+	public void setGroupOfEntities(EntitiesGroup newGroupOfEntities) {
+		if (newGroupOfEntities != groupOfEntities) {
+			NotificationChain msgs = null;
+			if (groupOfEntities != null)
+				msgs = ((InternalEObject)groupOfEntities).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES, null, msgs);
+			if (newGroupOfEntities != null)
+				msgs = ((InternalEObject)newGroupOfEntities).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES, null, msgs);
+			msgs = basicSetGroupOfEntities(newGroupOfEntities, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES, newGroupOfEntities, newGroupOfEntities));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RelationsGroup getGroupOfRelations() {
 		return groupOfRelations;
 	}
 
@@ -227,8 +221,8 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGroupOfRelations(Relations newGroupOfRelations, NotificationChain msgs) {
-		Relations oldGroupOfRelations = groupOfRelations;
+	public NotificationChain basicSetGroupOfRelations(RelationsGroup newGroupOfRelations, NotificationChain msgs) {
+		RelationsGroup oldGroupOfRelations = groupOfRelations;
 		groupOfRelations = newGroupOfRelations;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS, oldGroupOfRelations, newGroupOfRelations);
@@ -243,7 +237,7 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void setGroupOfRelations(Relations newGroupOfRelations) {
+	public void setGroupOfRelations(RelationsGroup newGroupOfRelations) {
 		if (newGroupOfRelations != groupOfRelations) {
 			NotificationChain msgs = null;
 			if (groupOfRelations != null)
@@ -263,31 +257,14 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public EList<G_Entity> getG_entities() {
-		if (g_entities == null) {
-			g_entities = new EObjectContainmentEList<G_Entity>(G_Entity.class, this, GowlPackage.GOWL_DOCUMENT__GENTITIES);
-		}
-		return g_entities;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GowlPackage.GOWL_DOCUMENT__GRELATIONS:
-				return ((InternalEList<?>)getG_relations()).basicRemove(otherEnd, msgs);
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				return ((InternalEList<?>)getG_prefix()).basicRemove(otherEnd, msgs);
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
-				return ((InternalEList<?>)getGroupOfEntities()).basicRemove(otherEnd, msgs);
+				return basicSetGroupOfEntities(null, msgs);
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				return basicSetGroupOfRelations(null, msgs);
-			case GowlPackage.GOWL_DOCUMENT__GENTITIES:
-				return ((InternalEList<?>)getG_entities()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -300,8 +277,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GowlPackage.GOWL_DOCUMENT__GRELATIONS:
-				return getG_relations();
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				return getG_prefix();
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
@@ -311,8 +286,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 				return getGroupOfEntities();
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				return getGroupOfRelations();
-			case GowlPackage.GOWL_DOCUMENT__GENTITIES:
-				return getG_entities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,10 +299,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GowlPackage.GOWL_DOCUMENT__GRELATIONS:
-				getG_relations().clear();
-				getG_relations().addAll((Collection<? extends G_Relation>)newValue);
-				return;
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				getG_prefix().clear();
 				getG_prefix().addAll((Collection<? extends G_Prefix>)newValue);
@@ -338,15 +307,10 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 				setBaseIRI((IRI)newValue);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
-				getGroupOfEntities().clear();
-				getGroupOfEntities().addAll((Collection<? extends Entities>)newValue);
+				setGroupOfEntities((EntitiesGroup)newValue);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
-				setGroupOfRelations((Relations)newValue);
-				return;
-			case GowlPackage.GOWL_DOCUMENT__GENTITIES:
-				getG_entities().clear();
-				getG_entities().addAll((Collection<? extends G_Entity>)newValue);
+				setGroupOfRelations((RelationsGroup)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -360,9 +324,6 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GowlPackage.GOWL_DOCUMENT__GRELATIONS:
-				getG_relations().clear();
-				return;
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				getG_prefix().clear();
 				return;
@@ -370,13 +331,10 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 				setBaseIRI((IRI)null);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
-				getGroupOfEntities().clear();
+				setGroupOfEntities((EntitiesGroup)null);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
-				setGroupOfRelations((Relations)null);
-				return;
-			case GowlPackage.GOWL_DOCUMENT__GENTITIES:
-				getG_entities().clear();
+				setGroupOfRelations((RelationsGroup)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -390,18 +348,14 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GowlPackage.GOWL_DOCUMENT__GRELATIONS:
-				return g_relations != null && !g_relations.isEmpty();
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				return g_prefix != null && !g_prefix.isEmpty();
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
 				return baseIRI != null;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
-				return groupOfEntities != null && !groupOfEntities.isEmpty();
+				return groupOfEntities != null;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				return groupOfRelations != null;
-			case GowlPackage.GOWL_DOCUMENT__GENTITIES:
-				return g_entities != null && !g_entities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -94,22 +94,13 @@ public interface GowlPackage extends EPackage {
 	int GOWL_OBJECT__LABEL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOWL_OBJECT__IRI = 2;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_OBJECT__GLABEL = 3;
+	int GOWL_OBJECT__GLABEL = 2;
 
 	/**
 	 * The number of structural features of the '<em>GOWL Object</em>' class.
@@ -118,7 +109,7 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_OBJECT_FEATURE_COUNT = 4;
+	int GOWL_OBJECT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>GOWL Object</em>' class.
@@ -186,15 +177,6 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GRELATION__LABEL = GOWL_OBJECT__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRELATION__IRI = GOWL_OBJECT__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
@@ -410,15 +392,6 @@ public interface GowlPackage extends EPackage {
 	int GTYPED_RELATION__LABEL = GRELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GTYPED_RELATION__IRI = GRELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -542,15 +515,6 @@ public interface GowlPackage extends EPackage {
 	int ALINK__LABEL = GTYPED_RELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALINK__IRI = GTYPED_RELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -614,15 +578,6 @@ public interface GowlPackage extends EPackage {
 	int GENTITY__LABEL = GOWL_OBJECT__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENTITY__IRI = GOWL_OBJECT__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -641,13 +596,22 @@ public interface GowlPackage extends EPackage {
 	int GENTITY__IS_TARGET_OF = GOWL_OBJECT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENTITY__IRI = GOWL_OBJECT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENTITY__IS_SOURCE_OF = GOWL_OBJECT_FEATURE_COUNT + 1;
+	int GENTITY__IS_SOURCE_OF = GOWL_OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GEntity</em>' class.
@@ -656,7 +620,7 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENTITY_FEATURE_COUNT = GOWL_OBJECT_FEATURE_COUNT + 2;
+	int GENTITY_FEATURE_COUNT = GOWL_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>GEntity</em>' class.
@@ -714,15 +678,6 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int DLINK__LABEL = GTYPED_RELATION__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DLINK__IRI = GTYPED_RELATION__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
@@ -797,15 +752,6 @@ public interface GowlPackage extends EPackage {
 	int ELINK__LABEL = GTYPED_RELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELINK__IRI = GTYPED_RELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -867,15 +813,6 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GUNTYPED_RELATION__LABEL = GRELATION__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GUNTYPED_RELATION__IRI = GRELATION__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
@@ -941,15 +878,6 @@ public interface GowlPackage extends EPackage {
 	int ILINK__LABEL = GTYPED_RELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ILINK__IRI = GTYPED_RELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1011,15 +939,6 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int INV_LINK__LABEL = GTYPED_RELATION__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INV_LINK__IRI = GTYPED_RELATION__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
@@ -1085,15 +1004,6 @@ public interface GowlPackage extends EPackage {
 	int NEGATE_PLINK__LABEL = GUNTYPED_RELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NEGATE_PLINK__IRI = GUNTYPED_RELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1157,15 +1067,6 @@ public interface GowlPackage extends EPackage {
 	int PLINK__LABEL = GUNTYPED_RELATION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLINK__IRI = GUNTYPED_RELATION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1193,7 +1094,7 @@ public interface GowlPackage extends EPackage {
 	int PLINK__TARGET = GUNTYPED_RELATION__TARGET;
 
 	/**
-	 * The feature id for the '<em><b>GProperty</b></em>' containment reference list.
+	 * The feature id for the '<em><b>GProperty</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1238,15 +1139,6 @@ public interface GowlPackage extends EPackage {
 	int GPROPERTY__LABEL = GENTITY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GPROPERTY__IRI = GENTITY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1263,6 +1155,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GPROPERTY__IS_TARGET_OF = GENTITY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPROPERTY__IRI = GENTITY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1308,15 +1209,6 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLINK__LABEL = GTYPED_RELATION__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLINK__IRI = GTYPED_RELATION__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
@@ -1382,15 +1274,6 @@ public interface GowlPackage extends EPackage {
 	int GANNOTATION_PROPERTY__LABEL = GPROPERTY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GANNOTATION_PROPERTY__IRI = GPROPERTY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1407,6 +1290,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GANNOTATION_PROPERTY__IS_TARGET_OF = GPROPERTY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_PROPERTY__IRI = GPROPERTY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1454,15 +1346,6 @@ public interface GowlPackage extends EPackage {
 	int GINDIVIDUAL__LABEL = GENTITY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GINDIVIDUAL__IRI = GENTITY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1479,6 +1362,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GINDIVIDUAL__IS_TARGET_OF = GENTITY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GINDIVIDUAL__IRI = GENTITY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1526,15 +1418,6 @@ public interface GowlPackage extends EPackage {
 	int GANONYMOUS_INDIVIDUAL__LABEL = GINDIVIDUAL__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GANONYMOUS_INDIVIDUAL__IRI = GINDIVIDUAL__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,6 +1434,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GANONYMOUS_INDIVIDUAL__IS_TARGET_OF = GINDIVIDUAL__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANONYMOUS_INDIVIDUAL__IRI = GINDIVIDUAL__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1598,15 +1490,6 @@ public interface GowlPackage extends EPackage {
 	int GCONTAINER__LABEL = GENTITY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GCONTAINER__IRI = GENTITY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1623,6 +1506,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GCONTAINER__IS_TARGET_OF = GENTITY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCONTAINER__IRI = GENTITY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1670,15 +1562,6 @@ public interface GowlPackage extends EPackage {
 	int GCLASS_CONTAINER__LABEL = GCONTAINER__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GCLASS_CONTAINER__IRI = GCONTAINER__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1695,6 +1578,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GCLASS_CONTAINER__IS_TARGET_OF = GCONTAINER__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCLASS_CONTAINER__IRI = GCONTAINER__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1742,15 +1634,6 @@ public interface GowlPackage extends EPackage {
 	int GCOLLECTION__LABEL = GENTITY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GCOLLECTION__IRI = GENTITY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1767,6 +1650,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GCOLLECTION__IS_TARGET_OF = GENTITY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCOLLECTION__IRI = GENTITY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1814,15 +1706,6 @@ public interface GowlPackage extends EPackage {
 	int GSINGLE_OBJECT__LABEL = GENTITY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSINGLE_OBJECT__IRI = GENTITY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1839,6 +1722,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GSINGLE_OBJECT__IS_TARGET_OF = GENTITY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSINGLE_OBJECT__IRI = GENTITY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1886,15 +1778,6 @@ public interface GowlPackage extends EPackage {
 	int GLITERAL__LABEL = GSINGLE_OBJECT__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GLITERAL__IRI = GSINGLE_OBJECT__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1911,6 +1794,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GLITERAL__IS_TARGET_OF = GSINGLE_OBJECT__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLITERAL__IRI = GSINGLE_OBJECT__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -1958,15 +1850,6 @@ public interface GowlPackage extends EPackage {
 	int GNAMED_CLASS__LABEL = GCOLLECTION__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GNAMED_CLASS__IRI = GCOLLECTION__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1983,6 +1866,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GNAMED_CLASS__IS_TARGET_OF = GCOLLECTION__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GNAMED_CLASS__IRI = GCOLLECTION__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -2039,15 +1931,6 @@ public interface GowlPackage extends EPackage {
 	int GNAMED_INDIVIDUAL__LABEL = GINDIVIDUAL__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GNAMED_INDIVIDUAL__IRI = GINDIVIDUAL__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2064,6 +1947,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GNAMED_INDIVIDUAL__IS_TARGET_OF = GINDIVIDUAL__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GNAMED_INDIVIDUAL__IRI = GINDIVIDUAL__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -2111,15 +2003,6 @@ public interface GowlPackage extends EPackage {
 	int GOBJECT_INTERSECTION_OF__LABEL = GCLASS_CONTAINER__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOBJECT_INTERSECTION_OF__IRI = GCLASS_CONTAINER__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2136,6 +2019,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GOBJECT_INTERSECTION_OF__IS_TARGET_OF = GCLASS_CONTAINER__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOBJECT_INTERSECTION_OF__IRI = GCLASS_CONTAINER__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -2183,15 +2075,6 @@ public interface GowlPackage extends EPackage {
 	int GOBJECT_PROPERTY__LABEL = GPROPERTY__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOBJECT_PROPERTY__IRI = GPROPERTY__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2208,6 +2091,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GOBJECT_PROPERTY__IS_TARGET_OF = GPROPERTY__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOBJECT_PROPERTY__IRI = GPROPERTY__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -2301,15 +2193,6 @@ public interface GowlPackage extends EPackage {
 	int GANNOTATION__LABEL = GSINGLE_OBJECT__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GANNOTATION__IRI = GSINGLE_OBJECT__IRI;
-
-	/**
 	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2326,6 +2209,15 @@ public interface GowlPackage extends EPackage {
 	 * @ordered
 	 */
 	int GANNOTATION__IS_TARGET_OF = GSINGLE_OBJECT__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION__IRI = GSINGLE_OBJECT__IRI;
 
 	/**
 	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
@@ -2382,22 +2274,13 @@ public interface GowlPackage extends EPackage {
 	int IRI_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Grelations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOWL_DOCUMENT__GRELATIONS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Gprefix</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_DOCUMENT__GPREFIX = 1;
+	int GOWL_DOCUMENT__GPREFIX = 0;
 
 	/**
 	 * The feature id for the '<em><b>Base IRI</b></em>' reference.
@@ -2406,16 +2289,16 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_DOCUMENT__BASE_IRI = 2;
+	int GOWL_DOCUMENT__BASE_IRI = 1;
 
 	/**
-	 * The feature id for the '<em><b>Group Of Entities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Group Of Entities</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_DOCUMENT__GROUP_OF_ENTITIES = 3;
+	int GOWL_DOCUMENT__GROUP_OF_ENTITIES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Group Of Relations</b></em>' containment reference.
@@ -2424,16 +2307,7 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_DOCUMENT__GROUP_OF_RELATIONS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Gentities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOWL_DOCUMENT__GENTITIES = 5;
+	int GOWL_DOCUMENT__GROUP_OF_RELATIONS = 3;
 
 	/**
 	 * The number of structural features of the '<em>GOWL Document</em>' class.
@@ -2442,7 +2316,7 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GOWL_DOCUMENT_FEATURE_COUNT = 6;
+	int GOWL_DOCUMENT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>GOWL Document</em>' class.
@@ -2455,14 +2329,14 @@ public interface GowlPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.EntitiesImpl <em>Entities</em>}' class.
+	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.EntitiesGroupImpl <em>Entities Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.cotechnoe.ontocase.eli.gowl.impl.EntitiesImpl
-	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getEntities()
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.EntitiesGroupImpl
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getEntitiesGroup()
 	 * @generated
 	 */
-	int ENTITIES = 30;
+	int ENTITIES_GROUP = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2471,53 +2345,71 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITIES__NAME = 0;
+	int ENTITIES_GROUP__NAME = 0;
 
 	/**
-	 * The number of structural features of the '<em>Entities</em>' class.
+	 * The feature id for the '<em><b>Gentities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITIES_FEATURE_COUNT = 1;
+	int ENTITIES_GROUP__GENTITIES = 1;
 
 	/**
-	 * The number of operations of the '<em>Entities</em>' class.
+	 * The number of structural features of the '<em>Entities Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITIES_OPERATION_COUNT = 0;
+	int ENTITIES_GROUP_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.RelationsImpl <em>Relations</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.cotechnoe.ontocase.eli.gowl.impl.RelationsImpl
-	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getRelations()
-	 * @generated
-	 */
-	int RELATIONS = 31;
-
-	/**
-	 * The number of structural features of the '<em>Relations</em>' class.
+	 * The number of operations of the '<em>Entities Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONS_FEATURE_COUNT = 0;
+	int ENTITIES_GROUP_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Relations</em>' class.
+	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.RelationsGroupImpl <em>Relations Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.RelationsGroupImpl
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getRelationsGroup()
+	 * @generated
+	 */
+	int RELATIONS_GROUP = 31;
+
+	/**
+	 * The feature id for the '<em><b>Grelations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONS_OPERATION_COUNT = 0;
+	int RELATIONS_GROUP__GRELATIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Relations Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONS_GROUP_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Relations Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONS_GROUP_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}' enum.
@@ -2552,17 +2444,6 @@ public interface GowlPackage extends EPackage {
 	EClass getG_OWL_Document();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getG_relations <em>Grelations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Grelations</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getG_relations()
-	 * @see #getG_OWL_Document()
-	 * @generated
-	 */
-	EReference getG_OWL_Document_G_relations();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getG_prefix <em>Gprefix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2585,10 +2466,10 @@ public interface GowlPackage extends EPackage {
 	EReference getG_OWL_Document_BaseIRI();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getGroupOfEntities <em>Group Of Entities</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getGroupOfEntities <em>Group Of Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Group Of Entities</em>'.
+	 * @return the meta object for the containment reference '<em>Group Of Entities</em>'.
 	 * @see com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getGroupOfEntities()
 	 * @see #getG_OWL_Document()
 	 * @generated
@@ -2607,46 +2488,57 @@ public interface GowlPackage extends EPackage {
 	EReference getG_OWL_Document_GroupOfRelations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getG_entities <em>Gentities</em>}'.
+	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.EntitiesGroup <em>Entities Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Gentities</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getG_entities()
-	 * @see #getG_OWL_Document()
+	 * @return the meta object for class '<em>Entities Group</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.EntitiesGroup
 	 * @generated
 	 */
-	EReference getG_OWL_Document_G_entities();
+	EClass getEntitiesGroup();
 
 	/**
-	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.Entities <em>Entities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entities</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.Entities
-	 * @generated
-	 */
-	EClass getEntities();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.Entities#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.EntitiesGroup#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.Entities#getName()
-	 * @see #getEntities()
+	 * @see com.cotechnoe.ontocase.eli.gowl.EntitiesGroup#getName()
+	 * @see #getEntitiesGroup()
 	 * @generated
 	 */
-	EAttribute getEntities_Name();
+	EAttribute getEntitiesGroup_Name();
 
 	/**
-	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.Relations <em>Relations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.EntitiesGroup#getG_entities <em>Gentities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Relations</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.Relations
+	 * @return the meta object for the containment reference list '<em>Gentities</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.EntitiesGroup#getG_entities()
+	 * @see #getEntitiesGroup()
 	 * @generated
 	 */
-	EClass getRelations();
+	EReference getEntitiesGroup_G_entities();
+
+	/**
+	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.RelationsGroup <em>Relations Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relations Group</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.RelationsGroup
+	 * @generated
+	 */
+	EClass getRelationsGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.RelationsGroup#getG_relations <em>Grelations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Grelations</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.RelationsGroup#getG_relations()
+	 * @see #getRelationsGroup()
+	 * @generated
+	 */
+	EReference getRelationsGroup_G_relations();
 
 	/**
 	 * Returns the meta object for enum '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}'.
@@ -2741,17 +2633,6 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getG_OWL_Object_Label();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getIri <em>Iri</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Iri</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getIri()
-	 * @see #getG_OWL_Object()
-	 * @generated
-	 */
-	EAttribute getG_OWL_Object_Iri();
 
 	/**
 	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getG_label <em>Glabel</em>}'.
@@ -2858,6 +2739,17 @@ public interface GowlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getG_Entity_IsTargetOf();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIri <em>Iri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Iri</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_Entity#getIri()
+	 * @see #getG_Entity()
+	 * @generated
+	 */
+	EAttribute getG_Entity_Iri();
 
 	/**
 	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.G_ObjectIntersectionOf <em>GObject Intersection Of</em>}'.
@@ -3021,10 +2913,10 @@ public interface GowlPackage extends EPackage {
 	EClass getPLink();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.cotechnoe.ontocase.eli.gowl.PLink#getG_Property <em>GProperty</em>}'.
+	 * Returns the meta object for the reference '{@link com.cotechnoe.ontocase.eli.gowl.PLink#getG_Property <em>GProperty</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>GProperty</em>'.
+	 * @return the meta object for the reference '<em>GProperty</em>'.
 	 * @see com.cotechnoe.ontocase.eli.gowl.PLink#getG_Property()
 	 * @see #getPLink()
 	 * @generated
@@ -3146,14 +3038,6 @@ public interface GowlPackage extends EPackage {
 		EClass GOWL_DOCUMENT = eINSTANCE.getG_OWL_Document();
 
 		/**
-		 * The meta object literal for the '<em><b>Grelations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GOWL_DOCUMENT__GRELATIONS = eINSTANCE.getG_OWL_Document_G_relations();
-
-		/**
 		 * The meta object literal for the '<em><b>Gprefix</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3170,7 +3054,7 @@ public interface GowlPackage extends EPackage {
 		EReference GOWL_DOCUMENT__BASE_IRI = eINSTANCE.getG_OWL_Document_BaseIRI();
 
 		/**
-		 * The meta object literal for the '<em><b>Group Of Entities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Group Of Entities</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3186,22 +3070,14 @@ public interface GowlPackage extends EPackage {
 		EReference GOWL_DOCUMENT__GROUP_OF_RELATIONS = eINSTANCE.getG_OWL_Document_GroupOfRelations();
 
 		/**
-		 * The meta object literal for the '<em><b>Gentities</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.EntitiesGroupImpl <em>Entities Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.EntitiesGroupImpl
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getEntitiesGroup()
 		 * @generated
 		 */
-		EReference GOWL_DOCUMENT__GENTITIES = eINSTANCE.getG_OWL_Document_G_entities();
-
-		/**
-		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.EntitiesImpl <em>Entities</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.cotechnoe.ontocase.eli.gowl.impl.EntitiesImpl
-		 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getEntities()
-		 * @generated
-		 */
-		EClass ENTITIES = eINSTANCE.getEntities();
+		EClass ENTITIES_GROUP = eINSTANCE.getEntitiesGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3209,17 +3085,33 @@ public interface GowlPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITIES__NAME = eINSTANCE.getEntities_Name();
+		EAttribute ENTITIES_GROUP__NAME = eINSTANCE.getEntitiesGroup_Name();
 
 		/**
-		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.RelationsImpl <em>Relations</em>}' class.
+		 * The meta object literal for the '<em><b>Gentities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.cotechnoe.ontocase.eli.gowl.impl.RelationsImpl
-		 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getRelations()
 		 * @generated
 		 */
-		EClass RELATIONS = eINSTANCE.getRelations();
+		EReference ENTITIES_GROUP__GENTITIES = eINSTANCE.getEntitiesGroup_G_entities();
+
+		/**
+		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.RelationsGroupImpl <em>Relations Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.RelationsGroupImpl
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getRelationsGroup()
+		 * @generated
+		 */
+		EClass RELATIONS_GROUP = eINSTANCE.getRelationsGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Grelations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATIONS_GROUP__GRELATIONS = eINSTANCE.getRelationsGroup_G_relations();
 
 		/**
 		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}' enum.
@@ -3302,14 +3194,6 @@ public interface GowlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GOWL_OBJECT__LABEL = eINSTANCE.getG_OWL_Object_Label();
-
-		/**
-		 * The meta object literal for the '<em><b>Iri</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GOWL_OBJECT__IRI = eINSTANCE.getG_OWL_Object_Iri();
 
 		/**
 		 * The meta object literal for the '<em><b>Glabel</b></em>' attribute feature.
@@ -3398,6 +3282,14 @@ public interface GowlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GENTITY__IS_TARGET_OF = eINSTANCE.getG_Entity_IsTargetOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Iri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENTITY__IRI = eINSTANCE.getG_Entity_Iri();
 
 		/**
 		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.G_ObjectIntersectionOfImpl <em>GObject Intersection Of</em>}' class.
@@ -3558,7 +3450,7 @@ public interface GowlPackage extends EPackage {
 		EClass PLINK = eINSTANCE.getPLink();
 
 		/**
-		 * The meta object literal for the '<em><b>GProperty</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>GProperty</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

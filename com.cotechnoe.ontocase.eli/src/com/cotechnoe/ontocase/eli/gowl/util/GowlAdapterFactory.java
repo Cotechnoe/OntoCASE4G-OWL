@@ -195,12 +195,12 @@ public class GowlAdapterFactory extends AdapterFactoryImpl {
 				return createG_OWL_DocumentAdapter();
 			}
 			@Override
-			public Adapter caseEntities(Entities object) {
-				return createEntitiesAdapter();
+			public Adapter caseEntitiesGroup(EntitiesGroup object) {
+				return createEntitiesGroupAdapter();
 			}
 			@Override
-			public Adapter caseRelations(Relations object) {
-				return createRelationsAdapter();
+			public Adapter caseRelationsGroup(RelationsGroup object) {
+				return createRelationsGroupAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -237,30 +237,30 @@ public class GowlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.cotechnoe.ontocase.eli.gowl.Entities <em>Entities</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.cotechnoe.ontocase.eli.gowl.EntitiesGroup <em>Entities Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.cotechnoe.ontocase.eli.gowl.Entities
+	 * @see com.cotechnoe.ontocase.eli.gowl.EntitiesGroup
 	 * @generated
 	 */
-	public Adapter createEntitiesAdapter() {
+	public Adapter createEntitiesGroupAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.cotechnoe.ontocase.eli.gowl.Relations <em>Relations</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.cotechnoe.ontocase.eli.gowl.RelationsGroup <em>Relations Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.cotechnoe.ontocase.eli.gowl.Relations
+	 * @see com.cotechnoe.ontocase.eli.gowl.RelationsGroup
 	 * @generated
 	 */
-	public Adapter createRelationsAdapter() {
+	public Adapter createRelationsGroupAdapter() {
 		return null;
 	}
 

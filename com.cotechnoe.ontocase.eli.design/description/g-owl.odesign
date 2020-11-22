@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="g-owl" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="g-owl" version="12.0.0.2017041100">
   <ownedViewpoints name="g-owl document" modelFileExtension="gowl">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="G-OWL diagram" domainClass="gowl::G_OWL_Document" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Individual" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_NamedIndividual">
+        <nodeMappings name="Individual" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfEntities.g_entities" synchronizationLock="true" domainClass="gowl::G_NamedIndividual">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_NamedIndividual.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Class" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_NamedClass">
+        <nodeMappings name="Class" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfEntities.g_entities" synchronizationLock="true" domainClass="gowl::G_NamedClass">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_NamedClass.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="ObjectProperty" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_ObjectProperty">
+        <nodeMappings name="ObjectProperty" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfEntities.g_entities" synchronizationLock="true" domainClass="gowl::G_ObjectProperty">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_ObjectProperty.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Annotation" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_Annotation">
+        <nodeMappings name="Annotation" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfEntities.g_entities" synchronizationLock="true" domainClass="gowl::G_Annotation">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" iconPath="/com.cotechnoe.ontocase.eli.design/icons/gowl/ovale-dash.gif" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/G_Annotation.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="AnnotationProperty" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_entities" synchronizationLock="true" domainClass="gowl::G_AnnotationProperty">
+        <nodeMappings name="AnnotationProperty" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfEntities.g_entities" synchronizationLock="true" domainClass="gowl::G_AnnotationProperty">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:g_label" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/com.cotechnoe.ontocase.eli.design/icons/gowl/polygon-dash.svg">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="P Link" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="feature:g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::PLink" useDomainElement="true">
-          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="P Link" labelDirectEdit="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='editGLabel']" semanticCandidatesExpression="aql:self.groupOfRelations.g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::PLink" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:g_label">
               <labelFormat>bold</labelFormat>
@@ -42,8 +42,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="I Link" semanticCandidatesExpression="feature:g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ILink" useDomainElement="true">
-          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="I Link" semanticCandidatesExpression="aql:self.groupOfRelations.g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ILink" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:g_label">
               <labelFormat>bold</labelFormat>
@@ -51,8 +51,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="S Link" semanticCandidatesExpression="feature:g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::SLink" useDomainElement="true">
-          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="S Link" semanticCandidatesExpression="aql:self.groupOfRelations.g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::SLink" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:g_label">
               <labelFormat>bold</labelFormat>
@@ -60,8 +60,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ALink" semanticCandidatesExpression="feature:g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ALink" useDomainElement="true">
-          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="ALink" semanticCandidatesExpression="aql:self.groupOfRelations.g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ALink" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:g_label">
               <labelFormat>bold</labelFormat>
@@ -69,8 +69,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="E Link" semanticCandidatesExpression="feature:g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ELink" useDomainElement="true">
-          <style sourceArrow="InputFillClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+        <edgeMappings name="E Link" semanticCandidatesExpression="aql:self.groupOfRelations.g_relations" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual']" targetMapping="//@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Class'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='ObjectProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Annotation'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='AnnotationProperty'] //@ownedViewpoints[name='g-owl%20document']/@ownedRepresentations[name='G-OWL%20diagram']/@defaultLayer/@nodeMappings[name='Individual']" targetFinderExpression="aql:self.target" sourceFinderExpression="feature:source" domainClass="gowl::ELink" useDomainElement="true">
+          <style sourceArrow="InputFillClosedArrow" targetArrow="InputFillClosedArrow" sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:g_label">
               <labelFormat>bold</labelFormat>
@@ -83,8 +83,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_NamedIndividual" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'individual '+container.g_entities->size()"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.groupOfEntities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_NamedIndividual" referenceName="g_entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'individual '+container.g_entities->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -92,8 +94,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_NamedClass" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'class '+container.g_entities->size()"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.groupOfEntities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_NamedClass" referenceName="g_entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'class '+container.g_entities->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -101,8 +105,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_ObjectProperty" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'objectProperty '+container.g_entities->size()"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.groupOfEntities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_ObjectProperty" referenceName="g_entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'objectProperty '+container.g_entities->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -110,8 +116,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_AnnotationProperty" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'property '+container.g_entities->size()"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.groupOfEntities">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_AnnotationProperty" referenceName="g_entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'property '+container.g_entities->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -119,8 +127,10 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_Annotation" referenceName="g_entities">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'annotation '+container.g_entities->size()"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_Annotation" referenceName="g_entities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'annotation '+container.g_entities->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -132,7 +142,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer()">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(gowl::G_OWL_Document).groupOfRelations">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::PLink" referenceName="g_relations">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:source.g_label + ' to ' + target.g_label"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
@@ -147,7 +157,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer()">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(gowl::G_OWL_Document).groupOfRelations">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::ILink" referenceName="g_relations">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
@@ -162,7 +172,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer()">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(gowl::G_OWL_Document).groupOfRelations">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::SLink" referenceName="g_relations" variableName="sort-of">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
@@ -177,7 +187,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer()">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(gowl::G_OWL_Document).groupOfRelations">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::ALink" referenceName="g_relations">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:' A '"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
@@ -192,7 +202,7 @@
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer()">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(gowl::G_OWL_Document).groupOfRelations">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::ELink" referenceName="g_relations" variableName="equivalent-of">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
@@ -219,7 +229,7 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <metamodels href="../../com.cotechnoe.ontocase.eli/model/gowl.ecore#/"/>
     <categories name="Default Category">
-      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1"/>
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3"/>
       <pages name="DebugPage" label="Debug" labelExpression="Debug" semanticCandidateExpression="var:self"/>
       <groups name="Default Group" labelExpression="Group" domainClass="gowl::G_Entity" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:TextDescription" name="gowl::G_Entitie iri" labelExpression="aql:'IRI :'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('iri'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('iri').changeable" valueExpression="aql:self.iri">
@@ -268,6 +278,45 @@
               <labelFontFormat>bold</labelFontFormat>
             </style>
           </conditionalStyles>
+        </controls>
+      </groups>
+      <groups name="Link Group" labelExpression="Link" domainClass="gowl::G_Relation" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:RadioDescription" name="gowl::G_Relation g_labelType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_labelType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_labelType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_labelType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.getEEnumLiteralByLiteral(self.g_labelType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_labelType" valueExpression="aql:newValue.instance"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="gowl::G_Relation label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('label').changeable" valueExpression="aql:self.label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('label').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="gowl::G_Relation g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="gowl::G_Relation source" referenceNameExpression="aql:'source'"/>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="gowl::G_Relation target" referenceNameExpression="aql:'target'"/>
+      </groups>
+      <groups name="PLink Group" labelExpression="Plink" domainClass="gowl::PLink" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="gowl::PLink g_ObjectProperty" referenceNameExpression="aql:'g_ObjectProperty'"/>
+        <controls xsi:type="properties:SelectDescription" name="OP - Selector" labelExpression="Object Property :" valueExpression="aql:self.g_Property" candidatesExpression="aql:self.source.isSourceOf->filter(gowl::ILink).target.isSourceOf->filter(gowl::ALink).target" candidateDisplayExpression="aql:candidate.label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="g_Property" valueExpression="aql:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
         </controls>
       </groups>
     </categories>

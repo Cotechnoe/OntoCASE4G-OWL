@@ -26,10 +26,12 @@ public class ELinkImpl extends G_TypedRelationImpl implements ELink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ELinkImpl() {
 		super();
+		setG_label("E");
+
 	}
 
 	/**

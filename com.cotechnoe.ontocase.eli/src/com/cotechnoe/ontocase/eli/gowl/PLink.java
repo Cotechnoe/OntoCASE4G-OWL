@@ -3,9 +3,6 @@
  */
 package com.cotechnoe.ontocase.eli.gowl;
 
-import org.eclipse.emf.common.util.EList;
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>PLink</b></em>'.
@@ -32,17 +29,24 @@ public interface PLink extends G_UntypedRelation {
 	String copyright = "Copyright Text\t(c) 2020 Cotechnoe http://www.cotechnoe.com";
 
 	/**
-	 * Returns the value of the '<em><b>GProperty</b></em>' containment reference list.
-	 * The list contents are of type {@link com.cotechnoe.ontocase.eli.gowl.G_Property}.
+	 * Returns the value of the '<em><b>GProperty</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * À transformer en volatile
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>GProperty</em>' containment reference list.
+	 * @return the value of the '<em>GProperty</em>' reference.
+	 * @see #setG_Property(G_Property)
 	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getPLink_G_Property()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	EList<G_Property> getG_Property();
+	G_Property getG_Property();
+
+	/**
+	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.PLink#getG_Property <em>GProperty</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>GProperty</em>' reference.
+	 * @see #getG_Property()
+	 * @generated
+	 */
+	void setG_Property(G_Property value);
 } // PLink

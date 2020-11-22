@@ -30,11 +30,11 @@
     <genClasses image="false" ecoreClass="gowl.ecore#//G_OWL_Object" labelFeature="#//gowl/G_OWL_Object/g_label">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/g_labelType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/iri"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_OWL_Object/g_label"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gowl.ecore#//G_Entity">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Entity/isTargetOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_Entity/iri"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_Entity/isSourceOf"/>
     </genClasses>
     <genClasses ecoreClass="gowl.ecore#//DLink" labelFeature="#//gowl/G_OWL_Object/g_label">
@@ -46,8 +46,7 @@
     <genClasses ecoreClass="gowl.ecore#//InvLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//NegatePLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//PLink" labelFeature="#//gowl/G_OWL_Object/g_label">
-      <genFeatures documentation="À transformer en volatile" property="None" children="true"
-          createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//PLink/g_Property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//PLink/g_Property"/>
     </genClasses>
     <genClasses image="false" ecoreClass="gowl.ecore#//G_Property" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//SLink" labelFeature="#//gowl/G_OWL_Object/g_label"/>
@@ -74,19 +73,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//IRI/iri"/>
     </genClasses>
     <genClasses ecoreClass="gowl.ecore#//G_OWL_Document">
-      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
-          ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_relations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_prefix"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/baseIRI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/groupOfEntities"/>
       <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
           ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/groupOfRelations"/>
-      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
-          ecoreFeature="ecore:EReference gowl.ecore#//G_OWL_Document/g_entities"/>
     </genClasses>
-    <genClasses ecoreClass="gowl.ecore#//Entities">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//Entities/name"/>
+    <genClasses ecoreClass="gowl.ecore#//EntitiesGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//EntitiesGroup/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//EntitiesGroup/g_entities"/>
     </genClasses>
-    <genClasses ecoreClass="gowl.ecore#//Relations"/>
+    <genClasses ecoreClass="gowl.ecore#//RelationsGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//RelationsGroup/g_relations"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

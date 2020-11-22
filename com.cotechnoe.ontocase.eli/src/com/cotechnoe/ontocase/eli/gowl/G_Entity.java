@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIsTargetOf <em>Is Target Of</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIri <em>Iri</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIsSourceOf <em>Is Source Of</em>}</li>
  * </ul>
  *
@@ -57,5 +58,27 @@ public interface G_Entity extends G_OWL_Object {
 	 * @generated
 	 */
 	EList<G_Relation> getIsTargetOf();
+
+	/**
+	 * Returns the value of the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Iri</em>' attribute.
+	 * @see #setIri(String)
+	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_Entity_Iri()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getIri();
+
+	/**
+	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIri <em>Iri</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Iri</em>' attribute.
+	 * @see #getIri()
+	 * @generated
+	 */
+	void setIri(String value);
 
 } // G_Entity

@@ -26,10 +26,11 @@ public class ILinkImpl extends G_TypedRelationImpl implements ILink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ILinkImpl() {
 		super();
+		this.setG_label("I");
 	}
 
 	/**

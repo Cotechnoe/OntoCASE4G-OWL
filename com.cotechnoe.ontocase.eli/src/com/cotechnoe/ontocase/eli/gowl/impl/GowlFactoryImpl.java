@@ -84,8 +84,8 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 			case GowlPackage.GANNOTATION: return createG_Annotation();
 			case GowlPackage.IRI: return createIRI();
 			case GowlPackage.GOWL_DOCUMENT: return createG_OWL_Document();
-			case GowlPackage.ENTITIES: return createEntities();
-			case GowlPackage.RELATIONS: return createRelations();
+			case GowlPackage.ENTITIES_GROUP: return createEntitiesGroup();
+			case GowlPackage.RELATIONS_GROUP: return createRelationsGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,11 +128,16 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */ 
 	@Override
 	public G_OWL_Document createG_OWL_Document() {
 		G_OWL_DocumentImpl g_OWL_Document = new G_OWL_DocumentImpl();
+		EntitiesGroup entitiesGroup = createEntitiesGroup();
+		RelationsGroup relationsGroup = createRelationsGroup();
+
+		g_OWL_Document.setGroupOfEntities(entitiesGroup);
+		g_OWL_Document.setGroupOfRelations(relationsGroup);	
 		return g_OWL_Document;
 	}
 
@@ -142,9 +147,9 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 	 * @generated
 	 */
 	@Override
-	public Entities createEntities() {
-		EntitiesImpl entities = new EntitiesImpl();
-		return entities;
+	public EntitiesGroup createEntitiesGroup() {
+		EntitiesGroupImpl entitiesGroup = new EntitiesGroupImpl();
+		return entitiesGroup;
 	}
 
 	/**
@@ -153,9 +158,9 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 	 * @generated
 	 */
 	@Override
-	public Relations createRelations() {
-		RelationsImpl relations = new RelationsImpl();
-		return relations;
+	public RelationsGroup createRelationsGroup() {
+		RelationsGroupImpl relationsGroup = new RelationsGroupImpl();
+		return relationsGroup;
 	}
 
 	/**

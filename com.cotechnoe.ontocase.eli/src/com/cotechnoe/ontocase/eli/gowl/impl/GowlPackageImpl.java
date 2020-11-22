@@ -6,7 +6,7 @@ package com.cotechnoe.ontocase.eli.gowl.impl;
 import com.cotechnoe.ontocase.eli.gowl.ALink;
 import com.cotechnoe.ontocase.eli.gowl.DLink;
 import com.cotechnoe.ontocase.eli.gowl.ELink;
-import com.cotechnoe.ontocase.eli.gowl.Entities;
+import com.cotechnoe.ontocase.eli.gowl.EntitiesGroup;
 import com.cotechnoe.ontocase.eli.gowl.G_Annotation;
 import com.cotechnoe.ontocase.eli.gowl.G_AnnotationProperty;
 import com.cotechnoe.ontocase.eli.gowl.G_AnonymousIndividual;
@@ -36,7 +36,7 @@ import com.cotechnoe.ontocase.eli.gowl.ILink;
 import com.cotechnoe.ontocase.eli.gowl.InvLink;
 import com.cotechnoe.ontocase.eli.gowl.NegatePLink;
 import com.cotechnoe.ontocase.eli.gowl.PLink;
-import com.cotechnoe.ontocase.eli.gowl.Relations;
+import com.cotechnoe.ontocase.eli.gowl.RelationsGroup;
 import com.cotechnoe.ontocase.eli.gowl.SLink;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -73,14 +73,14 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entitiesEClass = null;
+	private EClass entitiesGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass relationsEClass = null;
+	private EClass relationsGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -376,7 +376,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_G_relations() {
+	public EReference getG_OWL_Document_G_prefix() {
 		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -386,7 +386,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_G_prefix() {
+	public EReference getG_OWL_Document_BaseIRI() {
 		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -396,7 +396,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_BaseIRI() {
+	public EReference getG_OWL_Document_GroupOfEntities() {
 		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -406,7 +406,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_GroupOfEntities() {
+	public EReference getG_OWL_Document_GroupOfRelations() {
 		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -416,8 +416,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_GroupOfRelations() {
-		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(4);
+	public EClass getEntitiesGroup() {
+		return entitiesGroupEClass;
 	}
 
 	/**
@@ -426,8 +426,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_G_entities() {
-		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(5);
+	public EAttribute getEntitiesGroup_Name() {
+		return (EAttribute)entitiesGroupEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -436,8 +436,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getEntities() {
-		return entitiesEClass;
+	public EReference getEntitiesGroup_G_entities() {
+		return (EReference)entitiesGroupEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -446,8 +446,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntities_Name() {
-		return (EAttribute)entitiesEClass.getEStructuralFeatures().get(0);
+	public EClass getRelationsGroup() {
+		return relationsGroupEClass;
 	}
 
 	/**
@@ -456,8 +456,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getRelations() {
-		return relationsEClass;
+	public EReference getRelationsGroup_G_relations() {
+		return (EReference)relationsGroupEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -556,18 +556,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getG_OWL_Object_Iri() {
-		return (EAttribute)g_OWL_ObjectEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getG_OWL_Object_G_label() {
-		return (EAttribute)g_OWL_ObjectEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)g_OWL_ObjectEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -647,7 +637,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 */
 	@Override
 	public EReference getG_Entity_IsSourceOf() {
-		return (EReference)g_EntityEClass.getEStructuralFeatures().get(1);
+		return (EReference)g_EntityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -658,6 +648,16 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	@Override
 	public EReference getG_Entity_IsTargetOf() {
 		return (EReference)g_EntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getG_Entity_Iri() {
+		return (EAttribute)g_EntityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -950,11 +950,11 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		g_OWL_ObjectEClass = createEClass(GOWL_OBJECT);
 		createEAttribute(g_OWL_ObjectEClass, GOWL_OBJECT__GLABEL_TYPE);
 		createEAttribute(g_OWL_ObjectEClass, GOWL_OBJECT__LABEL);
-		createEAttribute(g_OWL_ObjectEClass, GOWL_OBJECT__IRI);
 		createEAttribute(g_OWL_ObjectEClass, GOWL_OBJECT__GLABEL);
 
 		g_EntityEClass = createEClass(GENTITY);
 		createEReference(g_EntityEClass, GENTITY__IS_TARGET_OF);
+		createEAttribute(g_EntityEClass, GENTITY__IRI);
 		createEReference(g_EntityEClass, GENTITY__IS_SOURCE_OF);
 
 		dLinkEClass = createEClass(DLINK);
@@ -1012,17 +1012,17 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		createEAttribute(iriEClass, IRI__IRI);
 
 		g_OWL_DocumentEClass = createEClass(GOWL_DOCUMENT);
-		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GRELATIONS);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GPREFIX);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__BASE_IRI);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GROUP_OF_ENTITIES);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GROUP_OF_RELATIONS);
-		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GENTITIES);
 
-		entitiesEClass = createEClass(ENTITIES);
-		createEAttribute(entitiesEClass, ENTITIES__NAME);
+		entitiesGroupEClass = createEClass(ENTITIES_GROUP);
+		createEAttribute(entitiesGroupEClass, ENTITIES_GROUP__NAME);
+		createEReference(entitiesGroupEClass, ENTITIES_GROUP__GENTITIES);
 
-		relationsEClass = createEClass(RELATIONS);
+		relationsGroupEClass = createEClass(RELATIONS_GROUP);
+		createEReference(relationsGroupEClass, RELATIONS_GROUP__GRELATIONS);
 
 		// Create enums
 		g_LABEL_TYPEEEnum = createEEnum(GLABEL_TYPE);
@@ -1096,11 +1096,11 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(g_OWL_ObjectEClass, G_OWL_Object.class, "G_OWL_Object", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getG_OWL_Object_G_labelType(), this.getG_LABEL_TYPE(), "g_labelType", null, 0, 1, G_OWL_Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getG_OWL_Object_Label(), ecorePackage.getEString(), "label", null, 1, 1, G_OWL_Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getG_OWL_Object_Iri(), ecorePackage.getEString(), "iri", null, 1, 1, G_OWL_Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getG_OWL_Object_G_label(), ecorePackage.getEString(), "g_label", null, 1, 1, G_OWL_Object.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(g_EntityEClass, G_Entity.class, "G_Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getG_Entity_IsTargetOf(), this.getG_Relation(), this.getG_Relation_Target(), "isTargetOf", null, 0, -1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getG_Entity_Iri(), ecorePackage.getEString(), "iri", null, 1, 1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_Entity_IsSourceOf(), this.getG_Relation(), this.getG_Relation_Source(), "isSourceOf", null, 0, -1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dLinkEClass, DLink.class, "DLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1117,7 +1117,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(negatePLinkEClass, NegatePLink.class, "NegatePLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pLinkEClass, PLink.class, "PLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPLink_G_Property(), this.getG_Property(), null, "g_Property", null, 1, -1, PLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPLink_G_Property(), this.getG_Property(), null, "g_Property", null, 1, 1, PLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(g_PropertyEClass, G_Property.class, "G_Property", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1158,17 +1158,17 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEAttribute(getIRI_Iri(), ecorePackage.getEString(), "iri", null, 1, 1, com.cotechnoe.ontocase.eli.gowl.IRI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(g_OWL_DocumentEClass, G_OWL_Document.class, "G_OWL_Document", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getG_OWL_Document_G_relations(), this.getG_Relation(), null, "g_relations", null, 0, -1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_OWL_Document_G_prefix(), this.getG_Prefix(), null, "g_prefix", null, 0, -1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_OWL_Document_BaseIRI(), this.getIRI(), null, "baseIRI", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getG_OWL_Document_GroupOfEntities(), this.getEntities(), null, "groupOfEntities", null, 0, -1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getG_OWL_Document_GroupOfRelations(), this.getRelations(), null, "groupOfRelations", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getG_OWL_Document_G_entities(), this.getG_Entity(), null, "g_entities", null, 0, -1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getG_OWL_Document_GroupOfEntities(), this.getEntitiesGroup(), null, "groupOfEntities", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getG_OWL_Document_GroupOfRelations(), this.getRelationsGroup(), null, "groupOfRelations", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(entitiesEClass, Entities.class, "Entities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntities_Name(), ecorePackage.getEString(), "name", "Entities ", 1, 1, Entities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(entitiesGroupEClass, EntitiesGroup.class, "EntitiesGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEntitiesGroup_Name(), ecorePackage.getEString(), "name", "Entities ", 1, 1, EntitiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEntitiesGroup_G_entities(), this.getG_Entity(), null, "g_entities", null, 0, -1, EntitiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(relationsEClass, Relations.class, "Relations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(relationsGroupEClass, RelationsGroup.class, "RelationsGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRelationsGroup_G_relations(), this.getG_Relation(), null, "g_relations", null, 0, -1, RelationsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(g_LABEL_TYPEEEnum, G_LABEL_TYPE.class, "G_LABEL_TYPE");
@@ -1200,12 +1200,6 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 */
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-		addAnnotation
-		  (getG_OWL_Object_G_label(),
-		   source,
-		   new String[] {
-			   "namespace", ""
-		   });
 		addAnnotation
 		  (g_LABEL_TYPEEEnum,
 		   source,

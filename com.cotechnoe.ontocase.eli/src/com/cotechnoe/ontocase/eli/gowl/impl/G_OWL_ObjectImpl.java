@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_ObjectImpl#getG_labelType <em>Glabel Type</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_ObjectImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_ObjectImpl#getIri <em>Iri</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_ObjectImpl#getG_label <em>Glabel</em>}</li>
  * </ul>
  *
@@ -77,26 +76,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected String label = LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIri() <em>Iri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIri()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String IRI_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIri() <em>Iri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIri()
-	 * @generated
-	 * @ordered
-	 */
-	protected String iri = IRI_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getG_label() <em>Glabel</em>}' attribute.
@@ -176,29 +155,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getIri() {
-		return iri;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setIri(String newIri) {
-		String oldIri = iri;
-		iri = newIri;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_OBJECT__IRI, oldIri, iri));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
@@ -228,8 +184,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 				return getG_labelType();
 			case GowlPackage.GOWL_OBJECT__LABEL:
 				return getLabel();
-			case GowlPackage.GOWL_OBJECT__IRI:
-				return getIri();
 			case GowlPackage.GOWL_OBJECT__GLABEL:
 				return getG_label();
 		}
@@ -249,9 +203,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case GowlPackage.GOWL_OBJECT__LABEL:
 				setLabel((String)newValue);
-				return;
-			case GowlPackage.GOWL_OBJECT__IRI:
-				setIri((String)newValue);
 				return;
 			case GowlPackage.GOWL_OBJECT__GLABEL:
 				setG_label((String)newValue);
@@ -274,9 +225,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 			case GowlPackage.GOWL_OBJECT__LABEL:
 				setLabel(LABEL_EDEFAULT);
 				return;
-			case GowlPackage.GOWL_OBJECT__IRI:
-				setIri(IRI_EDEFAULT);
-				return;
 			case GowlPackage.GOWL_OBJECT__GLABEL:
 				setG_label(GLABEL_EDEFAULT);
 				return;
@@ -296,8 +244,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 				return g_labelType != GLABEL_TYPE_EDEFAULT;
 			case GowlPackage.GOWL_OBJECT__LABEL:
 				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-			case GowlPackage.GOWL_OBJECT__IRI:
-				return IRI_EDEFAULT == null ? iri != null : !IRI_EDEFAULT.equals(iri);
 			case GowlPackage.GOWL_OBJECT__GLABEL:
 				return GLABEL_EDEFAULT == null ? getG_label() != null : !GLABEL_EDEFAULT.equals(getG_label());
 		}
@@ -318,8 +264,6 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 		result.append(g_labelType);
 		result.append(", label: ");
 		result.append(label);
-		result.append(", iri: ");
-		result.append(iri);
 		result.append(')');
 		return result.toString();
 	}

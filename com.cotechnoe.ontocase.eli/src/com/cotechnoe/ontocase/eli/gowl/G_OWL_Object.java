@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getG_labelType <em>Glabel Type</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getLabel <em>Label</em>}</li>
- *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getIri <em>Iri</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getG_label <em>Glabel</em>}</li>
  * </ul>
  *
@@ -80,28 +79,6 @@ public interface G_OWL_Object extends EObject {
 	void setLabel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Iri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Iri</em>' attribute.
-	 * @see #setIri(String)
-	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_OWL_Object_Iri()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	String getIri();
-
-	/**
-	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Object#getIri <em>Iri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Iri</em>' attribute.
-	 * @see #getIri()
-	 * @generated
-	 */
-	void setIri(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Glabel</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -109,7 +86,6 @@ public interface G_OWL_Object extends EObject {
 	 * @see #setG_label(String)
 	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_OWL_Object_G_label()
 	 * @model required="true" volatile="true" ordered="false"
-	 *        extendedMetaData="namespace=''"
 	 * @generated
 	 */
 	String getG_label();

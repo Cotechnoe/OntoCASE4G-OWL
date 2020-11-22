@@ -321,15 +321,15 @@ public class GowlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GowlPackage.ENTITIES: {
-				Entities entities = (Entities)theEObject;
-				T result = caseEntities(entities);
+			case GowlPackage.ENTITIES_GROUP: {
+				EntitiesGroup entitiesGroup = (EntitiesGroup)theEObject;
+				T result = caseEntitiesGroup(entitiesGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GowlPackage.RELATIONS: {
-				Relations relations = (Relations)theEObject;
-				T result = caseRelations(relations);
+			case GowlPackage.RELATIONS_GROUP: {
+				RelationsGroup relationsGroup = (RelationsGroup)theEObject;
+				T result = caseRelationsGroup(relationsGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -353,32 +353,32 @@ public class GowlSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entities</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Entities Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entities</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Entities Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntities(Entities object) {
+	public T caseEntitiesGroup(EntitiesGroup object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Relations</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Relations Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Relations</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Relations Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelations(Relations object) {
+	public T caseRelationsGroup(RelationsGroup object) {
 		return null;
 	}
 

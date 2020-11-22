@@ -26,10 +26,11 @@ public class InvLinkImpl extends G_TypedRelationImpl implements InvLink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected InvLinkImpl() {
 		super();
+		setG_label("-1");
 	}
 
 	/**

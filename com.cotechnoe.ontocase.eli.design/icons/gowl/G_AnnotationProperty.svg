@@ -26,7 +26,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      inkscape:cy="39.503069"
-     inkscape:cx="69.886188"
+     inkscape:cx="66.723363"
      inkscape:zoom="11.856489"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -72,6 +72,8 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m -167.46919,1023.5969 -20.31087,-34.82049 20,-34.99998 40.31087,-0.17948 20.31087,34.82049 -20,34.99996 z"
-       transform="matrix(1.550567,0,0,0.84411998,295.4868,219.49295)" />
+       transform="matrix(1.550567,0,0,0.84411998,295.4868,219.49295)"
+       inkscape:export-xdpi="11.84"
+       inkscape:export-ydpi="11.84" />
   </g>
 </svg>

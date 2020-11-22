@@ -61,10 +61,12 @@ public class DLinkImpl extends G_TypedRelationImpl implements DLink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected DLinkImpl() {
 		super();
+		setG_label("D");
+
 	}
 
 	/**
