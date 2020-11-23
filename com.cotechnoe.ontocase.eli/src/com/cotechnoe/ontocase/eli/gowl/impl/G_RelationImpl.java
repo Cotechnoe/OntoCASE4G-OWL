@@ -159,6 +159,15 @@ public abstract class G_RelationImpl extends G_OWL_ObjectImpl implements G_Relat
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */	
+	public String toString() {
+		return "G_RelationImpl [source=" + source + ", target=" + target + "]";
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public G_Entity basicGetTarget() {

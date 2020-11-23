@@ -59,6 +59,7 @@ import com.cotechnoe.ontocase.eli.gowl.ILink;
 import com.cotechnoe.ontocase.eli.gowl.PLink;
 import com.cotechnoe.ontocase.eli.gowl.SLink;
 import com.cotechnoe.ontocase.eli.gowl.util.GowlResourceFactoryImpl;
+import com.cotechnoe.ontocase.eli.gowl2owl.util.GOWL_Helper;
 
 import uk.ac.manchester.cs.owl.owlapi.OWLOntologyImpl;
 public class ImportOwlFileHelper {
@@ -137,16 +138,6 @@ public class ImportOwlFileHelper {
 		}		return null;
 	}
 
-	private G_Entity fingGowlResourceByIRI(IRI entityIRI) {
-		EList<G_Entity> entities = GOWLOntology.getGroupOfEntities().getG_entities();
-		for (Iterator iterator = entities.iterator(); iterator.hasNext();) {
-			G_Entity g_Entity = (G_Entity) iterator.next();
-			if (g_Entity.getIri().equals(entityIRI.toString())) {
-				return g_Entity;
-			}
-		}
-		return null;
-	}
 
 	private void init(File inputFile, FileOutputStream outputFile) throws OWLOntologyCreationException {
 		/**
@@ -385,9 +376,9 @@ public class ImportOwlFileHelper {
 		 */
 		if ( !value.isIRI() ) { return null; }
 		PLink gowlPlink = GowlFactory.eINSTANCE.createPLink();	
-		G_Entity src = fingGowlResourceByIRI(subject);
+		G_Entity src = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology,subject);
 		gowlPlink.setSource(src);
-		G_Entity g_property = fingGowlResourceByIRI(property.getIRI());
+		G_Entity g_property = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, property.getIRI());
 		if(g_property==null) {
 			g_property = GowlFactory.eINSTANCE.createG_AnnotationProperty();
 			g_property.setIri(property.getIRI().toString());
@@ -397,7 +388,7 @@ public class ImportOwlFileHelper {
 		gowlPlink.setG_labelType(G_LABEL_TYPE.PROPERTY_LABEL);
 		gowlPlink.setG_Property((G_Property) g_property);
 
-		G_Entity target = fingGowlResourceByIRI(value.asIRI().get());
+		G_Entity target = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, value.asIRI().get());
 		if (target == null) {
 			target = GowlFactory.eINSTANCE.createG_Annotation();
 			target.setIri(value.asIRI().get().toString());
@@ -411,9 +402,9 @@ public class ImportOwlFileHelper {
 	private PLink setSourceAndTargetToA_PLink(OWLObjectPropertyExpression property, OWLNamedIndividual subject,
 			OWLNamedIndividual object) {
 		PLink gowlPlink = GowlFactory.eINSTANCE.createPLink();	
-		G_Entity src = fingGowlResourceByIRI(subject.getIRI());
-		G_Entity target = fingGowlResourceByIRI(object.getIRI());
-		G_Entity g_property = fingGowlResourceByIRI(property.asOWLObjectProperty().getIRI());
+		G_Entity src = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, subject.getIRI());
+		G_Entity target = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, object.getIRI());
+		G_Entity g_property = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, property.asOWLObjectProperty().getIRI());
 		gowlPlink.setSource(src);
 //		if(g_property==null) {
 //			g_property = GowlFactory.eINSTANCE.createG_AnnotationProperty();
@@ -428,8 +419,8 @@ public class ImportOwlFileHelper {
 	}
 
 	private void setSourceAndTargetToARelation(G_Relation aRelation, IRI sourceIRI, IRI targetIRI) {
-		G_Entity src = fingGowlResourceByIRI(sourceIRI);
-		G_Entity target = fingGowlResourceByIRI(targetIRI);
+		G_Entity src = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, sourceIRI);
+		G_Entity target = GOWL_Helper.fingGowlResourceByIRI(GOWLOntology, targetIRI);
 		aRelation.setSource(src);
 		aRelation.setTarget(target);
 	}

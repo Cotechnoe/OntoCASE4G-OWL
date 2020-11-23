@@ -127,7 +127,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.groupOfEntities">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="gowl::G_Annotation" referenceName="g_entities">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="aql:'annotation '+container.g_entities->size()"/>
                 </subModelOperations>
