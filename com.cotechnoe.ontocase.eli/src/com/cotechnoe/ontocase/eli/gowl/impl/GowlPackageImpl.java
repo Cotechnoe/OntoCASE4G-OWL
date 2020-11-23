@@ -15,6 +15,7 @@ import com.cotechnoe.ontocase.eli.gowl.G_ClassType;
 import com.cotechnoe.ontocase.eli.gowl.G_Collection;
 import com.cotechnoe.ontocase.eli.gowl.G_Container;
 import com.cotechnoe.ontocase.eli.gowl.G_Entity;
+import com.cotechnoe.ontocase.eli.gowl.G_IRI_Status;
 import com.cotechnoe.ontocase.eli.gowl.G_Individual;
 import com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE;
 import com.cotechnoe.ontocase.eli.gowl.G_Literal;
@@ -88,6 +89,13 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	private EEnum g_LABEL_TYPEEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum g_IRI_StatusEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -386,8 +394,8 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getG_OWL_Document_BaseIRI() {
-		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(1);
+	public EAttribute getG_OWL_Document_BaseIRI() {
+		return (EAttribute)g_OWL_DocumentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -408,6 +416,16 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	@Override
 	public EReference getG_OWL_Document_GroupOfRelations() {
 		return (EReference)g_OWL_DocumentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getG_OWL_Document_DefaultNS() {
+		return (EAttribute)g_OWL_DocumentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -460,6 +478,9 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		return (EReference)relationsGroupEClass.getEStructuralFeatures().get(0);
 	}
 
+
+	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -468,6 +489,16 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	@Override
 	public EEnum getG_LABEL_TYPE() {
 		return g_LABEL_TYPEEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getG_IRI_Status() {
+		return g_IRI_StatusEEnum;
 	}
 
 	/**
@@ -637,7 +668,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 */
 	@Override
 	public EReference getG_Entity_IsSourceOf() {
-		return (EReference)g_EntityEClass.getEStructuralFeatures().get(2);
+		return (EReference)g_EntityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -658,6 +689,16 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	@Override
 	public EAttribute getG_Entity_Iri() {
 		return (EAttribute)g_EntityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getG_Entity_G_iri_status() {
+		return (EAttribute)g_EntityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -955,6 +996,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		g_EntityEClass = createEClass(GENTITY);
 		createEReference(g_EntityEClass, GENTITY__IS_TARGET_OF);
 		createEAttribute(g_EntityEClass, GENTITY__IRI);
+		createEAttribute(g_EntityEClass, GENTITY__GIRI_STATUS);
 		createEReference(g_EntityEClass, GENTITY__IS_SOURCE_OF);
 
 		dLinkEClass = createEClass(DLINK);
@@ -1013,9 +1055,10 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 
 		g_OWL_DocumentEClass = createEClass(GOWL_DOCUMENT);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GPREFIX);
-		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__BASE_IRI);
+		createEAttribute(g_OWL_DocumentEClass, GOWL_DOCUMENT__BASE_IRI);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GROUP_OF_ENTITIES);
 		createEReference(g_OWL_DocumentEClass, GOWL_DOCUMENT__GROUP_OF_RELATIONS);
+		createEAttribute(g_OWL_DocumentEClass, GOWL_DOCUMENT__DEFAULT_NS);
 
 		entitiesGroupEClass = createEClass(ENTITIES_GROUP);
 		createEAttribute(entitiesGroupEClass, ENTITIES_GROUP__NAME);
@@ -1026,6 +1069,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 
 		// Create enums
 		g_LABEL_TYPEEEnum = createEEnum(GLABEL_TYPE);
+		g_IRI_StatusEEnum = createEEnum(GIRI_STATUS);
 		g_ClassTypeEEnum = createEEnum(GCLASS_TYPE);
 	}
 
@@ -1101,6 +1145,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(g_EntityEClass, G_Entity.class, "G_Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getG_Entity_IsTargetOf(), this.getG_Relation(), this.getG_Relation_Target(), "isTargetOf", null, 0, -1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getG_Entity_Iri(), ecorePackage.getEString(), "iri", null, 1, 1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getG_Entity_G_iri_status(), this.getG_IRI_Status(), "g_iri_status", null, 0, 1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_Entity_IsSourceOf(), this.getG_Relation(), this.getG_Relation_Source(), "isSourceOf", null, 0, -1, G_Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dLinkEClass, DLink.class, "DLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1159,9 +1204,10 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 
 		initEClass(g_OWL_DocumentEClass, G_OWL_Document.class, "G_OWL_Document", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getG_OWL_Document_G_prefix(), this.getG_Prefix(), null, "g_prefix", null, 0, -1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getG_OWL_Document_BaseIRI(), this.getIRI(), null, "baseIRI", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getG_OWL_Document_BaseIRI(), ecorePackage.getEString(), "baseIRI", "http://example.org/gowl/example", 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_OWL_Document_GroupOfEntities(), this.getEntitiesGroup(), null, "groupOfEntities", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getG_OWL_Document_GroupOfRelations(), this.getRelationsGroup(), null, "groupOfRelations", null, 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getG_OWL_Document_DefaultNS(), ecorePackage.getEString(), "defaultNS", "http://example.org/gowl/example#", 1, 1, G_OWL_Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(entitiesGroupEClass, EntitiesGroup.class, "EntitiesGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntitiesGroup_Name(), ecorePackage.getEString(), "name", "Entities ", 1, 1, EntitiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1178,6 +1224,11 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		addEEnumLiteral(g_LABEL_TYPEEEnum, G_LABEL_TYPE.QNAME);
 		addEEnumLiteral(g_LABEL_TYPEEEnum, G_LABEL_TYPE.PROPERTY_LABEL);
 		addEEnumLiteral(g_LABEL_TYPEEEnum, G_LABEL_TYPE.TYPED_LINK);
+
+		initEEnum(g_IRI_StatusEEnum, G_IRI_Status.class, "G_IRI_Status");
+		addEEnumLiteral(g_IRI_StatusEEnum, G_IRI_Status.BASED_ON_LABEL);
+		addEEnumLiteral(g_IRI_StatusEEnum, G_IRI_Status.GEN_ID);
+		addEEnumLiteral(g_IRI_StatusEEnum, G_IRI_Status.PRESET);
 
 		initEEnum(g_ClassTypeEEnum, G_ClassType.class, "G_ClassType");
 		addEEnumLiteral(g_ClassTypeEEnum, G_ClassType.OWL_CLASS);
@@ -1205,6 +1256,12 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		   source,
 		   new String[] {
 			   "name", "G_LABEL_TYPE"
+		   });
+		addAnnotation
+		  (g_IRI_StatusEEnum,
+		   source,
+		   new String[] {
+			   "name", "G_IRI_Status"
 		   });
 	}
 

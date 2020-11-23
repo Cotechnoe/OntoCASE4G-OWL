@@ -30,7 +30,7 @@ public class ILinkImpl extends G_TypedRelationImpl implements ILink {
 	 */
 	protected ILinkImpl() {
 		super();
-		this.setG_label("I");
+		this.setLabel("I");
 	}
 
 	/**

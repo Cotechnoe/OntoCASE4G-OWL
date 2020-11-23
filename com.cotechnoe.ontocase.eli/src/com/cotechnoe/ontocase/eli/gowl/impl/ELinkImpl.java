@@ -30,7 +30,7 @@ public class ELinkImpl extends G_TypedRelationImpl implements ELink {
 	 */
 	protected ELinkImpl() {
 		super();
-		setG_label("E");
+		setLabel("E");
 
 	}
 

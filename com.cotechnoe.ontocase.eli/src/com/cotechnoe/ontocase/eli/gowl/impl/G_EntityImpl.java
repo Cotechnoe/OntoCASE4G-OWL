@@ -3,7 +3,10 @@
  */
 package com.cotechnoe.ontocase.eli.gowl.impl;
 
+import com.cotechnoe.ontocase.eli.util.StringConvert;
+import com.cotechnoe.ontocase.eli.gowl.G_OWL_Document;
 import com.cotechnoe.ontocase.eli.gowl.G_Entity;
+import com.cotechnoe.ontocase.eli.gowl.G_IRI_Status;
 import com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE;
 import com.cotechnoe.ontocase.eli.gowl.G_Relation;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
@@ -17,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -29,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIsTargetOf <em>Is Target Of</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIri <em>Iri</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getG_iri_status <em>Giri status</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_EntityImpl#getIsSourceOf <em>Is Source Of</em>}</li>
  * </ul>
  *
@@ -72,6 +77,26 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 	 * @ordered
 	 */
 	protected String iri = IRI_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getG_iri_status() <em>Giri status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getG_iri_status()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final G_IRI_Status GIRI_STATUS_EDEFAULT = G_IRI_Status.BASED_ON_LABEL;
+
+	/**
+	 * The cached value of the '{@link #getG_iri_status() <em>Giri status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getG_iri_status()
+	 * @generated
+	 * @ordered
+	 */
+	protected G_IRI_Status g_iri_status = GIRI_STATUS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getIsSourceOf() <em>Is Source Of</em>}' reference list.
@@ -156,6 +181,29 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public G_IRI_Status getG_iri_status() {
+		return g_iri_status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setG_iri_status(G_IRI_Status newG_iri_status) {
+		G_IRI_Status oldG_iri_status = g_iri_status;
+		g_iri_status = newG_iri_status == null ? GIRI_STATUS_EDEFAULT : newG_iri_status;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GENTITY__GIRI_STATUS, oldG_iri_status, g_iri_status));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -196,6 +244,8 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 				return getIsTargetOf();
 			case GowlPackage.GENTITY__IRI:
 				return getIri();
+			case GowlPackage.GENTITY__GIRI_STATUS:
+				return getG_iri_status();
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				return getIsSourceOf();
 		}
@@ -217,6 +267,9 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 				return;
 			case GowlPackage.GENTITY__IRI:
 				setIri((String)newValue);
+				return;
+			case GowlPackage.GENTITY__GIRI_STATUS:
+				setG_iri_status((G_IRI_Status)newValue);
 				return;
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				getIsSourceOf().clear();
@@ -240,6 +293,9 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 			case GowlPackage.GENTITY__IRI:
 				setIri(IRI_EDEFAULT);
 				return;
+			case GowlPackage.GENTITY__GIRI_STATUS:
+				setG_iri_status(GIRI_STATUS_EDEFAULT);
+				return;
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				getIsSourceOf().clear();
 				return;
@@ -259,6 +315,8 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 				return isTargetOf != null && !isTargetOf.isEmpty();
 			case GowlPackage.GENTITY__IRI:
 				return IRI_EDEFAULT == null ? iri != null : !IRI_EDEFAULT.equals(iri);
+			case GowlPackage.GENTITY__GIRI_STATUS:
+				return g_iri_status != GIRI_STATUS_EDEFAULT;
 			case GowlPackage.GENTITY__IS_SOURCE_OF:
 				return isSourceOf != null && !isSourceOf.isEmpty();
 		}
@@ -276,13 +334,15 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (iri: ");
 		result.append(iri);
+		result.append(", g_iri_status: ");
+		result.append(g_iri_status);
 		result.append(')');
 		return result.toString();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Le labelType est l'une de ces possibilité (IRI, LABEL, QNAME, RDFS_LABEL, LABEL)
+	 * Le labelType est l'une de ces possibilités (IRI, LABEL, QNAME, RDFS_LABEL, LABEL)
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -296,5 +356,42 @@ public abstract class G_EntityImpl extends G_OWL_ObjectImpl implements G_Entity 
 			super.setG_labelType(newG_labelType);
 		}
 	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getG_label() {
+		return this.getLabel();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void setG_label(String newG_label) {
+		this.setLabel(newG_label);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
+		if (eNotificationRequired()) {
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_OBJECT__LABEL, oldLabel, label));
+			if (getG_iri_status().equals(G_IRI_Status.BASED_ON_LABEL)) {
+				this.setIri(((G_OWL_Document)EcoreUtil.getRootContainer(this)).getDefaultNS()+StringConvert.convert(label));
+			}
+		}
+	}
+
 
 } //G_EntityImpl

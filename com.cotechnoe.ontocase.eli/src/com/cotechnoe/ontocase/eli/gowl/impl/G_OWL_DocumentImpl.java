@@ -7,7 +7,6 @@ import com.cotechnoe.ontocase.eli.gowl.EntitiesGroup;
 import com.cotechnoe.ontocase.eli.gowl.G_OWL_Document;
 import com.cotechnoe.ontocase.eli.gowl.G_Prefix;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
-import com.cotechnoe.ontocase.eli.gowl.IRI;
 import com.cotechnoe.ontocase.eli.gowl.RelationsGroup;
 import java.util.Collection;
 
@@ -37,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getBaseIRI <em>Base IRI</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getGroupOfEntities <em>Group Of Entities</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getGroupOfRelations <em>Group Of Relations</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.impl.G_OWL_DocumentImpl#getDefaultNS <em>Default NS</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,14 +60,24 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	protected EList<G_Prefix> g_prefix;
 
 	/**
-	 * The cached value of the '{@link #getBaseIRI() <em>Base IRI</em>}' reference.
+	 * The default value of the '{@link #getBaseIRI() <em>Base IRI</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBaseIRI()
 	 * @generated
 	 * @ordered
 	 */
-	protected IRI baseIRI;
+	protected static final String BASE_IRI_EDEFAULT = "http://example.org/gowl/example";
+
+	/**
+	 * The cached value of the '{@link #getBaseIRI() <em>Base IRI</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseIRI()
+	 * @generated
+	 * @ordered
+	 */
+	protected String baseIRI = BASE_IRI_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getGroupOfEntities() <em>Group Of Entities</em>}' containment reference.
@@ -88,6 +98,26 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected RelationsGroup groupOfRelations ;
+
+	/**
+	 * The default value of the '{@link #getDefaultNS() <em>Default NS</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultNS()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_NS_EDEFAULT = "http://example.org/gowl/example#";
+
+	/**
+	 * The cached value of the '{@link #getDefaultNS() <em>Default NS</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultNS()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultNS = DEFAULT_NS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,24 +157,7 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public IRI getBaseIRI() {
-		if (baseIRI != null && baseIRI.eIsProxy()) {
-			InternalEObject oldBaseIRI = (InternalEObject)baseIRI;
-			baseIRI = (IRI)eResolveProxy(oldBaseIRI);
-			if (baseIRI != oldBaseIRI) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GowlPackage.GOWL_DOCUMENT__BASE_IRI, oldBaseIRI, baseIRI));
-			}
-		}
-		return baseIRI;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IRI basicGetBaseIRI() {
+	public String getBaseIRI() {
 		return baseIRI;
 	}
 
@@ -154,8 +167,8 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public void setBaseIRI(IRI newBaseIRI) {
-		IRI oldBaseIRI = baseIRI;
+	public void setBaseIRI(String newBaseIRI) {
+		String oldBaseIRI = baseIRI;
 		baseIRI = newBaseIRI;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__BASE_IRI, oldBaseIRI, baseIRI));
@@ -251,6 +264,30 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS, newGroupOfRelations, newGroupOfRelations));
 	}
 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultNS() {
+		return defaultNS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultNS(String newDefaultNS) {
+		String oldDefaultNS = defaultNS;
+		defaultNS = newDefaultNS;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.GOWL_DOCUMENT__DEFAULT_NS, oldDefaultNS, defaultNS));
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -280,12 +317,13 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				return getG_prefix();
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
-				if (resolve) return getBaseIRI();
-				return basicGetBaseIRI();
+				return getBaseIRI();
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
 				return getGroupOfEntities();
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				return getGroupOfRelations();
+			case GowlPackage.GOWL_DOCUMENT__DEFAULT_NS:
+				return getDefaultNS();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,13 +342,16 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 				getG_prefix().addAll((Collection<? extends G_Prefix>)newValue);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
-				setBaseIRI((IRI)newValue);
+				setBaseIRI((String)newValue);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
 				setGroupOfEntities((EntitiesGroup)newValue);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				setGroupOfRelations((RelationsGroup)newValue);
+				return;
+			case GowlPackage.GOWL_DOCUMENT__DEFAULT_NS:
+				setDefaultNS((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -328,13 +369,16 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 				getG_prefix().clear();
 				return;
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
-				setBaseIRI((IRI)null);
+				setBaseIRI(BASE_IRI_EDEFAULT);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
 				setGroupOfEntities((EntitiesGroup)null);
 				return;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				setGroupOfRelations((RelationsGroup)null);
+				return;
+			case GowlPackage.GOWL_DOCUMENT__DEFAULT_NS:
+				setDefaultNS(DEFAULT_NS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -351,13 +395,33 @@ public class G_OWL_DocumentImpl extends MinimalEObjectImpl.Container implements 
 			case GowlPackage.GOWL_DOCUMENT__GPREFIX:
 				return g_prefix != null && !g_prefix.isEmpty();
 			case GowlPackage.GOWL_DOCUMENT__BASE_IRI:
-				return baseIRI != null;
+				return BASE_IRI_EDEFAULT == null ? baseIRI != null : !BASE_IRI_EDEFAULT.equals(baseIRI);
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_ENTITIES:
 				return groupOfEntities != null;
 			case GowlPackage.GOWL_DOCUMENT__GROUP_OF_RELATIONS:
 				return groupOfRelations != null;
+			case GowlPackage.GOWL_DOCUMENT__DEFAULT_NS:
+				return DEFAULT_NS_EDEFAULT == null ? defaultNS != null : !DEFAULT_NS_EDEFAULT.equals(defaultNS);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (baseIRI: ");
+		result.append(baseIRI);
+		result.append(", defaultNS: ");
+		result.append(defaultNS);
+		result.append(')');
+		return result.toString();
 	}
 
 } //G_OWL_DocumentImpl

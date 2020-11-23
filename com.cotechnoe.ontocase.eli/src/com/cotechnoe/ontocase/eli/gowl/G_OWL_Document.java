@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getBaseIRI <em>Base IRI</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getGroupOfEntities <em>Group Of Entities</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getGroupOfRelations <em>Group Of Relations</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getDefaultNS <em>Default NS</em>}</li>
  * </ul>
  *
  * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_OWL_Document()
@@ -47,26 +48,27 @@ public interface G_OWL_Document extends EObject {
 	EList<G_Prefix> getG_prefix();
 
 	/**
-	 * Returns the value of the '<em><b>Base IRI</b></em>' reference.
+	 * Returns the value of the '<em><b>Base IRI</b></em>' attribute.
+	 * The default value is <code>"http://example.org/gowl/example"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base IRI</em>' reference.
-	 * @see #setBaseIRI(IRI)
+	 * @return the value of the '<em>Base IRI</em>' attribute.
+	 * @see #setBaseIRI(String)
 	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_OWL_Document_BaseIRI()
-	 * @model required="true" ordered="false"
+	 * @model default="http://example.org/gowl/example" required="true" ordered="false"
 	 * @generated
 	 */
-	IRI getBaseIRI();
+	String getBaseIRI();
 
 	/**
-	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getBaseIRI <em>Base IRI</em>}' reference.
+	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getBaseIRI <em>Base IRI</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base IRI</em>' reference.
+	 * @param value the new value of the '<em>Base IRI</em>' attribute.
 	 * @see #getBaseIRI()
 	 * @generated
 	 */
-	void setBaseIRI(IRI value);
+	void setBaseIRI(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Group Of Entities</b></em>' containment reference.
@@ -111,5 +113,28 @@ public interface G_OWL_Document extends EObject {
 	 * @generated
 	 */
 	void setGroupOfRelations(RelationsGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>Default NS</b></em>' attribute.
+	 * The default value is <code>"http://example.org/gowl/example#"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default NS</em>' attribute.
+	 * @see #setDefaultNS(String)
+	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_OWL_Document_DefaultNS()
+	 * @model default="http://example.org/gowl/example#" required="true" ordered="false"
+	 * @generated
+	 */
+	String getDefaultNS();
+
+	/**
+	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_OWL_Document#getDefaultNS <em>Default NS</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default NS</em>' attribute.
+	 * @see #getDefaultNS()
+	 * @generated
+	 */
+	void setDefaultNS(String value);
 
 } // G_OWL_Document

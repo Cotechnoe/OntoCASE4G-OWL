@@ -3,6 +3,7 @@
  */
 package com.cotechnoe.ontocase.eli.gowl.impl;
 
+import com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE;
 import com.cotechnoe.ontocase.eli.gowl.G_Property;
 import com.cotechnoe.ontocase.eli.gowl.GowlPackage;
 import com.cotechnoe.ontocase.eli.gowl.PLink;
@@ -93,14 +94,18 @@ public class PLinkImpl extends G_UntypedRelationImpl implements PLink {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void setG_Property(G_Property newG_Property) {
 		G_Property oldG_Property = g_Property;
 		g_Property = newG_Property;
-		if (eNotificationRequired())
+		if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, GowlPackage.PLINK__GPROPERTY, oldG_Property, g_Property));
+		}
+		if (this.getG_labelType().equals(G_LABEL_TYPE.PROPERTY_LABEL)) {
+			this.setG_label(g_Property.getG_label());
+		}
 	}
 
 	/**

@@ -45,6 +45,8 @@ import com.cotechnoe.ontocase.eli.gowl.ALink;
 import com.cotechnoe.ontocase.eli.gowl.ELink;
 import com.cotechnoe.ontocase.eli.gowl.G_AnnotationProperty;
 import com.cotechnoe.ontocase.eli.gowl.G_Entity;
+import com.cotechnoe.ontocase.eli.gowl.G_IRI_Status;
+import com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE;
 import com.cotechnoe.ontocase.eli.gowl.G_NamedClass;
 import com.cotechnoe.ontocase.eli.gowl.G_NamedIndividual;
 import com.cotechnoe.ontocase.eli.gowl.G_OWL_Document;
@@ -368,6 +370,7 @@ public class ImportOwlFileHelper {
 			}
 		}
 		aGowlEntity.setIri(owlEntity.getIRI().toString());
+		aGowlEntity.setG_iri_status(G_IRI_Status.PRESET);
 		if (g_label== null)
 			aGowlEntity.setG_label(owlEntity.getIRI().getFragment());
 		else			
@@ -391,8 +394,8 @@ public class ImportOwlFileHelper {
 			g_property.setG_label(property.getIRI().getFragment());
 			GOWLOntology.getGroupOfEntities().getG_entities().add(g_property);
 		}
+		gowlPlink.setG_labelType(G_LABEL_TYPE.PROPERTY_LABEL);
 		gowlPlink.setG_Property((G_Property) g_property);
-		gowlPlink.setG_label(g_property.getG_label());
 
 		G_Entity target = fingGowlResourceByIRI(value.asIRI().get());
 		if (target == null) {
@@ -418,8 +421,8 @@ public class ImportOwlFileHelper {
 //			g_property.setG_label(property.getIRI().getFragment());
 //			GOWLOntology.getGroupOfEntities().getG_entities().add(g_property);
 //		}
+		gowlPlink.setG_labelType(G_LABEL_TYPE.PROPERTY_LABEL);
 		gowlPlink.setG_Property((G_Property) g_property);
-		gowlPlink.setG_label(g_property.getG_label());
 		gowlPlink.setTarget(target);
 		return gowlPlink;
 	}

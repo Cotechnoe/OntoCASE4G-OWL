@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIsTargetOf <em>Is Target Of</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIri <em>Iri</em>}</li>
+ *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getG_iri_status <em>Giri status</em>}</li>
  *   <li>{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getIsSourceOf <em>Is Source Of</em>}</li>
  * </ul>
  *
@@ -80,5 +81,30 @@ public interface G_Entity extends G_OWL_Object {
 	 * @generated
 	 */
 	void setIri(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Giri status</b></em>' attribute.
+	 * The literals are from the enumeration {@link com.cotechnoe.ontocase.eli.gowl.G_IRI_Status}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Giri status</em>' attribute.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_IRI_Status
+	 * @see #setG_iri_status(G_IRI_Status)
+	 * @see com.cotechnoe.ontocase.eli.gowl.GowlPackage#getG_Entity_G_iri_status()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	G_IRI_Status getG_iri_status();
+
+	/**
+	 * Sets the value of the '{@link com.cotechnoe.ontocase.eli.gowl.G_Entity#getG_iri_status <em>Giri status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Giri status</em>' attribute.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_IRI_Status
+	 * @see #getG_iri_status()
+	 * @generated
+	 */
+	void setG_iri_status(G_IRI_Status value);
 
 } // G_Entity

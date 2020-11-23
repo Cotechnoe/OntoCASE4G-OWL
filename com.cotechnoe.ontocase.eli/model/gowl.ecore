@@ -34,8 +34,18 @@
         upperBound="-1" eType="#//G_Relation" eOpposite="#//G_Relation/target"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iri" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_iri_status" ordered="false"
+        eType="#//G_IRI_Status"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isSourceOf" ordered="false"
         upperBound="-1" eType="#//G_Relation" eOpposite="#//G_Relation/source"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="G_IRI_Status">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="G_IRI_Status"/>
+    </eAnnotations>
+    <eLiterals name="BASED_ON_LABEL" literal="BASED_ON_LABEL"/>
+    <eLiterals name="GEN_ID" value="1" literal="GEN_ID"/>
+    <eLiterals name="PRESET" value="2" literal="PRESET"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DLink" eSuperTypes="#//G_TypedRelation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="D" ordered="false" lowerBound="1"
@@ -87,16 +97,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="G_OWL_Document">
     <eStructuralFeatures xsi:type="ecore:EReference" name="g_prefix" ordered="false"
         upperBound="-1" eType="#//G_Prefix" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="baseIRI" ordered="false"
-        lowerBound="1" eType="#//IRI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseIRI" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="http://example.org/gowl/example"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupOfEntities" ordered="false"
         lowerBound="1" eType="#//EntitiesGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupOfRelations" ordered="false"
         lowerBound="1" eType="#//RelationsGroup" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="g_entities" ordered="false"
-        upperBound="-1" eType="#//G_Entity" volatile="true" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="g_relations" ordered="false"
-        upperBound="-1" eType="#//G_Relation" volatile="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultNS" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="http://example.org/gowl/example#"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntitiesGroup">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"

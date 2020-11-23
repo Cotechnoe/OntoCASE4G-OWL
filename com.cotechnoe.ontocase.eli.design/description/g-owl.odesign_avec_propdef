@@ -229,17 +229,23 @@
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <metamodels href="../../com.cotechnoe.ontocase.eli/model/gowl.ecore#/"/>
     <categories name="Default Category">
-      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.5"/>
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3"/>
+      <pages name="DebugPage" label="Debug" labelExpression="Debug" semanticCandidateExpression="var:self"/>
       <groups name="Default Group" labelExpression="Group" domainClass="gowl::G_Entity" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextDescription" name="gowl::G_NamedIndividual g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
+        <controls xsi:type="properties:TextDescription" name="gowl::G_Entitie iri" labelExpression="aql:'IRI :'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('iri'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('iri').changeable" valueExpression="aql:self.iri">
           <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="iri" valueExpression="var:newValue"/>
           </initialOperation>
-          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('iri').lowerBound = 1">
             <style>
               <labelFontFormat>bold</labelFontFormat>
             </style>
           </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="gowl::G_NamedIndividual g_labelType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_labelType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_labelType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_labelType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.getEEnumLiteralByLiteral(self.g_labelType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_labelType" valueExpression="aql:newValue.instance"/>
+          </initialOperation>
         </controls>
         <controls xsi:type="properties:TextDescription" name="gowl::G_NamedIndividual label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('label').changeable" valueExpression="aql:self.label">
           <initialOperation>
@@ -251,11 +257,11 @@
             </style>
           </conditionalStyles>
         </controls>
-        <controls xsi:type="properties:TextDescription" name="gowl::G_Entitie iri" labelExpression="aql:'IRI :'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('iri'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('iri').changeable" valueExpression="aql:self.iri">
+        <controls xsi:type="properties:TextDescription" name="gowl::G_NamedIndividual g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
           <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="iri" valueExpression="var:newValue"/>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
           </initialOperation>
-          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('iri').lowerBound = 1">
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
             <style>
               <labelFontFormat>bold</labelFontFormat>
             </style>
@@ -275,21 +281,26 @@
         </controls>
       </groups>
       <groups name="Link Group" labelExpression="Link" domainClass="gowl::G_Relation" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextDescription" name="gowl::G_Relation g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
+        <controls xsi:type="properties:RadioDescription" name="gowl::G_Relation g_labelType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_labelType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_labelType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_labelType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.getEEnumLiteralByLiteral(self.g_labelType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
           <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_labelType" valueExpression="aql:newValue.instance"/>
           </initialOperation>
-          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
-            <style>
-              <labelFontFormat>bold</labelFontFormat>
-            </style>
-          </conditionalStyles>
         </controls>
         <controls xsi:type="properties:TextDescription" name="gowl::G_Relation label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('label').changeable" valueExpression="aql:self.label">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:SetValue" featureName="label" valueExpression="var:newValue"/>
           </initialOperation>
           <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('label').lowerBound = 1">
+            <style>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="gowl::G_Relation g_label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_label').changeable" valueExpression="aql:self.g_label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('g_label').lowerBound = 1">
             <style>
               <labelFontFormat>bold</labelFontFormat>
             </style>
@@ -305,42 +316,6 @@
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
               <subModelOperations xsi:type="tool_1:SetValue" featureName="g_Property" valueExpression="aql:newValue"/>
             </firstModelOperations>
-          </initialOperation>
-        </controls>
-      </groups>
-      <groups name="GOWL_Document" labelExpression="Document" domainClass="gowl::G_OWL_Document" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:TextDescription" name="gowl::G_OWL_Document baseIRI" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('baseIRI')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('baseIRI'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('baseIRI').changeable" valueExpression="aql:self.baseIRI">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="baseIRI" valueExpression="var:newValue"/>
-          </initialOperation>
-          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('baseIRI').lowerBound = 1">
-            <style>
-              <labelFontFormat>bold</labelFontFormat>
-            </style>
-          </conditionalStyles>
-        </controls>
-        <controls xsi:type="properties:TextDescription" name="gowl::G_OWL_Document defaultNS" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('defaultNS')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('defaultNS'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('defaultNS').changeable" valueExpression="aql:self.defaultNS">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="defaultNS" valueExpression="var:newValue"/>
-          </initialOperation>
-          <conditionalStyles preconditionExpression="aql:self.eClass().getEStructuralFeature('defaultNS').lowerBound = 1">
-            <style>
-              <labelFontFormat>bold</labelFontFormat>
-            </style>
-          </conditionalStyles>
-        </controls>
-      </groups>
-      <groups name="IRI Group" labelExpression="IRI properties" domainClass="gowl::G_Entity" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:RadioDescription" name="gowl::G_Entity g_iri_status" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_iri_status')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_iri_status'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_iri_status').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_iri_status').eType.getEEnumLiteralByLiteral(self.g_iri_status.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_iri_status').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_iri_status" valueExpression="aql:newValue.instance"/>
-          </initialOperation>
-        </controls>
-      </groups>
-      <groups name="Label group" labelExpression="Label properties" semanticCandidateExpression="var:self">
-        <controls xsi:type="properties:RadioDescription" name="gowl::G_NamedIndividual g_labelType" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('g_labelType')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('g_labelType'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('g_labelType').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.getEEnumLiteralByLiteral(self.g_labelType.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('g_labelType').eType.eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool_1:SetValue" featureName="g_labelType" valueExpression="aql:newValue.instance"/>
           </initialOperation>
         </controls>
       </groups>

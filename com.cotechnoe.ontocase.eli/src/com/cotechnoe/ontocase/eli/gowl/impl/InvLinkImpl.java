@@ -30,7 +30,7 @@ public class InvLinkImpl extends G_TypedRelationImpl implements InvLink {
 	 */
 	protected InvLinkImpl() {
 		super();
-		setG_label("-1");
+		setLabel("-1");
 	}
 
 	/**

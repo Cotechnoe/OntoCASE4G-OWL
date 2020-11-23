@@ -101,6 +101,8 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 		switch (eDataType.getClassifierID()) {
 			case GowlPackage.GLABEL_TYPE:
 				return createG_LABEL_TYPEFromString(eDataType, initialValue);
+			case GowlPackage.GIRI_STATUS:
+				return createG_IRI_StatusFromString(eDataType, initialValue);
 			case GowlPackage.GCLASS_TYPE:
 				return createG_ClassTypeFromString(eDataType, initialValue);
 			default:
@@ -118,6 +120,8 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 		switch (eDataType.getClassifierID()) {
 			case GowlPackage.GLABEL_TYPE:
 				return convertG_LABEL_TYPEToString(eDataType, instanceValue);
+			case GowlPackage.GIRI_STATUS:
+				return convertG_IRI_StatusToString(eDataType, instanceValue);
 			case GowlPackage.GCLASS_TYPE:
 				return convertG_ClassTypeToString(eDataType, instanceValue);
 			default:
@@ -163,6 +167,8 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 		return relationsGroup;
 	}
 
+
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -180,6 +186,26 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 	 * @generated
 	 */
 	public String convertG_LABEL_TYPEToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public G_IRI_Status createG_IRI_StatusFromString(EDataType eDataType, String initialValue) {
+		G_IRI_Status result = G_IRI_Status.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertG_IRI_StatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

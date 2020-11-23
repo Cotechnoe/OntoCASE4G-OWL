@@ -162,6 +162,7 @@ public abstract class G_OWL_ObjectImpl extends MinimalEObjectImpl.Container impl
 		return this.getLabel();
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

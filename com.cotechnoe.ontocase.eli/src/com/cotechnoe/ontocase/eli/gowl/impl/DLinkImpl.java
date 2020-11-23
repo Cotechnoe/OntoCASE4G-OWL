@@ -65,7 +65,7 @@ public class DLinkImpl extends G_TypedRelationImpl implements DLink {
 	 */
 	protected DLinkImpl() {
 		super();
-		setG_label("D");
+		setLabel("D");
 
 	}
 

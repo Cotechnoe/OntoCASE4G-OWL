@@ -27,9 +27,7 @@ public enum G_LABEL_TYPE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LABEL(0, "LABEL", "LABEL"),
-
-	/**
+	LABEL(0, "LABEL", "LABEL"), /**
 	 * The '<em><b>RDFS LABEL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,9 +35,7 @@ public enum G_LABEL_TYPE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RDFS_LABEL(1, "RDFS_LABEL", "RDFS_LABEL"),
-
-	/**
+	RDFS_LABEL(1, "RDFS_LABEL", "RDFS_LABEL"), /**
 	 * The '<em><b>IRI</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,9 +43,7 @@ public enum G_LABEL_TYPE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IRI(2, "IRI", "IRI"),
-
-	/**
+	IRI(2, "IRI", "IRI"), /**
 	 * The '<em><b>QNAME</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,9 +51,7 @@ public enum G_LABEL_TYPE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	QNAME(3, "QNAME", "QNAME"),
-
-	/**
+	QNAME(3, "QNAME", "QNAME"), /**
 	 * The '<em><b>PROPERTY LABEL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,9 +59,7 @@ public enum G_LABEL_TYPE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PROPERTY_LABEL(4, "PROPERTY_LABEL", "PROPERTY_LABEL"),
-
-	/**
+	PROPERTY_LABEL(4, "PROPERTY_LABEL", "PROPERTY_LABEL"), /**
 	 * The '<em><b>TYPED LINK</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
