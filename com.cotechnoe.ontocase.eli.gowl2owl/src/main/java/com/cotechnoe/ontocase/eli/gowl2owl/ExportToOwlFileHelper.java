@@ -26,10 +26,13 @@ import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAnnotationSubject;
 import org.semanticweb.owlapi.model.OWLAnnotationValue;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
@@ -39,6 +42,7 @@ import org.semanticweb.owlapi.vocab.OWL2Datatype;
 import com.cotechnoe.ontocase.eli.gowl.ALink;
 import com.cotechnoe.ontocase.eli.gowl.ELink;
 import com.cotechnoe.ontocase.eli.gowl.G_Annotation;
+import com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass;
 import com.cotechnoe.ontocase.eli.gowl.G_AnnotationProperty;
 import com.cotechnoe.ontocase.eli.gowl.G_Collection;
 import com.cotechnoe.ontocase.eli.gowl.G_Entity;
@@ -94,6 +98,9 @@ public class ExportToOwlFileHelper {
 	private ResourceSetImpl resourceSet;
 	private Resource gowlResource;
 	private G_OWL_Document GOWLOntology;
+	private OWLAnnotationProperty RDF_TYPE_ANNOTATION;
+	private IRI RDF_PROPERTY_ANNOTATION;
+	private IRI RDFS_CLASS_ANNOTATION;
 	public ExportToOwlFileHelper(File inputFile, FileOutputStream outputFile) {
 		try {
 			init(inputFile, outputFile);
@@ -150,7 +157,9 @@ public class ExportToOwlFileHelper {
 		manager = OWLManager.createOWLOntologyManager();
 		ontology = manager.createOntology();
 		dataFactory = ontology.getOWLOntologyManager().getOWLDataFactory();
-
+		RDF_TYPE_ANNOTATION = dataFactory.getOWLAnnotationProperty(IRI.create(RDF.TYPE.toString()));	
+		RDF_PROPERTY_ANNOTATION = IRI.create(RDF.PROPERTY.toString());
+		RDFS_CLASS_ANNOTATION = IRI.create(RDFS.CLASS.toString());
 	}
 
 	private void parseEntities() {
@@ -163,18 +172,26 @@ public class ExportToOwlFileHelper {
 			if (g_Entity instanceof G_Annotation ) {
 				//				dataFactory.getOWLAnnotation(RDF.TYPE, owlIri);
 				//				OWLAnnotationValue value = owlIri;
-				//				System.err.println("Managing G_NamedIndividual "+g_Entity);
+				System.err.println("Managing G_ANNOTATION "+g_Entity);
 			} else if (g_Entity instanceof G_NamedIndividual ) {
 				owlEntity = dataFactory.getOWLNamedIndividual(owlIri);
 				System.err.println("Managing G_NamedIndividual "+g_Entity);
-			} else if (g_Entity instanceof G_NamedClass ) {
+			} else if (g_Entity instanceof G_AnnotationClass ) {
+				OWLAnnotationAssertionAxiom rdfClassAxiom = dataFactory.getOWLAnnotationAssertionAxiom(RDF_TYPE_ANNOTATION,  owlIri, RDFS_CLASS_ANNOTATION);				
+				manager.addAxiom(ontology, rdfClassAxiom);
+				System.err.println("Managing G_AnnotationClass "+g_Entity);
+				return ;
+			} else if (g_Entity instanceof G_NamedClass  ) {
 				owlEntity = dataFactory.getOWLClass(owlIri);
 				System.err.println("Managing G_NamedClass "+g_Entity);
 			} else if (g_Entity instanceof G_ObjectProperty ) {
 				owlEntity = dataFactory.getOWLObjectProperty(owlIri);
 				System.err.println("Managing G_ObjectProperty "+g_Entity);
 			} else if (g_Entity instanceof G_AnnotationProperty ) {
-				owlEntity = dataFactory.getOWLAnnotationProperty(owlIri);		
+				owlEntity = dataFactory.getOWLAnnotationProperty(owlIri);	
+				OWLAnnotationAssertionAxiom rdfPropAxiom = dataFactory.getOWLAnnotationAssertionAxiom(RDF_TYPE_ANNOTATION,  owlIri, RDF_PROPERTY_ANNOTATION);
+				dataFactory.getOWLAnnotationProperty(IRI.create(RDF.TYPE.toString()));
+				manager.addAxiom(ontology, rdfPropAxiom);
 				System.err.println("Managing G_AnnotationProperty "+g_Entity);
 			} else {
 				System.err.println("Entity not Supported "+g_Entity);
@@ -187,14 +204,14 @@ public class ExportToOwlFileHelper {
 	}
 
 	private void parseModel() {
-		parseEntities();
+	//	parseEntities();
 		parseRelations();
 
 	}
 	private void parseRelations() {
 		EList<G_Relation> relations = GOWLOntology.getGroupOfRelations().getG_relations();
 		for (G_Relation g_relation : relations) {
-			OWLAnnotationAssertionAxiom axiom=null;
+			OWLAxiom axiom=null;
 			if (g_relation instanceof ILink ) {
 				System.err.println("ILINK "+g_relation);
 				G_Entity source = g_relation.getSource();
@@ -203,8 +220,14 @@ public class ExportToOwlFileHelper {
 				IRI targetIri = IRI.create(target.getIri());
 				OWLAnnotationValue value = targetIri;
 				OWLAnnotationSubject sub = srcIri;
-				OWLAnnotationProperty prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDF.TYPE.toString()));			
-				axiom = dataFactory.getOWLAnnotationAssertionAxiom(prop, sub, value);
+				if (source instanceof G_NamedIndividual && target instanceof G_NamedClass ) {
+					OWLNamedIndividual owlIndv = dataFactory.getOWLNamedIndividual(srcIri);
+					OWLClass owlClass = dataFactory.getOWLClass(targetIri);
+					axiom = dataFactory.getOWLClassAssertionAxiom(owlClass, owlIndv);
+				} else {
+					OWLAnnotationProperty prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDF.TYPE.toString()));			
+					axiom = dataFactory.getOWLAnnotationAssertionAxiom(prop, sub, value);
+				}
 			} else if (g_relation instanceof SLink ) {
 				G_Entity source = g_relation.getSource();
 				G_Entity target = g_relation.getTarget();
@@ -214,6 +237,8 @@ public class ExportToOwlFileHelper {
 				OWLAnnotationSubject sub = srcIri;
 				OWLAnnotationProperty prop=null;
 				if (source instanceof G_NamedClass && target instanceof G_NamedClass ) {
+					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.SUBCLASSOF.toString()));
+				} else if (source instanceof G_AnnotationClass && target instanceof G_AnnotationClass ) {
 					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.SUBCLASSOF.toString()));
 				} else {
 					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.SUBPROPERTYOF.toString()));					
@@ -241,7 +266,7 @@ public class ExportToOwlFileHelper {
 				try {
 					axiom = dataFactory.getOWLAnnotationAssertionAxiom(prop, sub, value);
 				} catch (java.lang.NullPointerException e) {
-					System.err.println("SLINK NOT Implemented: "+g_relation);
+					System.err.println("ELINK NOT Implemented: "+g_relation);
 				}
 			} else if (g_relation instanceof ALink ) {
 				G_Entity source = g_relation.getSource();
@@ -251,16 +276,21 @@ public class ExportToOwlFileHelper {
 				OWLAnnotationValue value = targetIri;
 				OWLAnnotationSubject sub = srcIri;
 				OWLAnnotationProperty prop=null;
-				if (source instanceof G_Collection && target instanceof G_Property ) {
+				if (source instanceof G_NamedClass && target instanceof G_ObjectProperty ) {
+					OWLClass owlCLass = dataFactory.getOWLClass(srcIri);
+					OWLObjectProperty owlProperty = dataFactory.getOWLObjectProperty(targetIri);
+					axiom = dataFactory.getOWLObjectPropertyDomainAxiom(owlProperty, owlCLass);
+				} else if (source instanceof G_ObjectProperty && target instanceof G_NamedClass ){
+					OWLClass owlCLass = dataFactory.getOWLClass(targetIri);
+					OWLObjectProperty owlProperty = dataFactory.getOWLObjectProperty(srcIri);
+					axiom = dataFactory.getOWLObjectPropertyRangeAxiom(owlProperty, owlCLass);
+				} else if (source instanceof G_Collection) {
 					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.RANGE.toString()));
-				} else if (source instanceof G_Property && target instanceof G_Collection ){
-					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.DOMAIN.toString()));					
-				} 
-				try {
 					axiom = dataFactory.getOWLAnnotationAssertionAxiom(prop, sub, value);
-				} catch (java.lang.NullPointerException e) {
-					System.err.println("ALINK NOT Implemented: "+g_relation);
-				}
+				} else if (source instanceof G_Property ){
+					prop = dataFactory.getOWLAnnotationProperty(IRI.create(RDFS.DOMAIN.toString()));					
+					axiom = dataFactory.getOWLAnnotationAssertionAxiom(prop, sub, value);
+				} 
 			} else if (g_relation instanceof PLink ) {
 				G_Entity source = g_relation.getSource();
 				G_Entity target = g_relation.getTarget();

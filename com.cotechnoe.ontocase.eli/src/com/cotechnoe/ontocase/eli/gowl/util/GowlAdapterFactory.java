@@ -203,6 +203,10 @@ public class GowlAdapterFactory extends AdapterFactoryImpl {
 				return createRelationsGroupAdapter();
 			}
 			@Override
+			public Adapter caseG_AnnotationClass(G_AnnotationClass object) {
+				return createG_AnnotationClassAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -261,6 +265,20 @@ public class GowlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRelationsGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass <em>GAnnotation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass
+	 * @generated
+	 */
+	public Adapter createG_AnnotationClassAdapter() {
 		return null;
 	}
 

@@ -71,15 +71,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="G_Collection" abstract="true" eSuperTypes="#//G_Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="G_Literal" eSuperTypes="#//G_SingleObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="G_SingleObject" abstract="true" eSuperTypes="#//G_Entity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="G_NamedClass" eSuperTypes="#//G_Collection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_ClassType" ordered="false"
-        lowerBound="1" eType="#//G_ClassType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="G_ClassType">
-    <eLiterals name="OWL_CLASS"/>
-    <eLiterals name="RDFS_CLASS" value="1"/>
-    <eLiterals name="SKOS_CLASS" value="2"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_NamedClass" eSuperTypes="#//G_Collection"/>
   <eClassifiers xsi:type="ecore:EClass" name="G_NamedIndividual" eSuperTypes="#//G_Individual"/>
   <eClassifiers xsi:type="ecore:EClass" name="G_ObjectIntersectionOf" eSuperTypes="#//G_ClassContainer"/>
   <eClassifiers xsi:type="ecore:EClass" name="G_ObjectProperty" eSuperTypes="#//G_Property"/>
@@ -117,5 +109,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="RelationsGroup">
     <eStructuralFeatures xsi:type="ecore:EReference" name="g_relations" ordered="false"
         upperBound="-1" eType="#//G_Relation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="G_ClassType">
+    <eLiterals name="RDFS_CLASS" literal="RDFS_CLASS"/>
+    <eLiterals name="SKOS_CLASS" value="1" literal="SKOS_CLASS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="G_AnnotationClass" eSuperTypes="#//G_Collection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="g_ClassType" ordered="false"
+        lowerBound="1" eType="#//G_ClassType"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -1985,22 +1985,13 @@ public interface GowlPackage extends EPackage {
 	int GNAMED_CLASS__IS_SOURCE_OF = GCOLLECTION__IS_SOURCE_OF;
 
 	/**
-	 * The feature id for the '<em><b>GClass Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GNAMED_CLASS__GCLASS_TYPE = GCOLLECTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>GNamed Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GNAMED_CLASS_FEATURE_COUNT = GCOLLECTION_FEATURE_COUNT + 1;
+	int GNAMED_CLASS_FEATURE_COUNT = GCOLLECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>GNamed Class</em>' class.
@@ -2558,6 +2549,106 @@ public interface GowlPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.G_AnnotationClassImpl <em>GAnnotation Class</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.G_AnnotationClassImpl
+	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getG_AnnotationClass()
+	 * @generated
+	 */
+	int GANNOTATION_CLASS = 32;
+
+	/**
+	 * The feature id for the '<em><b>Glabel Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__GLABEL_TYPE = GCOLLECTION__GLABEL_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__LABEL = GCOLLECTION__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Glabel</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__GLABEL = GCOLLECTION__GLABEL;
+
+	/**
+	 * The feature id for the '<em><b>Is Target Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__IS_TARGET_OF = GCOLLECTION__IS_TARGET_OF;
+
+	/**
+	 * The feature id for the '<em><b>Iri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__IRI = GCOLLECTION__IRI;
+
+	/**
+	 * The feature id for the '<em><b>Giri status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__GIRI_STATUS = GCOLLECTION__GIRI_STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Is Source Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__IS_SOURCE_OF = GCOLLECTION__IS_SOURCE_OF;
+
+	/**
+	 * The feature id for the '<em><b>GClass Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS__GCLASS_TYPE = GCOLLECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>GAnnotation Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS_FEATURE_COUNT = GCOLLECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>GAnnotation Class</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GANNOTATION_CLASS_OPERATION_COUNT = GCOLLECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2565,7 +2656,7 @@ public interface GowlPackage extends EPackage {
 	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getG_LABEL_TYPE()
 	 * @generated
 	 */
-	int GLABEL_TYPE = 32;
+	int GLABEL_TYPE = 33;
 
 	/**
 	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.G_IRI_Status <em>GIRI Status</em>}' enum.
@@ -2575,7 +2666,7 @@ public interface GowlPackage extends EPackage {
 	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getG_IRI_Status()
 	 * @generated
 	 */
-	int GIRI_STATUS = 33;
+	int GIRI_STATUS = 34;
 
 	/**
 	 * The meta object id for the '{@link com.cotechnoe.ontocase.eli.gowl.G_ClassType <em>GClass Type</em>}' enum.
@@ -2585,7 +2676,7 @@ public interface GowlPackage extends EPackage {
 	 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getG_ClassType()
 	 * @generated
 	 */
-	int GCLASS_TYPE = 34;
+	int GCLASS_TYPE = 35;
 
 
 	/**
@@ -2706,6 +2797,27 @@ public interface GowlPackage extends EPackage {
 	 */
 	EReference getRelationsGroup_G_relations();
 
+
+	/**
+	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass <em>GAnnotation Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GAnnotation Class</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass
+	 * @generated
+	 */
+	EClass getG_AnnotationClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass#getG_ClassType <em>GClass Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>GClass Type</em>'.
+	 * @see com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass#getG_ClassType()
+	 * @see #getG_AnnotationClass()
+	 * @generated
+	 */
+	EAttribute getG_AnnotationClass_G_ClassType();
 
 	/**
 	 * Returns the meta object for enum '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}'.
@@ -3040,17 +3152,6 @@ public interface GowlPackage extends EPackage {
 	EClass getG_NamedClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.cotechnoe.ontocase.eli.gowl.G_NamedClass#getG_ClassType <em>GClass Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>GClass Type</em>'.
-	 * @see com.cotechnoe.ontocase.eli.gowl.G_NamedClass#getG_ClassType()
-	 * @see #getG_NamedClass()
-	 * @generated
-	 */
-	EAttribute getG_NamedClass_G_ClassType();
-
-	/**
 	 * Returns the meta object for class '{@link com.cotechnoe.ontocase.eli.gowl.G_SingleObject <em>GSingle Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3310,6 +3411,24 @@ public interface GowlPackage extends EPackage {
 		EReference RELATIONS_GROUP__GRELATIONS = eINSTANCE.getRelationsGroup_G_relations();
 
 
+
+		/**
+		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.G_AnnotationClassImpl <em>GAnnotation Class</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.G_AnnotationClassImpl
+		 * @see com.cotechnoe.ontocase.eli.gowl.impl.GowlPackageImpl#getG_AnnotationClass()
+		 * @generated
+		 */
+		EClass GANNOTATION_CLASS = eINSTANCE.getG_AnnotationClass();
+
+		/**
+		 * The meta object literal for the '<em><b>GClass Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GANNOTATION_CLASS__GCLASS_TYPE = eINSTANCE.getG_AnnotationClass_G_ClassType();
 
 		/**
 		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.G_LABEL_TYPE <em>GLABEL TYPE</em>}' enum.
@@ -3606,14 +3725,6 @@ public interface GowlPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GNAMED_CLASS = eINSTANCE.getG_NamedClass();
-
-		/**
-		 * The meta object literal for the '<em><b>GClass Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GNAMED_CLASS__GCLASS_TYPE = eINSTANCE.getG_NamedClass_G_ClassType();
 
 		/**
 		 * The meta object literal for the '{@link com.cotechnoe.ontocase.eli.gowl.impl.G_SingleObjectImpl <em>GSingle Object</em>}' class.

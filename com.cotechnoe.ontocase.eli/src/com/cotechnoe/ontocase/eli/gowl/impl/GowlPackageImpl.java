@@ -8,6 +8,7 @@ import com.cotechnoe.ontocase.eli.gowl.DLink;
 import com.cotechnoe.ontocase.eli.gowl.ELink;
 import com.cotechnoe.ontocase.eli.gowl.EntitiesGroup;
 import com.cotechnoe.ontocase.eli.gowl.G_Annotation;
+import com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass;
 import com.cotechnoe.ontocase.eli.gowl.G_AnnotationProperty;
 import com.cotechnoe.ontocase.eli.gowl.G_AnonymousIndividual;
 import com.cotechnoe.ontocase.eli.gowl.G_ClassContainer;
@@ -82,6 +83,13 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	private EClass relationsGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass g_AnnotationClassEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -487,6 +495,26 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getG_AnnotationClass() {
+		return g_AnnotationClassEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getG_AnnotationClass_G_ClassType() {
+		return (EAttribute)g_AnnotationClassEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getG_LABEL_TYPE() {
 		return g_LABEL_TYPEEEnum;
 	}
@@ -807,16 +835,6 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getG_NamedClass_G_ClassType() {
-		return (EAttribute)g_NamedClassEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getG_SingleObject() {
 		return g_SingleObjectEClass;
 	}
@@ -1036,7 +1054,6 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		g_SingleObjectEClass = createEClass(GSINGLE_OBJECT);
 
 		g_NamedClassEClass = createEClass(GNAMED_CLASS);
-		createEAttribute(g_NamedClassEClass, GNAMED_CLASS__GCLASS_TYPE);
 
 		g_NamedIndividualEClass = createEClass(GNAMED_INDIVIDUAL);
 
@@ -1066,6 +1083,9 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 
 		relationsGroupEClass = createEClass(RELATIONS_GROUP);
 		createEReference(relationsGroupEClass, RELATIONS_GROUP__GRELATIONS);
+
+		g_AnnotationClassEClass = createEClass(GANNOTATION_CLASS);
+		createEAttribute(g_AnnotationClassEClass, GANNOTATION_CLASS__GCLASS_TYPE);
 
 		// Create enums
 		g_LABEL_TYPEEEnum = createEEnum(GLABEL_TYPE);
@@ -1127,6 +1147,7 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		g_ObjectIntersectionOfEClass.getESuperTypes().add(this.getG_ClassContainer());
 		g_ObjectPropertyEClass.getESuperTypes().add(this.getG_Property());
 		g_AnnotationEClass.getESuperTypes().add(this.getG_SingleObject());
+		g_AnnotationClassEClass.getESuperTypes().add(this.getG_Collection());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(aLinkEClass, ALink.class, "ALink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1185,7 +1206,6 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(g_SingleObjectEClass, G_SingleObject.class, "G_SingleObject", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(g_NamedClassEClass, G_NamedClass.class, "G_NamedClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getG_NamedClass_G_ClassType(), this.getG_ClassType(), "g_ClassType", null, 1, 1, G_NamedClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(g_NamedIndividualEClass, G_NamedIndividual.class, "G_NamedIndividual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1216,6 +1236,9 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		initEClass(relationsGroupEClass, RelationsGroup.class, "RelationsGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelationsGroup_G_relations(), this.getG_Relation(), null, "g_relations", null, 0, -1, RelationsGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(g_AnnotationClassEClass, G_AnnotationClass.class, "G_AnnotationClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getG_AnnotationClass_G_ClassType(), this.getG_ClassType(), "g_ClassType", null, 1, 1, G_AnnotationClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(g_LABEL_TYPEEEnum, G_LABEL_TYPE.class, "G_LABEL_TYPE");
 		addEEnumLiteral(g_LABEL_TYPEEEnum, G_LABEL_TYPE.LABEL);
@@ -1231,7 +1254,6 @@ public class GowlPackageImpl extends EPackageImpl implements GowlPackage {
 		addEEnumLiteral(g_IRI_StatusEEnum, G_IRI_Status.PRESET);
 
 		initEEnum(g_ClassTypeEEnum, G_ClassType.class, "G_ClassType");
-		addEEnumLiteral(g_ClassTypeEEnum, G_ClassType.OWL_CLASS);
 		addEEnumLiteral(g_ClassTypeEEnum, G_ClassType.RDFS_CLASS);
 		addEEnumLiteral(g_ClassTypeEEnum, G_ClassType.SKOS_CLASS);
 

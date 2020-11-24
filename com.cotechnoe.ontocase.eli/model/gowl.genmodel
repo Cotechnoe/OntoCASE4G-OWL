@@ -22,7 +22,6 @@
       <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_IRI_Status/PRESET"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="gowl.ecore#//G_ClassType">
-      <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/OWL_CLASS"/>
       <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/RDFS_CLASS"/>
       <genEnumLiterals ecoreEnumLiteral="gowl.ecore#//G_ClassType/SKOS_CLASS"/>
     </genEnums>
@@ -64,9 +63,7 @@
     <genClasses image="false" ecoreClass="gowl.ecore#//G_Collection" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//G_Literal" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses image="false" ecoreClass="gowl.ecore#//G_SingleObject" labelFeature="#//gowl/G_OWL_Object/g_label"/>
-    <genClasses ecoreClass="gowl.ecore#//G_NamedClass" labelFeature="#//gowl/G_OWL_Object/g_label">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_NamedClass/g_ClassType"/>
-    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//G_NamedClass" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//G_NamedIndividual" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//G_ObjectIntersectionOf" labelFeature="#//gowl/G_OWL_Object/g_label"/>
     <genClasses ecoreClass="gowl.ecore#//G_ObjectProperty" labelFeature="#//gowl/G_OWL_Object/g_label"/>
@@ -92,6 +89,9 @@
     </genClasses>
     <genClasses ecoreClass="gowl.ecore#//RelationsGroup">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gowl.ecore#//RelationsGroup/g_relations"/>
+    </genClasses>
+    <genClasses ecoreClass="gowl.ecore#//G_AnnotationClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gowl.ecore#//G_AnnotationClass/g_ClassType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

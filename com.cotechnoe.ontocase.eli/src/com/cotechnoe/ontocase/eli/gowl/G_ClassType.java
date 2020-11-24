@@ -20,16 +20,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum G_ClassType implements Enumerator {
 	/**
-	 * The '<em><b>OWL CLASS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #OWL_CLASS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	OWL_CLASS(0, "OWL_CLASS", "OWL_CLASS"),
-
-	/**
 	 * The '<em><b>RDFS CLASS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,7 +27,7 @@ public enum G_ClassType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RDFS_CLASS(1, "RDFS_CLASS", "RDFS_CLASS"),
+	RDFS_CLASS(0, "RDFS_CLASS", "RDFS_CLASS"),
 
 	/**
 	 * The '<em><b>SKOS CLASS</b></em>' literal object.
@@ -47,7 +37,7 @@ public enum G_ClassType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SKOS_CLASS(2, "SKOS_CLASS", "SKOS_CLASS");
+	SKOS_CLASS(1, "SKOS_CLASS", "SKOS_CLASS");
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -55,17 +45,6 @@ public enum G_ClassType implements Enumerator {
 	 * @generated
 	 */
 	public static final String copyright = "Copyright Text\t(c) 2020 Cotechnoe http://www.cotechnoe.com";
-
-	/**
-	 * The '<em><b>OWL CLASS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #OWL_CLASS
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int OWL_CLASS_VALUE = 0;
 
 	/**
 	 * The '<em><b>RDFS CLASS</b></em>' literal value.
@@ -76,7 +55,7 @@ public enum G_ClassType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RDFS_CLASS_VALUE = 1;
+	public static final int RDFS_CLASS_VALUE = 0;
 
 	/**
 	 * The '<em><b>SKOS CLASS</b></em>' literal value.
@@ -87,7 +66,7 @@ public enum G_ClassType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SKOS_CLASS_VALUE = 2;
+	public static final int SKOS_CLASS_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>GClass Type</b></em>' enumerators.
@@ -97,7 +76,6 @@ public enum G_ClassType implements Enumerator {
 	 */
 	private static final G_ClassType[] VALUES_ARRAY =
 		new G_ClassType[] {
-			OWL_CLASS,
 			RDFS_CLASS,
 			SKOS_CLASS,
 		};
@@ -156,7 +134,6 @@ public enum G_ClassType implements Enumerator {
 	 */
 	public static G_ClassType get(int value) {
 		switch (value) {
-			case OWL_CLASS_VALUE: return OWL_CLASS;
 			case RDFS_CLASS_VALUE: return RDFS_CLASS;
 			case SKOS_CLASS_VALUE: return SKOS_CLASS;
 		}

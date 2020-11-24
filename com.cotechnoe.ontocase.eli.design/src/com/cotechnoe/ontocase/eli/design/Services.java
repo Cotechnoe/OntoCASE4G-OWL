@@ -3,6 +3,7 @@ package com.cotechnoe.ontocase.eli.design;
 import org.eclipse.emf.ecore.EObject;
 
 import com.cotechnoe.ontocase.eli.gowl.G_Annotation;
+import com.cotechnoe.ontocase.eli.gowl.G_AnnotationClass;
 import com.cotechnoe.ontocase.eli.gowl.G_AnnotationProperty;
 import com.cotechnoe.ontocase.eli.gowl.G_Entity;
 import com.cotechnoe.ontocase.eli.gowl.G_NamedClass;
@@ -29,7 +30,9 @@ public class Services {
 		if (preSource.equals(preTarget)) return false;
 		if (preSource instanceof G_NamedClass && preTarget instanceof G_NamedClass) {
 			return true;
-		} else if (preSource instanceof G_ObjectProperty && preTarget instanceof G_ObjectProperty) {
+		} else if (preSource instanceof G_Property && preTarget instanceof G_Property) {
+			return true;
+		} else if (preSource instanceof G_AnnotationClass && preTarget instanceof G_AnnotationClass) {
 			return true;
 		}
 		return false;

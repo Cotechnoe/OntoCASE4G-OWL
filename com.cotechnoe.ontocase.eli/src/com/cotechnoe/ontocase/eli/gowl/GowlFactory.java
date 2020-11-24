@@ -56,6 +56,15 @@ public interface GowlFactory extends EFactory {
 	RelationsGroup createRelationsGroup();
 
 	/**
+	 * Returns a new object of class '<em>GAnnotation Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GAnnotation Class</em>'.
+	 * @generated
+	 */
+	G_AnnotationClass createG_AnnotationClass();
+
+	/**
 	 * Returns a new object of class '<em>GPrefix</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -86,6 +86,7 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 			case GowlPackage.GOWL_DOCUMENT: return createG_OWL_Document();
 			case GowlPackage.ENTITIES_GROUP: return createEntitiesGroup();
 			case GowlPackage.RELATIONS_GROUP: return createRelationsGroup();
+			case GowlPackage.GANNOTATION_CLASS: return createG_AnnotationClass();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -168,6 +169,17 @@ public class GowlFactoryImpl extends EFactoryImpl implements GowlFactory {
 	}
 
 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public G_AnnotationClass createG_AnnotationClass() {
+		G_AnnotationClassImpl g_AnnotationClass = new G_AnnotationClassImpl();
+		return g_AnnotationClass;
+	}
 
 	/**
 	 * <!-- begin-user-doc -->

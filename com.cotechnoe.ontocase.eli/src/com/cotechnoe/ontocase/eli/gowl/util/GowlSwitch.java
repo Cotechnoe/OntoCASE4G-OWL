@@ -333,6 +333,15 @@ public class GowlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GowlPackage.GANNOTATION_CLASS: {
+				G_AnnotationClass g_AnnotationClass = (G_AnnotationClass)theEObject;
+				T result = caseG_AnnotationClass(g_AnnotationClass);
+				if (result == null) result = caseG_Collection(g_AnnotationClass);
+				if (result == null) result = caseG_Entity(g_AnnotationClass);
+				if (result == null) result = caseG_OWL_Object(g_AnnotationClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -379,6 +388,21 @@ public class GowlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRelationsGroup(RelationsGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GAnnotation Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GAnnotation Class</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseG_AnnotationClass(G_AnnotationClass object) {
 		return null;
 	}
 
